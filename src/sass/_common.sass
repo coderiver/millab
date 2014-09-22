@@ -1,0 +1,219 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+$black: #191919
+$dark: #303030
+$border: #ededed
+$red: #a02d31
+$red_h: #aa2328
++font(opensans-regular, opensans-regular) 
++font(opensans-semibold, opensans-semibold) 
++font(opensans-bold, opensans-bold) 
++font(opensans-italic, opensans-italic) 
++font(opensans-condbold, opensans-condbold) 
++font(opensans-light, opensans-light) 
++font(seguisb, seguisb) 
+=fr
+	font-family: 'opensans-regular', Arial, sans-serif
+=fsb
+	font-family: 'opensans-semibold', Arial, sans-serif
+=fb
+	font-family: 'opensans-bold', Arial, sans-serif
+=fit
+	font-family: 'opensans-italic', Arial, sans-serif
+=fcon
+	font-family: 'opensans-condbold', Arial, sans-serif
+=fl
+	font-family: 'opensans-light', Arial, sans-serif
+=fsb2
+	font-family: 'seguisb', Arial, sans-serif
+html
+	+selection
+		background: rgba($red,.3) 
+	&.has-open-popup
+		overflow: hidden
+		body
+			overflow: hidden
+body
+	min-width: 1000px
+	min-height: 840px
+	font-family: Arial, sans-serif 
+	font-size: 16px 
+	line-height: 1.4
+	+fr
+	background: #f5f5f5 
+a
+	text-decoration: none
+
+.wrap
+	+clr
+	clear: both
+.wrapper
+	overflow: hidden 
+.out
+	position: relative
+	z-index: 2
+	margin: 0 0 -50px
+	min-height: 100%
+	height: auto !important
+	height: 100%	 
+	overflow: hidden 
+.push
+	clear: both
+	height: 50px
+// common blocks      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

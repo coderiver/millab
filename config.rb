@@ -2,10 +2,10 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "css"
-sass_dir = "sass"
-images_dir = "img"
-javascripts_dir = "js"
+css_dir = "production/css"
+sass_dir = "src/sass"
+images_dir = "production/img"
+javascripts_dir = "production/js"
 
 
 # You can select your preferred output style here (can be overridden via the command line):
@@ -20,6 +20,15 @@ line_comments = false
 
 preferred_syntax = :sass
 
+# this one for switching between production and dev versions of the website
+module Sass::Script::Functions
+  def image_path(string)
+    assert_type string, :String
+    Sass::Script::String.new("../img/#{string.value}")
+  end
+  alias_method :"image-path",:image_path 
+  declare :"image-path", :args => [:string]
+end
 
 # ===================
 # Uncomment this part to make sprite name static, icons-123asda.png -> icons.png
