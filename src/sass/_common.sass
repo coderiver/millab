@@ -47,11 +47,12 @@
 // p
 // 	+jpg(bla)
 
-$black: #191919
-$dark: #303030
-$border: #ededed
-$red: #a02d31
-$red_h: #aa2328
+$text: #2d3441
+$black: #191c20
+$light: #e8eff5
+$border: #e9edf0
+$azure: #1fbfd5
+$blue: #cef3fd
 +font(opensans-regular, opensans-regular) 
 +font(opensans-semibold, opensans-semibold) 
 +font(opensans-bold, opensans-bold) 
@@ -59,35 +60,32 @@ $red_h: #aa2328
 +font(opensans-condbold, opensans-condbold) 
 +font(opensans-light, opensans-light) 
 +font(seguisb, seguisb) 
-=fr
+=reg
 	font-family: 'opensans-regular', Arial, sans-serif
-=fsb
+=sbold
 	font-family: 'opensans-semibold', Arial, sans-serif
-=fb
+=bold
 	font-family: 'opensans-bold', Arial, sans-serif
-=fit
+=it
 	font-family: 'opensans-italic', Arial, sans-serif
-=fcon
+=cond
 	font-family: 'opensans-condbold', Arial, sans-serif
-=fl
+=light
 	font-family: 'opensans-light', Arial, sans-serif
-=fsb2
-	font-family: 'seguisb', Arial, sans-serif
+
 html
 	+selection
-		background: rgba($red,.3) 
+		background: rgba($azure,.3) 
 	&.has-open-popup
 		overflow: hidden
 		body
 			overflow: hidden
 body
-	min-width: 1000px
-	min-height: 840px
-	font-family: Arial, sans-serif 
-	font-size: 16px 
-	line-height: 1.4
-	+fr
-	background: #f5f5f5 
+	min-width: 1024px
+	font-size: 12px 
+	line-height: 2
+	+reg
+	background: $light 
 a
 	text-decoration: none
 
