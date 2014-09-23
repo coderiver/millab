@@ -45,7 +45,7 @@
 		right: 0
 		height: 380px
 		background: rgba(#020711, .9)
-		+tr(top .2s)
+		+tr(top .4s)
 	&__title
 		display: block
 		padding: 0 30px
@@ -61,7 +61,7 @@
 		font-size: 12px
 		a
 			color: #fff
-			+tr(color .2s)
+			+tr(color .4s)
 			&:hover
 				color: #32cae1 
 .benefits-wrap
@@ -104,7 +104,7 @@
 		color: $azure
 		line-height: 1.7
 		+sbold 
-		+tr(opacity .2s)
+		+tr(opacity .4s)
 	&__main
 		position: absolute
 		left: 0
@@ -117,7 +117,7 @@
 		color: #fff
 		line-height: 1.7
 		background: rgba($azure, .9) 
-		+tr(top .2s)
+		+tr(top .4s)
 		strong  
 			display: block
 			margin-bottom: 11px
@@ -143,12 +143,27 @@
 	background: #d7ffe2
 	font-size: 12px
 	line-height: 1.5
+	+tr(background .4s)
 	&:after
 		content: ""
 		position: absolute
 		bottom: -14px
 		left: 0
 		+arr(22,14,#aed7b8,tr)
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		opacity: 0
+		border: 2px solid #68e388 
+		+tr(opacity .4s)
+	&:hover
+		background: #fff 
+		&:before
+			opacity: 1
 	&__in
 		position: relative
 		height: 277px

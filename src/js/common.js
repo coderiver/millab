@@ -23,7 +23,7 @@ head.ready(function() {
 			left: el_left - $(this).outerWidth()/2,
 			top: el_top - el.outerHeight()
 		});
-	    el.fadeIn(200);
+	    el.fadeIn(400);
 	  }, function() {
 
 	    win.hide();
