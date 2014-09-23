@@ -1,9 +1,13 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	$(document).on("click", function(){
+        $(".js-select").removeClass("is-active");
+		$(".js-select-list").slideUp(100);
+        //$(".js-overlay").hide();
+        //$("html").removeClass("has-open-popup");
+	});
 
+// slick slider init
 	$('.js-slick').slick({
 		infinite: true,
 		slidesToShow: 6,
@@ -11,6 +15,8 @@ head.ready(function() {
 		dots: false,
 		arrows: true
 	});
+
+// window popup
 	var win = $(".js-window");
 	$(".js-window-toggle").hover(
 	  function() {
@@ -29,4 +35,35 @@ head.ready(function() {
 	    win.hide();
 	  }
 	);
+
+// select list
+    $(".js-select").on("click",function(event) {
+        event.stopPropagation();
+    });
+    $(".js-select-text").on("click",function(event) {
+        if ($(this).parents(".js-select").hasClass("is-active")) {
+            $(".js-select").removeClass("is-active");
+            $(".js-select-list").slideUp(100);
+        }
+        else {
+            $(".js-select").removeClass("is-active");
+            $(".js-select-list").slideUp(100);
+            $(this).parents(".js-select").toggleClass("is-active");
+            $(this).parents(".js-select").find(".js-select-list").slideToggle(100);
+        }
+       
+    });
+    $(".js-select-list a").on("click",function() {
+        var val = $(this).attr("href");
+        var text = $(this).text();
+        $(this).parents(".js-select").find(".js-select-text").text(text);
+        $(this).parents(".js-select").find("option").removeAttr("selected");
+        $(this).parents(".js-select").find('option[value="'+val+'"]').attr("selected", "selected");
+        $(this).parents(".js-select-list").find("a").removeClass("is-active");
+        $(this).addClass("is-active");
+        $(this).parents(".js-select").removeClass("is-active");
+        $(this).parents(".js-select-list").slideUp(100);
+        return false;
+        
+    });
 });

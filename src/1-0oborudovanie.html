@@ -10,11 +10,50 @@
 	@@include('_header.html')
 	<div class="l-center">
 		<nav class="breadcrumbs">
-			<a href="#">Главная</a>
-			<a href="#">Оборудование</a>
+			<a href="#"><span>Главная</span></a>
+			<a href="#"><span>Оборудование</span></a>
 		</nav>		
 		<div class="main">
-			
+			<div class="main__head">
+				<div class="main__title">
+					<h1>Оборудование</h1>
+				</div>
+				<div class="main__set"> 
+					<div class="select select_year js-select">
+						<span class="select__text js-select-text">Выбор категории
+						</span>
+						<ul class="select__list js-select-list">
+							<li><a href="0" class="is-active">Всё оборудование</a></li>
+							<li><a href="1">Лабораторное оборудование</a></li>
+							<li><a href="2">Пилотное оборудование</a></li>
+							<li><a href="3">Промышленное оборудование</a></li>
+						</ul>
+						<select class="js-select-body">
+							<option value="0">Всё оборудование</option>
+							<option value="1">Лабораторное оборудование</option>
+							<option value="2">Пилотное оборудование</option>
+							<option value="3">Промышленное оборудование</option>
+						</select>
+					</div>
+				</div>
+				<div class="wrap">
+					<p>В нашем каталоге представлены описания оборудования и расходных материалов, которые Компания МИЛЛАБ предлагает на российском рынке — широкий спектр решений от ведущих производителей в мире.</p>
+				</div>
+			</div>
+			<div class="main__body">
+				<div class="wrapper">
+					<a href="#" class="item">
+						<span class="item__img">
+							<img src="img/item1.png" alt="img">
+						</span>
+						<span class="item__title">Системы параллельного синтеза</span>
+					</a>
+				</div>
+			</div>
+			<div class="main__footer">
+				<p>В нашем каталоге представлены описания оборудования и расходных материалов, которые Компания МИЛЛАБ предлагает на российском рынке — широкий спектр решений от ведущих производителей в мире.</p>
+				<p>Изучив каталог, Вы можете получить информацию о технических и функциональных характеристиках, получить рекомендации по подбору аксессуаров для более комфортной и производительной работы.</p>
+			</div> 
 		</div>
 	</div>
 	<div class="push"></div>
