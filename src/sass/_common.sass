@@ -52,7 +52,9 @@ $black: #191c20
 $light: #e8eff5
 $border: #e9edf0
 $azure: #1fbfd5
+$azure_h: #62deef
 $blue: #cef3fd
+$gray: #adb2bb
 +font(opensans-regular, opensans-regular) 
 +font(opensans-semibold, opensans-semibold) 
 +font(opensans-bold, opensans-bold) 
@@ -72,6 +74,8 @@ $blue: #cef3fd
 	font-family: 'opensans-condbold', Arial, sans-serif
 =light
 	font-family: 'opensans-light', Arial, sans-serif
+=pfmed
+	font-family: 'pfsquaresanspro-medium', Arial, sans-serif
 
 html
 	+selection
@@ -84,11 +88,15 @@ body
 	min-width: 1024px
 	font-size: 12px 
 	line-height: 2
+	letter-spacing: .3px 
 	+reg
 	background: $light 
 a
 	text-decoration: none
-
+.l-center
+	position: relative
+	margin: 0 auto 
+	width: 975px
 .wrap
 	+clr
 	clear: both
@@ -97,50 +105,249 @@ a
 .out
 	position: relative
 	z-index: 2
-	margin: 0 0 -50px
+	margin: 0 0 -157px
 	min-height: 100%
 	height: auto !important
 	height: 100%	 
 	overflow: hidden 
 .push
 	clear: both
-	height: 50px
+	height: 157px
 // common blocks      
+.header
+	background: #fff
+	.l-center
+		padding: 14px 0 17px
+		+clr
+	&__logo,
+	&__about,
+	&__search
+		float: left
+	&__contact
+		margin-top: 20px
+		float: right
+		text-align: right
+	&__logo
+		margin-right: 50px
+		img
+			display: block
+	&__about
+		margin: 44px 68px 0 0
+		width: 180px
+		color: $gray 
+		line-height: 1.7
+	&__search
+		position: relative
+		margin: 44px 0 0
+		width: 234px
+		input
+			display: block
+			border: 1px solid #e0e0e0
+			padding: 0 0 0 38px 
+			width: 100%
+			height: 36px
+			+box
+			border-radius: 4px 
+			background: #fcfdfd 
+			+reg
+			+tr(border .2s)
+			color: $text 
+			font-size: 12px
+			+placeholder
+				color: #cecece 
+			&:focus
+				border-color: $azure 
+				+ button
+					&:before
+						opacity: 0
+					&:after
+						opacity: 1
+		button
+			position: absolute
+			top: 0
+			left: 0
+			height: 36px
+			width: 36px
+			background: none
+			overflow: visible
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				top: 12px
+				left: 13px 
+				+tr(opacity .2s)
+			&:before
+				+s(glass-gray)
+				opacity: 1
+			&:after
+				z-index: 2
+				+s(glass)
+				opacity: 0
+	&__callback
+		color: $azure
+		+bold
+		font-size: 10px
+		text-transform: uppercase 
+		+tr(color .2s)
+		&:hover
+			color: $azure_h
+			i
+				opacity: .7
+		i
+			margin-right: 3px
+			+tr(opacity .2s)
+	.tel
+		margin-top: 8px
+.tel
+	font-size: 18px
+	letter-spacing: 1px 
+	+sbold
+.nav-wrap
+	background: $text
+	.l-center
+		padding: 0
+.nav
+	display: table
+	position: relative
+	margin: 0 auto  
+	width: 975px
+	// &:before
+	// 	content: ""
+	// 	position: absolute
+	// 	left: 0 
+	// 	top: -96px
+	// 	z-index: 0 
+	// 	width: 950px
+	// 	height: 955px
+	// 	background: url(../img/header-bg.png) 0 0 no-repeat 
+	li
+		display: table-cell
+		vertical-align: middle
+		text-align: center
+		&:nth-child(6),
+		&:nth-child(7),
+		&:nth-child(8),
+		&:nth-child(9)
+			position: relative
+			z-index: 2
+			background: #fff
+			a
+				color: $azure 
+				&:hover
+					color: $azure_h 
+		&.is-active
+			a
+				background: #2b505f 
+				&:before
+					display: block
+	a
+		display: block
+		position: relative
+		padding: 0 15px
+		height: 80px
+		line-height: 87px 
+		color: #fff 
+		text-transform: uppercase
+		font-size: 11px
+		white-space: nowrap
+		+tr(color .2s)
+		&:hover
+			color: #859fa9 
+		&:before
+			content: ""
+			display: none
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			height: 4px
+			background: $azure  
 
 
+.footer
+	position: relative 
+	padding: 0 0 39px 
+	z-index: 2
+	background: #fff 
+	&__main
+		margin: 0 auto 
+		width: 975px
+		+clr
+	&__left
+		float: left
+		padding-top: 36px
+		width: 323px
+		font-size: 11px
+		color: $text
+		p
+			margin-bottom: 16px
+		a
+			color: $azure 
+			+tr(color .2s)
+			font-size: 10px
+			+bold
+			text-transform: uppercase 
+			&:hover
+				color: $azure_h
+				i
+					opacity: .7
+			i
+				margin-right: 12px
+				+tr(opacity .2s)
 
+	&__right
+		overflow: hidden
+		border-left: 1px solid $border 
+		padding-left: 25px 
+	&__top
+		+clr
+		padding: 26px 0 12px
+		+justify
+	.tel,
+	.soc,
+	&__logo
+		display: inline-block
+		vertical-align: middle
+	&__logo
+		img
+			display: block
+			+tr(opacity .2s)
+			&:hover
+				opacity: .7
+	&__contacts
+		font-size: 11px
+		color: $gray 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.soc
+	text-align: center
+	font-size: 12px
+	a
+		display: inline-block
+		position: relative
+		&:hover
+			+sbold
+			&:before
+				+reg
+		&:before
+			content: "/"
+			position: absolute
+			left: -3px
+			top: 0 
+			font-size: 12px
+			color: #d8e2ea 
+		&:first-child
+			&:before
+				display: none
+	&__fb
+		width: 76px
+		color: #425f9b 
+	&__tw
+		width: 60px
+		color: #54adef 
+	&__ln
+		width: 68px
+		color: #1e87be 
 
 
 
