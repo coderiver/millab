@@ -1,0 +1,33 @@
+.news-wrap
+	+clr
+	.news
+		&:first-child
+			margin-left: -25px
+.news
+	float: left
+	padding: 21px 20px 21px 25px 
+	width: 250px
+	+box
+	font-size: 12px
+	color: $text
+	+reg
+	line-height: 1.7 
+	background: #fff
+	+transition(box-shadow .2s,border .2s)
+	border-top: 4px solid #fff
+	&:hover
+		position: relative
+		z-index: 2
+		box-shadow: 0 0 20px rgba(9,85,95,.16)
+		border-top-color: #61ddef 
+		.news__title
+			color: $azure_h 
+	&__title	
+		margin-bottom: 2px
+		color: $azure
+		font-size: 13px
+		+sbold
+	&__text
+		margin-bottom: 13px
+		line-height: 1.8
+		 

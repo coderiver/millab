@@ -5,6 +5,23 @@
 	&-sitemap
 		display: inline-block
 		+s(sitemap)
+	&-distrib
+		display: inline-block
+		+s(distrib)
+	&-service
+		display: inline-block
+		+s(service)
+	&-mol
+		display: inline-block
+		+s(mol)
+.h1
+	font-weight: normal
+	font-size: 30px
+	+sbold
+.h2
+	font-weight: normal
+	font-size: 20px
+	+sbold
 .input
 	display: block
 	border: 1px solid #e0e0e0
@@ -12,12 +29,70 @@
 	width: 100%
 	height: 36px
 	+box
-	-webkit-border-radius: 4px 
 	border-radius: 4px 
 	background: #fcfdfd 
-	+reg
+	+reg 
 	color: $text 
 	font-size: 12px
 	+placeholder 
 		color: #cecece 
- 
+.btn
+	display: inline-block
+	padding: 12px 18px 
+	border-radius: 3px
+	font-size: 10px
+	line-height: 1
+	color: #fff
+	+bold 
+	text-transform: uppercase
+	background: #1dbed4
+	+tr(background .2s)
+	&:hover
+		background: $azure_h
+	&:active
+		background: #1f879c 
+.brands-slider
+	background: #fff
+	.l-center
+		padding: 0 18px
+	.slick-slide
+		a
+			display: block
+		img
+			margin: 0 auto 
+
+.window
+	display: none
+	position: absolute
+	width: 333px
+	z-index: 10
+	background: #fff
+	line-height: 1.7
+	color: $gray
+	font-size: 12px 
+	box-shadow: 0 0 29px rgba(9,85,95,.3)
+	&:after
+		content: ""
+		position: absolute
+		left: 50%
+		margin-left: -13px
+		bottom: -13px
+		+arr(26,13,#fff,b) 
+	&__in
+		padding: 25px 
+		p
+			margin-bottom: 10px
+		a
+			font-size: 10px
+			color: $azure
+			+tr(color .2s)
+			text-transform: uppercase
+			+bold
+			&:hover
+				color: $azure_h 
+	&__img
+		overflow: hidden
+		img
+			display: block
+			width: 100%
+			height: auto

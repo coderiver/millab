@@ -1,29 +1,185 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.promo-wrap
+	position: relative
+	background: $text
+	+clr
+	&:before
+		content: ""
+		position: absolute
+		left: 312px
+		top: -175px
+		z-index: 0 
+		width: 950px
+		height: 955px
+		background: url(../img/header-bg.png) 0 0 no-repeat  
+.promo
+	overflow: hidden
+	position: relative
+	float: left
+	height: 380px
+	width: 325px
+	overflow: hidden
+	&_lab
+		background: #edfcff 
+		.promo__title
+			background: #19b6cb 
+	&_pilot
+		background: #eaf0f2
+		.promo__title
+			background: #1fbfd5 
+			color: #eaf0f2 
+	&_prom
+		background: #f8feff
+		.promo__title
+			background: #32cae1
+	&__img
+		img
+			display: block
+			margin: 0 auto 
+	&:hover
+		.promo__main
+			top: 0
+	&__main
+		position: absolute
+		top: 300px
+		left: 0
+		right: 0
+		height: 380px
+		background: rgba(#020711, .9)
+		+tr(top .2s)
+	&__title
+		display: block
+		padding: 0 30px
+		height: 80px
+		line-height: 80px
+		color: #fff
+		font-size: 16px
+		+sbold  
+		background: #32cae1 
+	&__list
+		padding: 20px 30px
+		color: #fff
+		font-size: 12px
+		a
+			color: #fff
+			+tr(color .2s)
+			&:hover
+				color: #32cae1 
+.benefits-wrap
+	padding: 30px 0 
+	+clr
+.benefit
+	position: relative
+	border-left: 1px solid #bfcad3
+	float: left
+	width: 325px
+	height: 198px
+	+box
+	overflow: hidden
+	text-align: center
+	&:first-child
+		border: 0
+	&:hover
+		.benefit__main
+			top: 0
+		.benefit__name
+			opacity: 0
+	&__img
+		padding-top: 5px
+		height: 122px
+		position: relative
+		span
+			display: inline-block
+			border: 10px solid #eff4f8
+			width: 93px
+			height: 93px
+			line-height: 93px
+			border-radius: 50%
+			background: #fff
+		i
+			vertical-align: middle
+	&__name
+		margin: 0 auto 
+		max-width: 60%
+		font-size: 14px
+		color: $azure
+		line-height: 1.7
+		+sbold 
+		+tr(opacity .2s)
+	&__main
+		position: absolute
+		left: 0
+		top: 100%
+		padding: 30px 40px 
+		height: 100%
+		width: 100%
+		+box
+		font-size: 12px
+		color: #fff
+		line-height: 1.7
+		background: rgba($azure, .9) 
+		+tr(top .2s)
+		strong  
+			display: block
+			margin-bottom: 11px
+			font-size: 14px
+			+sbold
+		p 
+			opacity: 0.7
+.box
+	margin: 0 0 30px
+	background: #fff
+	+clr
+	&__news
+		float: right
+		margin: 46px 0 0 
+		width: 725px
+	.action
+		float: left
+		margin: 44px 0 52px -22px
+.action
+	position: relative
+	width: 216px
+	color: $text 
+	background: #d7ffe2
+	font-size: 12px
+	line-height: 1.5
+	&:after
+		content: ""
+		position: absolute
+		bottom: -14px
+		left: 0
+		+arr(22,14,#aed7b8,tr)
+	&__in
+		position: relative
+		height: 277px
+		+box
+		overflow: hidden
+		padding: 29px 60px 10px 22px
+	img
+		position: absolute
+		top: 0
+		right: 0
+		z-index: 0
+	&__title
+		margin-bottom: 12px
+		font-size: 16px
+		+sbold
+	&__text,
+	&__title
+		position: relative
+		z-index: 2
+	&__text
+		margin-bottom: 18px
+	&__badge
+		position: absolute
+		top: -49px
+		right: -47px
+		img
+			position: static
+.date
+	font-size: 12px
+	+reg
+	color: $gray 
 
 
 

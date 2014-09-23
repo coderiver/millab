@@ -123,14 +123,15 @@ a
 	&__about,
 	&__search
 		float: left
+		position: relative
+		z-index: 2
 	&__contact
 		margin-top: 20px
 		float: right
 		text-align: right
 	&__logo
 		margin-right: 50px
-		img
-			display: block
+		+svg(logo,196,96)
 	&__about
 		margin: 44px 68px 0 0
 		width: 180px
@@ -212,15 +213,7 @@ a
 	position: relative
 	margin: 0 auto  
 	width: 975px
-	// &:before
-	// 	content: ""
-	// 	position: absolute
-	// 	left: 0 
-	// 	top: -96px
-	// 	z-index: 0 
-	// 	width: 950px
-	// 	height: 955px
-	// 	background: url(../img/header-bg.png) 0 0 no-repeat 
+	
 	li
 		display: table-cell
 		vertical-align: middle
@@ -244,6 +237,7 @@ a
 	a
 		display: block
 		position: relative
+		z-index: 2
 		padding: 0 15px
 		height: 80px
 		line-height: 87px 
@@ -277,7 +271,7 @@ a
 	&__left
 		float: left
 		padding-top: 36px
-		width: 323px
+		width: 325px
 		font-size: 11px
 		color: $text
 		p
@@ -318,6 +312,8 @@ a
 	&__contacts
 		font-size: 11px
 		color: $gray 
+	.soc
+		margin: 7px 0 0 -25px
 
 .soc
 	text-align: center
