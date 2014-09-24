@@ -1,9 +1,44 @@
-// default layout
-.l
+.main
+	background: #fff
+	margin-bottom: 30px
 	+clr
-	.l-col1
-		float: left
-		width: 20%
-	.l-col2
+	&__right-col
 		float: right
-		width: 70%
+		width: 765px
+	&__head
+		margin-bottom: -1px
+		border-bottom: 1px solid $border
+		padding: 39px 37px 42px 82px
+		font-size: 14px
+		line-height: 1.7
+		+clr
+		.wrap
+			clear: both
+			padding-top: 21px
+		p
+			margin-bottom: 11px
+	&__title
+		float: left
+		max-width: 64%
+	&__set
+		float: right
+		width: 211px
+		.select
+			margin-top: 6px
+	&__body
+		+clr
+		.item
+			&:nth-child(3n)
+				border-right: 0
+	&__footer
+		border-top: 1px solid $border
+		padding: 52px 35px 57px 82px
+		line-height: 24px
+		p
+			margin-bottom: 11px
+			&:first-child
+				font-size: 14px
+	
+.sidebar
+	float: left
+	width: 232px
