@@ -4,7 +4,13 @@
 	+clr
 	&__right-col
 		float: right
-		width: 765px
+		width: 691px
+		padding: 0 26px 0 38px
+		.main__head,
+		.main__footer
+			padding-left: 0
+			padding-right: 0
+			border: 0
 	&__head
 		margin-bottom: -1px
 		border-bottom: 1px solid $border
@@ -30,6 +36,9 @@
 		.item
 			&:nth-child(3n)
 				border-right: 0
+		.item_small
+			&:nth-child(3n)
+				border-right: 1px solid $border
 	&__footer
 		border-top: 1px solid $border
 		padding: 52px 35px 57px 82px
@@ -41,4 +50,82 @@
 	
 .sidebar
 	float: left
+	position: relative
+	margin: 25px 0 0 -22px
+	padding: 15px 0 
 	width: 232px
+	font-size: 13px
+	background: $text 
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		bottom: -14px
+		+arr(22,14,#000,tr)
+	&:before
+		content: "" 
+		position: absolute
+		top: 0
+		right: 0 
+		width: 232px
+		height: 294px
+		background: url(../img/sidebar-bg.png) 100% 0 no-repeat 
+	li
+		&.is-active
+			background: #244f63 
+			a
+				background: $azure
+				&:hover
+					color: #fff
+			ul
+				display: block
+				a
+					background: none 
+				li
+					a
+						&:hover
+							color: $azure 
+					ul
+						display: none
+					&.is-active
+						a
+							background: rgba(#1dbdd3,.5)
+							&:hover
+								color: #fff
+						ul
+							display: block
+							li
+								background: none
+							a
+								padding-left: 54px
+								background: none
+								color: #a4c1ce
+								&:hover
+									color: #fff 
+					
+	a
+		display: block
+		position: relative
+		z-index: 2
+		padding: 13px 33px 
+		line-height: 1.5
+		+reg
+		color: #fff
+		+tr(color .2s)
+		&:hover
+			color: $azure 
+		&.is-current
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 15px
+				margin-top: -2px
+				width: 5px
+				height: 5px
+				background: #fff
+				border-radius: 50%   
+	ul
+		font-size: 12px
+		display: none 
+		

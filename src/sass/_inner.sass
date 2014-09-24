@@ -79,7 +79,30 @@
 		text-align: center 
 		.item__title
 			margin-bottom: 13px
-		
+.item_small
+	margin: 0 -1px 9px 0
+	padding: 18px 23px 
+	width: 231px	
+	height: 250px	
+	.item__img
+		margin: 0 0 20px
+		height: 143px
+	.item__title
+		font-size: 12px
+	.btn-detail
+		position: absolute
+		top: 18px
+		right: 23px
+		left: 23px
+		width: auto
+		height: 144px
+		line-height: 144px
+		opacity: 0
+		will-change: opacity
+		+tr(opacity .4s)
+	&:hover
+		.btn-detail
+			opacity: 1
 .news-wrap
 	+clr
 	.news
