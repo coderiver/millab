@@ -16,6 +16,12 @@
 		width: 211px
 	&__body
 		+clr
+	&__footer
+		border-top: 1px solid $border
+		padding: 20px 35px 20px 82px
+		p
+			&:first-child
+				font-size: 14px
 .breadcrumbs
 	padding: 18px 0 5px 6px
 	font-size: 0
@@ -54,6 +60,8 @@
 	+box
 	background: #fff 
 	text-align: center
+	&:hover
+		background: #f3fdff 
 	&__img
 		display: block
 		margin: 0 0 15px 
@@ -66,6 +74,19 @@
 	&__title
 		color: $azure
 		font-size: 14px 
+	&__main
+		position: absolute
+		top: 35px
+		bottom: 0
+		left: 35px
+		right: 35px
+	&__in
+		position: absolute
+		top: 41px
+		left: 0
+		right: 0
+		bottom: 0
+		background: #f3fdff 
 .news-wrap
 	+clr
 	.news

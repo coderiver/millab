@@ -51,6 +51,16 @@
 		background: $azure_h
 	&:active
 		background: #1f879c 
+.btn-detail
+	display: block
+	width: 100%
+	+box
+	text-align: center
+	height: 41px
+	line-height: 41px
+	background: rgba(59,196,216,.84)
+
+
 .brands-slider
 	background: #fff
 	position: relative
@@ -88,9 +98,11 @@
 		cursor: pointer
 		background: #eaf9fb
 		+unselectable
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
 		+box
 		+tr(color .2s)
-		
 		&:after
 			content: "" 
 			position: absolute
@@ -100,6 +112,7 @@
 			right: 8px
 			+s(select)  
 			+tr(opacity .2s)
+			will-change: opacity
 	&__list
 		position: absolute
 		display: none

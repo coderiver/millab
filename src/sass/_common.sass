@@ -91,6 +91,9 @@ body
 	letter-spacing: .3px 
 	+reg
 	background: $light 
+	&.index-page
+		.header
+			overflow: visible
 a
 	text-decoration: none
 .l-center
@@ -115,7 +118,19 @@ a
 	height: 290px
 // common blocks      
 .header
+	position: relative
+	z-index: 2
 	background: #fff
+	overflow: hidden
+	&:before
+		content: ""
+		position: absolute
+		left: 312px
+		top: 32px 
+		z-index: 0 
+		width: 950px
+		height: 955px
+		background: url(../img/header-bg.png) 0 0 no-repeat  
 	.l-center
 		padding: 14px 0 17px
 		+clr
@@ -127,7 +142,7 @@ a
 		z-index: 2
 	&__contact
 		margin-top: 20px
-		float: right
+		float: right  
 		text-align: right
 	&__logo
 		margin-right: 50px
