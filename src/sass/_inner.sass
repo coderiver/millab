@@ -81,7 +81,8 @@
 				display: none
 		 
 .item
-	float: left
+	display: inline-block
+	vertical-align: top
 	position: relative
 	margin: 0 0 -1px -1px
 	border: 1px solid $border
@@ -90,6 +91,7 @@
 	overflow: hidden
 	height: 279px
 	+box
+	font-size: 12px
 	background: #fff 
 	text-align: center
 	+tr(background .4s)
@@ -144,6 +146,14 @@
 			text-align: left 
 			border-top: 1px solid #d8e2ea 
 			color: $text 
+	&__descr
+		padding: 14px 17px
+		text-align: left 
+		line-height: 1.7
+		border-top: 1px solid #d8e2ea 
+		color: $text 
+		p
+			margin-bottom: 11px
 .item_small
 	margin: 0 -1px 9px 0
 	padding: 18px 20px 
@@ -198,40 +208,20 @@
 		opacity: 0
 		will-change: opacity
 		+tr(opacity .4s)
-.item_table
-	margin: 0 -1px 9px 0
-	padding: 0 
-	width: 173px
+.has-extend
 	height: auto
-	&:hover
-		.btn-detail
-			opacity: 1
+	padding: 0
+	&.item_small
+		.item__top
+			height: 250px
+			padding: 18px 20px 
+	&.item_smaller
+		.item__top
+			height: 205px
+			padding: 10px 12px 
 	.item__top
 		position: relative
-		padding: 10px 12px 
-		height: 205px
 		+box
-	.item__title
-		font-size: 12px
-		line-height: 1.3
-	.item__img
-		margin-bottom: 5px
-		height: 130px
-		line-height: 130px
-		img
-			display: inline-block
-			vertical-align: middle
-	.btn-detail
-		position: absolute 
-		top: 10px
-		right: 12px
-		left: 12px
-		height: 130px
-		width: auto
-		line-height: 130px
-		opacity: 0
-		will-change: opacity
-		+tr(opacity .4s)
 .news-wrap
 	+clr
 	.news
