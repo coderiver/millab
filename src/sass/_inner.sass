@@ -114,6 +114,7 @@
 	&__title 
 		color: $azure
 		font-size: 14px 
+		
 	&__main
 		position: absolute
 		top: 30px 
@@ -137,6 +138,12 @@
 		text-align: center 
 		.item__title
 			margin-bottom: 13px
+	&__list
+		li
+			padding: 5px 17px
+			text-align: left 
+			border-top: 1px solid #d8e2ea 
+			color: $text 
 .item_small
 	margin: 0 -1px 9px 0
 	padding: 18px 20px 
@@ -147,6 +154,7 @@
 		height: 143px
 	.item__title
 		font-size: 12px
+		line-height: 1.3
 	.btn-detail
 		position: absolute 
 		top: 18px
@@ -162,9 +170,16 @@
 		.btn-detail
 			opacity: 1
 .item_smaller
-	padding: 10px 15px 
+	margin: 0 -1px 9px 0
+	padding: 10px 12px 
 	width: 173px
 	height: 205px
+	&:hover
+		.btn-detail
+			opacity: 1
+	.item__title
+		font-size: 12px
+		line-height: 1.3
 	.item__img
 		margin-bottom: 5px
 		height: 130px
@@ -173,11 +188,50 @@
 			display: inline-block
 			vertical-align: middle
 	.btn-detail
+		position: absolute 
 		top: 10px
-		right: 15px
-		left: 15px
+		right: 12px
+		left: 12px
+		height: 130px
+		width: auto
+		line-height: 130px
+		opacity: 0
+		will-change: opacity
+		+tr(opacity .4s)
+.item_table
+	margin: 0 -1px 9px 0
+	padding: 0 
+	width: 173px
+	height: auto
+	&:hover
+		.btn-detail
+			opacity: 1
+	.item__top
+		position: relative
+		padding: 10px 12px 
+		height: 205px
+		+box
+	.item__title
+		font-size: 12px
+		line-height: 1.3
+	.item__img
+		margin-bottom: 5px
 		height: 130px
 		line-height: 130px
+		img
+			display: inline-block
+			vertical-align: middle
+	.btn-detail
+		position: absolute 
+		top: 10px
+		right: 12px
+		left: 12px
+		height: 130px
+		width: auto
+		line-height: 130px
+		opacity: 0
+		will-change: opacity
+		+tr(opacity .4s)
 .news-wrap
 	+clr
 	.news

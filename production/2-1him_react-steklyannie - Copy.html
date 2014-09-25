@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>1-1sistemi_paral_sinteza</title>
+	<title>2-1him_react-steklyannie</title>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=1024">
 <link rel="stylesheet" media="screen" href="css/screen.css" >
@@ -31,34 +31,60 @@
 				<div class="tel">+7 495 933 71 47</div>
 			</div>
 		</div>
-		<div class="nav-wrap">
-			<div class="l-center">
-				<ul class="nav">
-					<li class="is-active"><a href="#">Оборудование</a></li>
-					<li><a href="#">Партнёры</a></li>           
-					<li><a href="#">Каталоги</a></li>           
-					<li><a href="#">Решения</a></li>           
-					<li><a href="#">Сервис</a></li> 
-					<li><a href="#">О проекте</a></li>           
-					<li><a href="#">Новости</a></li>           
-					<li><a href="#">Статьи</a></li>           
-					<li><a href="#">Контактная информация</a></li>
-				</ul>
-			</div>
-		</div>
 	</div>
 	<!-- end header -->
+	<div class="nav-wrap">
+		<div class="l-center">
+			<ul class="nav">
+				<li class="is-active"><a href="#">Оборудование</a></li>
+				<li><a href="#">Партнёры</a></li>           
+				<li><a href="#">Каталоги</a></li>           
+				<li><a href="#">Решения</a></li>           
+				<li><a href="#">Сервис</a></li> 
+				<li><a href="#">О проекте</a></li>           
+				<li><a href="#">Новости</a></li>           
+				<li><a href="#">Статьи</a></li>           
+				<li><a href="#">Контактная информация</a></li>
+			</ul>
+		</div>
+	</div>
 	<div class="l-center">
 		<ul class="breadcrumbs">
 			<li><a href="#"><span>Главная</span></a></li>
+			<li class="has-drop-list">
+				<a href="#"><span>Оборудование</span></a>
+				<ul>
+					<li><a href="#">Система параллельного синтеза</a></li>
+					<li><a href="#">Тонкопленочные испарители</a></li>
+					<li><a href="#">Химические реакторы</a></li>
+					<li><a href="#">Системы молекулярной дитиляции</a></li>
+					<li><a href="#">Оборудование для фильтрации</a></li>
+					<li><a href="#">Термостатирующее оборудование</a></li>
+					<li><a href="#">Ротационные испарители</a></li>
+					<li><a href="#">Общелабораторное оборудование</a></li>
+				</ul> 
+			</li>
+			<li class="has-drop-list">
+				<a href="#"><span>Химические реакторы</span></a>
+				<ul>
+					<li><a href="#">Система параллельного синтеза</a></li>
+					<li><a href="#">Тонкопленочные испарители</a></li>
+					<li><a href="#">Химические реакторы</a></li>
+					<li><a href="#">Системы молекулярной дитиляции</a></li>
+					<li><a href="#">Оборудование для фильтрации</a></li>
+					<li><a href="#">Термостатирующее оборудование</a></li>
+					<li><a href="#">Ротационные испарители</a></li>
+					<li><a href="#">Общелабораторное оборудование</a></li>
+				</ul> 
+			</li> 
 		</ul>	
 		<div class="main">
 			<ul class="sidebar">
-				<li class="is-active">
+				<li>
 					<a href="#">Системы параллельного синтеза</a>
 					<ul>
 						<li>
-							<a href="#" class="is-current">Станции параллельного синтеза Carousel 6 Plus</a>
+							<a href="#">Станции параллельного синтеза Carousel 6 Plus</a>
 						</li>
 						<li>
 							<a href="#">Станции параллельного синтеза Carousel 12 Plus</a>
@@ -83,11 +109,11 @@
 						</li>
 					</ul>
 				</li>
-				<li>
+				<li class="is-active">
 					<a href="#">Химические реакторы</a>
 					<ul>
-						<li>
-							<a href="#">Стеклянные реакторы</a>
+						<li class="is-active">
+							<a href="#" class="is-current">Стеклянные реакторы</a>
 							<ul>
 								<li>
 									<a href="#">Настольные исследовательские реакторы</a>
@@ -135,21 +161,21 @@
 			<div class="main__right-col">
 				<div class="main__head">
 					<div class="main__title">
-						<h1>Системы параллельного синтеза</h1>
+						<h1>Химические реакторы</h1>
 					</div>
 					<div class="main__set"> 
 						<div class="select select_year js-select">
-							<span class="select__text js-select-text">Лабораторное оборудование
+							<span class="select__text js-select-text">Всё оборудование
 							</span>
 							<ul class="select__list js-select-list">
-								<li><a href="0">Всё оборудование</a></li>
-								<li><a href="1" class="is-active">Лабораторное оборудование</a></li>
+								<li><a href="0" class="is-active">Всё оборудование</a></li>
+								<li><a href="1">Лабораторное оборудование</a></li>
 								<li><a href="2">Пилотное оборудование</a></li>
 								<li><a href="3">Промышленное оборудование</a></li>
 							</ul>
 							<select class="js-select-body">
-								<option value="0">Всё оборудование</option>
-								<option value="1" selected>Лабораторное оборудование</option>
+								<option value="0" selected>Всё оборудование</option>
+								<option value="1">Лабораторное оборудование</option>
 								<option value="2" >Пилотное оборудование</option>
 								<option value="3">Промышленное оборудование</option>
 							</select>
@@ -161,53 +187,52 @@
 				</div>
 				<div class="main__body">
 					<div class="wrapper">
-						<a class="item item_smaller" href="#">
+						<a class="item item_small" href="#">
 							<div class="item__img">
-								<img src="img/item9.png" alt="img">
+								<img src="img/item17.png" alt="img">
 							</div>
-							<div class="item__title">Breeze</div>
+							<div class="item__title">Настольные исследовательские реакторы</div>
 							<div class="btn-detail">Подробнее</div>
 						</a>
-						<a class="item item_smaller" href="#">
+						<a class="item item_small" href="#">
 							<div class="item__img">
-								<img src="img/item10.png" alt="img">
+								<img src="img/item18.png" alt="img">
 							</div>
-							<div class="item__title">Carousel 6 Plus</div>
+							<div class="item__title">Пилотные стеклянные реакторы</div>
 							<div class="btn-detail">Подробнее</div>
 						</a>
-						<a class="item item_smaller" href="#">
+						<a class="item item_small" href="#">
 							<div class="item__img">
-								<img src="img/item11.png" alt="img">
+								<img src="img/item19.png" alt="img">
 							</div>
-							<div class="item__title">Cooled Carousel 6 Plus</div>
+							<div class="item__title">Стеклянные реакторы для производств</div>
 							<div class="btn-detail">Подробнее</div>
 						</a>
-						<a class="item item_smaller" href="#">
+						<a class="item item_small" href="#">
 							<div class="item__img">
-								<img src="img/item12.png" alt="img">
+								<img src="img/item20.png" alt="img">
 							</div>
-							<div class="item__title">Tornado Plus</div>
+							<div class="item__title">Стеклянные реакторы для низкотемпературного синтеза</div>
 							<div class="btn-detail">Подробнее</div>
-						</a> 
-						<a class="item item_smaller" href="#">
+						</a>
+						<a class="item item_small" href="#">
 							<div class="item__img">
-								<img src="img/item13.png" alt="img">
+								<img src="img/item21.png" alt="img">
 							</div>
-							<div class="item__title">Storm</div>
+							<div class="item__title">Стеклянные реакторы для работы под давлением</div>
 							<div class="btn-detail">Подробнее</div>
-						</a> 
+						</a>
 					</div> 
-				</div>
+				</div> 
 				<div class="main__footer is-active">
 					<div class="box-more js-box-more">
 						<p>В нашем каталоге представлены описания оборудования и расходных материалов, которые Компания МИЛЛАБ предлагает на российском рынке — широкий спектр решений от ведущих производителей в мире.</p>
 						<p>Изучив каталог, Вы можете получить информацию о технических и функциональных характеристиках, получить рекомендации по подбору аксессуаров для более комфортной и производительной работы.</p>
-						<p>Мы хотим быть партнёрами наших клиентов, поэтому строим бизнес на принципах искренности и желания сотрудничать в будущем. Изучив каталог, Вы можете получить информацию о технических и функциональных характеристиках, получить рекомендации по подбору аксессуаров для более комфортной и производительной работы. </p>
 					</div>	
-					<a href="#" class="link-more js-more">
+					<!-- <a href="#" class="link-more js-more">
 						<span>Читать подробнее</span>
 						<span>Свернуть текст</span>
-					</a>
+					</a> -->
 				</div>
 			</div>
 		</div>
