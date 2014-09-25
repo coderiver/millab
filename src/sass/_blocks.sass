@@ -180,3 +180,30 @@
 			display: block
 			width: 100%
 			height: auto
+
+.box-more
+	position: relative
+	height: 135px
+	overflow: hidden
+	+tr(height .2s)
+	&.is-active
+		height: 100%
+.link-more
+	display: inline-block
+	color: $azure
+	font-size: 12px
+	line-height: 1.2
+	border-bottom: 1px dotted  
+	+transition(color .2s, border .2s)
+	&:hover
+		border-bottom-color: transparent
+		color: $azure_h  
+	span
+		display: none
+		&:first-child
+			display: inline
+	&.is-active
+		span
+			display: inline
+			&:first-child
+				display: none

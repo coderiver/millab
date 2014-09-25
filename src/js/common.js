@@ -66,4 +66,11 @@ head.ready(function() {
         return false;
         
     });
+
+    $(".js-more").on("click",function() {
+        var el = $(this).parent().find(".js-box-more");
+        $(this).toggleClass("is-active");
+        el.toggleClass("is-active");
+        return false;
+    });
 });

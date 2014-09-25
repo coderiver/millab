@@ -87,6 +87,7 @@
 	border: 1px solid $border
 	padding: 30px 35px 
 	width: 326px
+	overflow: hidden
 	height: 279px
 	+box
 	background: #fff 
@@ -102,16 +103,18 @@
 		margin: 0 0 19px 
 		height: 152px
 		overflow: hidden
-		img
+		img 
 			display: block
-			width: 100%
-			height: auto
-	&__title
+			//width: 100%
+			height: auto 
+			max-height: 100%
+			max-width: 100%
+	&__title 
 		color: $azure
 		font-size: 14px 
 	&__main
 		position: absolute
-		top: 30px
+		top: 30px 
 		bottom: 0
 		left: 35px
 		right: 35px
@@ -156,6 +159,23 @@
 	&:hover
 		.btn-detail
 			opacity: 1
+.item_smaller
+	padding: 10px 15px 
+	width: 173px
+	height: 205px
+	.item__img
+		margin-bottom: 5px
+		height: 130px
+		line-height: 130px
+		img
+			display: inline-block
+			vertical-align: middle
+	.btn-detail
+		top: 10px
+		right: 15px
+		left: 15px
+		height: 130px
+		line-height: 130px
 .news-wrap
 	+clr
 	.news
