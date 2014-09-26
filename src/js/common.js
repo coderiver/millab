@@ -73,4 +73,22 @@ head.ready(function() {
         el.toggleClass("is-active");
         return false;
     });
+
+    // accordeon
+    function accord () {
+        var el = $('.js-accord'),
+            item = el.find('.accord__item'),
+            head = el.find('.accord__head'),
+            content = el.find('.accord__in');
+        head.on('click', function () {
+            if (!$(this).parent().hasClass('is-active')) {
+                item.removeClass('is-active');
+                $(this).parent().addClass('is-active');
+                content.slideUp();
+                $(this).next().slideDown();
+            };
+        }); 
+    }
+    accord();
+
 });

@@ -1,8 +1,404 @@
 // verstalo naverstalo
 .links
-	padding: 22px 0
+	padding: 17px 0
+	margin-bottom: 30px
 	border: 1px solid #d8e2ea
 	border-width: 1px 0 
 	.links__list
+		font-size: 0
 		li
 			display: inline-block
+			padding-left: 20px
+			font-size: 13px
+			&:first-child
+				padding-left: 5px
+		a
+			color: $azure 
+
+.prod
+	.prod__row
+		padding-bottom: 40px
+		margin-bottom: 35px
+		border-bottom: 1px solid #d8e2ea 
+		+clr
+	.prod__gallery
+		float: left
+	.prod__previews
+		float: left
+		width: 40px
+		margin-right: 10px
+		font-size: 0
+		li
+			position: relative
+			margin-bottom: 10px
+			opacity: .5 
+			cursor: pointer
+			&.is-active
+				opacity: 1 
+				&:after
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					border: 2px solid $azure
+	.prod__slider
+		float: left
+		img
+			max-width: 100%
+			max-height: 100%
+			vertical-align: top
+	.prod__in
+		float: right
+		width: 300px
+	.prod__head
+		margin-bottom: 35px
+		+clr
+	.prod__brand
+		float: left
+	.prod__types
+		float: right
+		font-size: 0
+		i
+			display: inline-block
+			margin-left: 15px 
+			opacity: .3 
+			vertical-align: middle
+			&.is-active
+				opacity: 1 
+	.prod__types-1
+		+s(prod-type1)
+	.prod__types-2
+		+s(prod-type2)
+	.prod__types-3
+		+s(prod-type3)
+
+.accord
+	.accord__item
+		margin-bottom: 5px 
+		border: 1px solid #e5f8fe
+		+tr(border-color .2s)
+		&.is-active
+			border-color: #2d3441
+			cursor: default
+			.accord__head
+				background: #2d3441 
+				color: #fff 
+				&:after
+					+rotate(180)
+	.accord__head
+		position: relative
+		padding: 10px 40px 10px 15px
+		background: #E5F8FE 
+		font-size: 14px
+		line-height: 1.7
+		cursor: pointer
+		+transition(background-color .2s, color .2s)
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			right: 20px 
+			margin-top: -3px
+			+arr(6,5,#89969f,b)
+			+tr(transform .2s)
+	.accord__in
+		display: none
+		padding: 20px
+
+.video
+	position: relative
+	.video__iframe
+		font-size: 0
+	.video__play
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 64px
+		height: 64px
+		padding-left: 7px
+		margin: -32px 0 0 -32px
+		border: 3px solid $azure
+		border-radius: 50% 
+		background: none 
+		font-size: 0 
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			+arr(28,30,$azure,r)
+
+.request
+	padding: 35px 25px 55px
+	border: 1px solid $azure
+	border-width: 4px 0
+	background: url(../img/request-bg.png) no-repeat 0 100% #E5F8FE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
