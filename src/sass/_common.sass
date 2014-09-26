@@ -106,7 +106,7 @@ a
 	position: relative
 	z-index: 2
 	margin: 0 auto 
-	width: 975px
+	max-width: 975px
 .wrap
 	+clr
 	clear: both
@@ -247,6 +247,10 @@ a
 			position: relative
 			z-index: 2
 			background: #fff
+			&.is-active
+				a
+					background: #d3f2f7 
+					color: $azure 
 			a
 				color: $azure 
 				&:hover
