@@ -132,7 +132,8 @@ a { text-decoration: none; }
 
 .h2, h2 { font-weight: normal; font-size: 20px; line-height: 1.2; font-family: "opensans-semibold", Arial, sans-serif; }
 
-.field__title { padding-bottom: 6px; font-size: 12px; color: #2d3441; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.field__title { display: block; padding-bottom: 6px; font-size: 12px; color: #2d3441; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.field__body { display: block; }
 .field.has-error .input { border-color: red; color: red; }
 
 .field_hor { margin-bottom: 14px; *zoom: 1; }
@@ -148,6 +149,8 @@ a { text-decoration: none; }
 .input::-webkit-input-placeholder { color: #cecece; }
 .input::placeholder { color: #cecece; }
 .input:focus { border-color: #2d3341; }
+
+.input_textarea { padding: 13px; min-height: 130px; max-height: 180px; resize: vertical; }
 
 .btn { display: inline-block; padding: 12px 18px; border-radius: 3px; font-size: 10px; line-height: 1; color: white; font-family: "opensans-bold", Arial, sans-serif; text-transform: uppercase; background: #1dbed4; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; }
 .btn:hover { background: #62deef; }
