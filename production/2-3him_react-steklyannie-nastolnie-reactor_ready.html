@@ -170,7 +170,7 @@
 				</div>
 				<div class="main__body">
 					<!-- links -->
-					<div class="links">
+					<div class="links js-links">
 						<div class="links__wrap">
 							<div class="l-center">
 								<div class="links__in">
@@ -178,11 +178,11 @@
 										<a href="#" class="btn">Запрос стоимости</a>
 									</div>
 									<ul class="links__list">
-										<li><a href="#">Описание</a></li>
-										<li><a href="#">Комплектация</a></li>
-										<li><a href="#">Технические характеристики</a></li>
-										<li><a href="#">Применение</a></li>
-										<li><a href="#">Видео</a></li>
+										<li><a href="#description">Описание</a></li>
+										<li><a href="#complect">Комплектация</a></li>
+										<li><a href="#specifications">Технические характеристики</a></li>
+										<li><a href="#use">Применение</a></li>
+										<li><a href="#video">Видео</a></li>
 									</ul>
 								</div>
 							</div>
@@ -237,7 +237,7 @@
 							</div>
 						</div>
 						<!-- 2 -->
-						<div class="prod__row">
+						<div id="description" class="prod__row js-links-block">
 							<!-- content -->
 							<div class="content">
 								<h2>Описание</h2>
@@ -246,7 +246,7 @@
 							</div>
 						</div>
 						<!-- 3 -->
-						<div class="prod__row">
+						<div id="complect" class="prod__row js-links-block">
 							<!-- content -->
 							<div class="content">
 								<h2>Комплектация</h2>
@@ -508,7 +508,7 @@
 							</div>
 						</div>
 						<!-- 4 -->
-						<div class="prod__row">
+						<div id="specifications" class="prod__row js-links-block">
 							<!-- content -->
 							<div class="content">
 								<h2>Технические характеристики</h2>
@@ -581,12 +581,13 @@
 							</div>
 						</div>
 						<!-- 5 -->
-						<div class="prod__row">
+						<div id="use" class="prod__row js-links-block">
 							<!-- content -->
 							<div class="content">
 								<h2>Применение</h2>
 								<ul>
-									<li><strong>Химическая промышленность</strong>
+									<li>
+										<p><strong>Химическая промышленность</strong></p>
 										<p>исследование процесса синтеза, отработка рабочих параметров;</p>
 										<p>масштабирование процесса в условиях лаборатории;</p>
 										<p>моделирование процессов синтеза в промышленности, с использованием стандартных ёмкостей, имеющих геометрию производственных реакторов;</p>
@@ -596,7 +597,7 @@
 							</div>
 						</div>
 						<!-- 6 -->
-						<div class="prod__row">
+						<div id="video" class="prod__row js-links-block">
 							<!-- content -->
 							<div class="content">
 								<h2>Видео</h2>
@@ -680,7 +681,7 @@
 										</span> 
 									</label>
 									<!-- field -->
-									<label class="field">
+									<label class="field field_phone">
 										<span class="field__title">Телефон*</span>
 										<span class="field__body"> 
 											<input class="input" type="text">
@@ -696,15 +697,17 @@
 											<input class="input" type="text">
 										</span> 
 									</label>
-									<!-- field -->
-									<label class="field">
-										<span class="field__title">Сообщение</span>
-										<span class="field__body"> 
-											<textarea class="textarea"></textarea>
-										</span> 
-									</label>
+									<div class="request__message">
+										<!-- field -->
+										<label class="field">
+											<span class="field__title">Сообщение</span>
+											<span class="field__body"> 
+												<textarea class="input input_textarea"></textarea>
+											</span> 
+										</label>
+										<button class="btn">Отправить запрос</button>
+									</div>
 								</div>
-								<button class="btn">Отправить запрос</button>
 							</div>
 							<!-- back -->
 							<a href="#" class="link-back"><i>←</i> Назад в раздел</a>
