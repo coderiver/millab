@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<title>Error page</title>
+	@@include('_head.html')
+</head> 
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	@@include('_header.html')
+	<div class="l-center">
+		<nav class="breadcrumbs">
+			<a href="#"><span>Главная</span></a>
+		</nav>		
+		<div class="main">
+			<div class="main__container">
+				<div class="error">
+					<span>404</span>
+					<p>К сожалению, запрашиваемая страница не найдена.<br />
+Вы можете перейти на <a href="#">главную</a> или воспользоваться <a href="#">поиском</a>.</p>
+				</div>
+			</div>		
+		</div>
+	</div>
+	<div class="push"></div>
+</div>
+<!-- END out--> 
+@@include('_brands-slider.html')
+@@include('_footer.html')
+</body>
+</html>

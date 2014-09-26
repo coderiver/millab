@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+	<title>6-0 contacts</title>
+	@@include('_head.html')
+</head> 
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	@@include('_header.html')
+	<div class="l-center">
+		<nav class="breadcrumbs">
+			<a href="#"><span>Главная</span></a>
+		</nav>		
+		<div class="main">
+			<div class="main__container main__container_mod">
+				<div class="con">
+					<a href="#" class="con__button btn btn-detail"><span>контактная форма</span></a>
+					<h1>Контактная информация</h1>
+					<div class="con__row">
+						<ul class="main__sidebar">
+							<li>Москва</li>
+							<li><a href="#">Санкт-Петербург</a></li>
+							<li><a href="#">Новосибирск</a></li>
+							<li><a href="#">Краснодар</a></li>
+							<li><a href="#">Владивосток</a></li>
+							<li><a href="#">Минск</a></li>
+							<li><a href="#">Лондон</a></li>
+						</ul>
+						<div class="address">
+							<table>
+								<tr>
+									<td class="address__left"><span>Адрес:</span></td>
+									<td>
+										<p>127247 г. Москва, Дмитровское ш., д. 100,<br />
+										стр. 2, Бизнес-центр North House</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="address__left"><span>Телефон:</span></td>
+									<td>
+										<p>+7 495 933–71–47</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="address__left"><span>Факс:</span></td>
+									<td>
+										<p>+7 495 933–71–48</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="address__left"><span>E-mail:</span></td>
+									<td>
+										<p><a href="#">info@millab.ru</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td class="address__left"><span>Время работы:</span></td>
+									<td>
+										<p>пн–пт 09.00 – 18.00</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="address__left"><span>Как добраться:</span></td>
+									<td>
+										<p>Ближайшая ст.м. Петровско-Разумовская <br />
+<span class="address__i">В период с 08.00 до 10.00 и с 16.30 до 18.00 <br />
+курсирует корпоративный транспорт. <br /></span>
+Общественный транспорт от ст. м. Петровско-Разумовская:
+маршрутки №134, №735 до ост. «Дом 100»; <br />
+автобусы №63, №763, №763к до ост. «Яхромская улица».</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="map-canvas" class="map"></div>		
+			<script>
+			  	function initialize() {
+				    var mapOptions = {
+				      	zoom: 15,
+				      	center: new google.maps.LatLng(40.748296, -74.004394),
+				      	disableDefaultUI: true,
+				      	scrollwheel: false,
+				     	zoomControl: true,
+				    	zoomControlOptions: {
+				        	style: google.maps.ZoomControlStyle.DEFAULT
+				      	},
+				      	mapTypeId: google.maps.MapTypeId.ROADMAP
+				    }
+				    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+				    var image = 'img/marker.png';
+				    var myLatLng1 = new google.maps.LatLng(40.748296, -74.004394);
+				    var marker1 = new google.maps.Marker({
+					      position: myLatLng1,
+					      map: map,
+					      title: 'Uluru (Ayers Rock)', 
+					      icon: image
+					});
+				    var contentString1 =	'<div style="width:200px;height: 80px">'
+							+'<p>115 E.23rd Street </p>'
+							+'<p>3rd. Floor </p>'
+							+'<p>New York, NY</p>'
+							+'<p>10010</p>'+
+						'</div>';
+				  	var infowindow1 = new google.maps.InfoWindow({
+					    content: contentString1
+					});
+					google.maps.event.addListener(marker1, 'click', function(){
+					    infowindow1.open(map,marker1);
+					});
+					//infowindow1.open(map,marker1);
+
+				}
+			  	// Asynchronous Loading
+				function loadScript() {
+				  var script = document.createElement('script');
+				  script.type = 'text/javascript';
+				  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+				      'callback=initialize';
+				  document.body.appendChild(script);
+				}
+				window.onload = loadScript;
+			</script>		
+		</div>
+	</div>
+
+	@@include('_brands-slider.html')
+	<div class="push"></div>
+</div>
+<!-- END out--> 
+@@include('_footer.html')
+</body>
+</html>
