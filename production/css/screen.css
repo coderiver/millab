@@ -195,6 +195,10 @@ a { text-decoration: none; }
 .pagin { text-align: center; }
 .pagin a { display: inline-block; border: 1px solid #1fbfd5; padding: 3px 4px; font-size: 13px; }
 
+.link-back { display: inline-block; color: #1fbfd5; font-size: 14px; font-family: "opensans-semibold", Arial, sans-serif; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
+.link-back:hover { color: #62deef; }
+.link-back i { display: inline-block; margin-right: 5px; font: normal 18px Arial, sans-serif; }
+
 .main { background: white; margin-bottom: 30px; *zoom: 1; }
 .main:after { content: " "; display: table; clear: both; }
 .main__right-col { float: right; width: 691px; padding: 0 36px 0 38px; }
@@ -220,6 +224,8 @@ a { text-decoration: none; }
 .main__footer { border-top: 1px solid #e9edf0; padding: 52px 35px 57px 82px; line-height: 24px; }
 .main__footer p { margin-bottom: 11px; }
 .main__footer p:first-child { font-size: 14px; }
+.main__footer .link-back { margin-top: 34px; }
+.main__footer_mod { padding-top: 20px; }
 
 .sidebar { float: left; position: relative; margin: 25px 0 0 -22px; padding: 15px 0; width: 232px; font-size: 13px; background: #2d3441; }
 .sidebar:after { content: ""; position: absolute; left: 0; bottom: -14px; width: 0px; height: 0px; border-style: solid; border-width: 0 22px 14px 0; border-color: transparent black transparent transparent; }
@@ -244,6 +250,8 @@ a { text-decoration: none; }
 .sidebar a:hover { color: #1fbfd5; }
 .sidebar a.is-current:before { content: ""; position: absolute; top: 50%; left: 15px; margin-top: -2px; width: 5px; height: 5px; background: white; border-radius: 50%; }
 .sidebar ul { font-size: 12px; display: none; }
+
+.sidebar_simple:before { display: none; }
 
 .promo-wrap { background: #2d3441; *zoom: 1; }
 .promo-wrap:after { content: " "; display: table; clear: both; }
@@ -346,7 +354,7 @@ a { text-decoration: none; }
 
 .has-extend { height: auto; padding: 0; }
 .has-extend.item_small .item__top { height: 250px; padding: 18px 20px; }
-.has-extend.item_smaller .item__top { height: 205px; padding: 10px 12px; }
+.has-extend.item_smaller .item__top { height: 205px; padding: 10px 9px; }
 .has-extend .item__top { position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .news-wrap { *zoom: 1; }
