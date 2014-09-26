@@ -17,6 +17,11 @@
 			li
 				&:first-child
 					padding-left: 20px
+			a
+				&.is-active
+					color: $text
+					&:before
+						opacity: 1 
 		.links__order
 			display: block
 	.links__wrap
@@ -35,16 +40,17 @@
 			display: block
 			padding: 17px 0
 			color: $azure 
-			&.is-active
-				color: $text
-				&:before
-					content: ""
-					position: absolute
-					top: 0
-					left: 0
-					right: 0
-					height: 4px
-					background: $azure 
+			+tr(color .2s)
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				height: 4px
+				background: $azure 
+				opacity: 0
+				+tr(opacity .2s) 
 	.links__order
 		float: right
 		margin: 13px 0 0 20px
