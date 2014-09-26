@@ -453,4 +453,11 @@ a { text-decoration: none; }
 
 .content > * { margin-bottom: 20px; }
 .content ul li { position: relative; padding-left: 40px; margin-bottom: 10px; }
-.content ul li:before { content: ""; position: absolute; top: 10px; left: 0; width: 23px; height: 1px; background: #1fbfd5; }
+.content ul li:before { content: ""; position: absolute; top: 11px; left: 0; width: 23px; height: 1px; background: #1fbfd5; }
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 { font-family: "opensans-semibold", Arial, sans-serif; font-weight: normal; }
+.content h2 { margin-bottom: 25px; }
+.content h5 { font-size: 14px; font-weight: normal; }
+.content tr:nth-child(2n) td { background: #f3f8f9; }
+.content td { padding: 10px 20px; border-bottom: 1px solid #e8eff5; }
+.content img[align="left"] { float: left; margin: 0 20px 20px 0; }
+.content b, .content strong { font-family: "opensans-semibold", Arial, sans-serif; font-size: 14px; }

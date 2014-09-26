@@ -182,13 +182,33 @@
 			&:before
 				content: ""
 				position: absolute
-				top: 10px
+				top: 11px
 				left: 0
 				width: 23px
 				height: 1px
 				background: $azure 
-
-
+	h1, h2, h3, h4, h5, h6
+		+sbold
+		font-weight: normal 
+	h2
+		margin-bottom: 25px
+	h5
+		font-size: 14px
+		font-weight: normal
+	tr
+		&:nth-child(2n)
+			td
+				background: #F3F8F9 
+	td
+		padding: 10px 20px 
+		border-bottom: 1px solid #e8eff5
+	img
+		&[align="left"]
+			float: left
+			margin: 0 20px 20px 0
+	b, strong
+		+sbold
+		font-size: 14px
 
 
 
