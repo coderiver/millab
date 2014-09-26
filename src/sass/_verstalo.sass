@@ -1,19 +1,54 @@
 // verstalo naverstalo
 .links
-	padding: 17px 0
+	min-height: 60px
 	margin-bottom: 30px
 	border: 1px solid #d8e2ea
 	border-width: 1px 0 
+	&.is-fixed
+		.links__wrap
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+			z-index: 999
+			background: #FFF 
+			box-shadow: 0 2px 5px rgba(0,1,1,.2)
+		.links__list
+			li
+				&:first-child
+					padding-left: 20px
+		.links__order
+			display: block
+	.links__wrap
+		+clr
 	.links__list
+		display: table
 		font-size: 0
 		li
-			display: inline-block
+			display: table-cell
 			padding-left: 20px
 			font-size: 13px
 			&:first-child
 				padding-left: 5px
 		a
+			position: relative
+			display: block
+			padding: 17px 0
 			color: $azure 
+			&.is-active
+				color: $text
+				&:before
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					height: 4px
+					background: $azure 
+	.links__order
+		float: right
+		margin: 13px 0 0 20px
+		display: none
 
 .prod
 	.prod__row
@@ -45,6 +80,7 @@
 					border: 2px solid $azure
 	.prod__slider
 		float: left
+	.prod__slider-item
 		img
 			max-width: 100%
 			max-height: 100%
@@ -135,7 +171,22 @@
 	border-width: 4px 0
 	background: url(../img/request-bg.png) no-repeat 0 100% #E5F8FE 
 
-
+.content
+	>*
+		margin-bottom: 20px 
+	ul
+		li
+			position: relative
+			padding-left: 40px
+			margin-bottom: 10px
+			&:before
+				content: ""
+				position: absolute
+				top: 10px
+				left: 0
+				width: 23px
+				height: 1px
+				background: $azure 
 
 
 

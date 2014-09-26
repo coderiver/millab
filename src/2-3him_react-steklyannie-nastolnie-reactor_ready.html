@@ -5,6 +5,7 @@
 	@@include('_head.html')
 </head> 
 <body>
+</div>
 <!-- BEGIN  out-->
 <div class="out">
 	@@include('_header.html')
@@ -130,13 +131,22 @@
 				<div class="main__body">
 					<!-- links -->
 					<div class="links">
-						<ul class="links__list">
-							<li><a href="#">Описание</a></li>
-							<li><a href="#">Комплектация</a></li>
-							<li><a href="#">Технические характеристики</a></li>
-							<li><a href="#">Применение</a></li>
-							<li><a href="#">Видео</a></li>
-						</ul>
+						<div class="links__wrap">
+							<div class="l-center">
+								<div class="links__in">
+									<div class="links__order">
+										<a href="#" class="btn">Запрос стоимости</a>
+									</div>
+									<ul class="links__list">
+										<li><a href="#">Описание</a></li>
+										<li><a href="#">Комплектация</a></li>
+										<li><a href="#">Технические характеристики</a></li>
+										<li><a href="#">Применение</a></li>
+										<li><a href="#">Видео</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- prod -->
 					<div class="prod">
@@ -144,14 +154,23 @@
 						<div class="prod__row">
 							<div class="prod__gallery">
 								<ul class="prod__previews">
-									<li class="is-active"><img src="http://placehold.it/40x40" alt=""></li>
+									<li><img src="http://placehold.it/40x40" alt=""></li>
 									<li><img src="http://placehold.it/40x40" alt=""></li>
 									<li><img src="http://placehold.it/40x40" alt=""></li>
 									<li><img src="http://placehold.it/40x40" alt=""></li>
 									<li><img src="http://placehold.it/40x40" alt=""></li>
 								</ul>
-								<div class="prod__slider">
-									<img src="http://placehold.it/300x400" alt="">
+								<div class="prod__slider cycle-slideshow"
+									data-cycle-timeout="0"
+									data-cycle-pager=".prod__previews"
+									data-cycle-slides=".prod__slider-item"
+									data-cycle-pager-template=""
+									data-cycle-pager-active-class="is-active">
+									<div class="prod__slider-item"><img src="http://placehold.it/300x400" alt=""></div>
+									<div class="prod__slider-item"><img src="http://placehold.it/300x400" alt=""></div>
+									<div class="prod__slider-item"><img src="http://placehold.it/300x400" alt=""></div>
+									<div class="prod__slider-item"><img src="http://placehold.it/300x400" alt=""></div>
+									<div class="prod__slider-item"><img src="http://placehold.it/300x400" alt=""></div>
 								</div>
 							</div>
 							<div class="prod__in">
@@ -515,7 +534,7 @@
 						<div class="prod__row">
 							<!-- content -->
 							<div class="content">
-								<h2>Комплектация</h2>
+								<h2>Применение</h2>
 								<ul>
 									<li>Химическая промышленность
 										<p>исследование процесса синтеза, отработка рабочих параметров;</p>

@@ -86,7 +86,11 @@ head.ready(function() {
                 $(this).parent().addClass('is-active');
                 content.slideUp();
                 $(this).next().slideDown();
-            };
+            }
+            else {
+                item.removeClass('is-active');
+                $(this).next().slideUp();
+            }
         }); 
     }
     accord();
