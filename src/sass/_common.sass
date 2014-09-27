@@ -126,21 +126,21 @@ a
 // common blocks      
 .header
 	position: relative
-	z-index: 2
+	z-index: 2 
 	background: #fff
 	overflow: hidden
-	&:before
-		content: ""
-		position: absolute
-		left: 312px
-		top: 32px 
-		z-index: 0 
-		width: 950px
-		height: 955px
-		background: url(../img/header-bg.png) 0 0 no-repeat  
 	.l-center
 		padding: 14px 0 17px
 		+clr
+		&:before
+			content: ""
+			position: absolute
+			right: 178px
+			top: 32px 
+			z-index: 0 
+			width: 950px
+			height: 955px
+			background: url(../img/header-bg.png) 0 0 no-repeat  
 	&__logo,
 	&__about,
 	&__search
@@ -230,6 +230,8 @@ a
 	background: $text
 	.l-center
 		padding: 0
+		&:before
+			display: none
 .nav
 	display: table
 	position: relative
