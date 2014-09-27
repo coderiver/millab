@@ -64,7 +64,7 @@ head.ready(function() {
         $(this).parents(".js-select").find('option[value="'+val+'"]').attr("selected", "selected");
         $(this).parents(".js-select-list").find("a").removeClass("is-active");
         $(this).addClass("is-active");
-        $(this).parents(".js-select").removeClass("is-active");
+        $(this).parents(".js-select").removeClass("is-active").removeClass("is-empty");
         $(this).parents(".js-select-list").slideUp(100);
         return false;
         
