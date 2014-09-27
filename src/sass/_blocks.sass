@@ -288,6 +288,9 @@
 		
 .sort
 	font-size: 12px
+	&_right
+		float: right
+		margin-right: 44px
 	&__title
 		display: inline-block
 		vertical-align: middle
@@ -332,6 +335,9 @@
 				color: $azure_h 
 	select
 		display: none
+	.select
+		display: inline-block
+		vertical-align: middle
 .drop
 	position: relative
 	font-size: 11px
@@ -446,3 +452,15 @@
 			height: 8px
 			border-radius: 50%
 			background: $text
+.category 
+	a
+		display: inline-block
+		color: $gray
+		font-size: 12px
+		+tr(color .2s)
+		&:after
+			content: "/"
+			display: inline-block
+			margin-left: 3px 
+		&:hover
+			color: $azure 

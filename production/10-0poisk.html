@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>5-0post</title>
+	<title>10-0poisk</title>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=1024">
 <link rel="stylesheet" media="screen" href="css/screen.css" >
@@ -17,10 +17,10 @@
 			<div class="header__about">
 				Оборудование для синтеза премиум-класса 
 			</div>
-			<div class="header__search">
+			<div class="search">
 				<form class="js-form">
-					<input type="text" placeholder="Поиск по сайту">
-					<button type="submint"></button>
+					<input class="search__input" type="text" placeholder="Поиск по сайту">
+					<button class="search__btn" type="submit"></button>
 				</form>
 			</div> 
 			<div class="header__contact">
@@ -55,126 +55,42 @@
 		<div class="main">
 			<div class="main__head no-border">
 				<div class="main__title">
-					<h1>Новости</h1>
+					<h1>Поиск</h1>
 				</div>
 				<div class="main__opt"> 
-					<div class="main__nav">
-						<a href="#" class="is-active">Все</a>     
-						<a href="#">2014</a>     
-						<a href="#">2013</a>     
-						<a href="#">2012</a>
-					</div>
-					<div class="sort">
-						<span class="sort__title">Сортировать по:</span>
-						<div class="sort__body js-select">
-							<span class="sort__text js-select-text">дате
+					<div class="sort sort_right">
+						<span class="sort__title">Показывать по:</span>
+						<div class="select js-select">
+							<span class="select__text js-select-text">10
 							</span>
-							<ul class="sort__list js-select-list">
-								<li><a href="0" class="is-active">дате</a></li>
-								<li><a href="1">дате</a></li>
-								<li><a href="2">дате</a></li>
-								<li><a href="3">дате</a></li>
+							<ul class="select__list js-select-list">
+								<li><a href="0">10</a></li>
+								<li><a href="1" class="is-active">20</a></li>
+								<li><a href="2">30</a></li>
+								<li><a href="3">40</a></li>
 							</ul>
 							<select class="js-select-body">
-								<option value="0">дате</option>
-								<option value="1">дате</option>
-								<option value="2">дате</option>
-								<option value="3">дате</option>
+								<option value="0" selected>10</option>
+								<option value="1">20</option>
+								<option value="2">30</option>
+								<option value="3">40</option>
 							</select>
 						</div>
 					</div>
-					<a href="#" class="btn">подписаться</a>
 				</div>
-			</div> 
-			<div class="main__body">
-				<div class="post-wrap">
-					<a class="post" href="#">
-						<div class="post__img">
-							<img src="img/item1.png" alt="img">
-						</div>
-						<div class="item__title">Спектрофотометр Agilent Cary 7000</div>
-						<p>вошёл в топ 100 технологически значимых продуктов по версии журнала R&D за 2014 год.</p>
-						<span class="date">17 Июля 2014</span>
-						<div class="btn-detail">Подробнее</div>
-					</a>
-					<a class="post" href="#">
-						<div class="post__img">
-							<img src="img/item2.png" alt="img">
-						</div>
-						<div class="item__title">Спектрофотометр Agilent Cary 7000</div>
-						<p>вошёл в топ 100 технологически значимых продуктов по версии журнала R&D за 2014 год.</p>
-						<span class="date">17 Июля 2014</span>
-						<div class="btn-detail">Подробнее</div>
-					</a>
-					<a class="post" href="#">
-						<div class="post__img">
-							<img src="img/item3.png" alt="img">
-						</div>
-						<div class="item__title">Спектрофотометр Agilent Cary 7000</div>
-						<p>вошёл в топ 100 технологически значимых продуктов по версии журнала R&D за 2014 год.</p>
-						<span class="date">17 Июля 2014</span>
-						<div class="btn-detail">Подробнее</div>
-					</a>
-					<a class="post" href="#">
-						<div class="post__img">
-							<img src="img/item4.png" alt="img">
-						</div>
-						<div class="item__title">Спектрофотометр Agilent Cary 7000</div>
-						<p>вошёл в топ 100 технологически значимых продуктов по версии журнала R&D за 2014 год.</p>
-						<span class="date">17 Июля 2014</span>
-						<div class="btn-detail">Подробнее</div>
-					</a>
-					<a class="post" href="#">
-						<div class="post__img">
-							<img src="img/item5.png" alt="img">
-						</div>
-						<div class="item__title">Спектрофотометр Agilent Cary 7000</div>
-						<p>вошёл в топ 100 технологически значимых продуктов по версии журнала R&D за 2014 год.</p>
-						<span class="date">17 Июля 2014</span>
-						<div class="btn-detail">Подробнее</div>
-					</a>
-					<a class="post" href="#">
-						<div class="post__img">
-							<img src="img/item6.png" alt="img">
-						</div>
-						<div class="item__title">Спектрофотометр Agilent Cary 7000</div>
-						<p>вошёл в топ 100 технологически значимых продуктов по версии журнала R&D за 2014 год.</p>
-						<span class="date">17 Июля 2014</span>
-						<div class="btn-detail">Подробнее</div>
-					</a>
-					<a class="post" href="#">
-						<div class="post__img">
-							<img src="img/item7.png" alt="img">
-						</div>
-						<div class="item__title">Спектрофотометр Agilent Cary 7000</div>
-						<p>вошёл в топ 100 технологически значимых продуктов по версии журнала R&D за 2014 год.</p>
-						<span class="date">17 Июля 2014</span>
-						<div class="btn-detail">Подробнее</div>
-					</a>
-					<a class="post" href="#">
-						<div class="post__img">
-							<img src="img/item8.png" alt="img">
-						</div>
-						<div class="item__title">Спектрофотометр Agilent Cary 7000</div>
-						<p>вошёл в топ 100 технологически значимых продуктов по версии журнала R&D за 2014 год.</p>
-						<span class="date">17 Июля 2014</span>
-						<div class="btn-detail">Подробнее</div>
-					</a>
-					<a class="post" href="#">
-						<div class="post__img">
-							<img src="img/item9.png" alt="img">
-						</div>
-						<div class="item__title">Спектрофотометр Agilent Cary 7000</div>
-						<p>вошёл в топ 100 технологически значимых продуктов по версии журнала R&D за 2014 год.</p>
-						<span class="date">17 Июля 2014</span>
-						<div class="btn-detail">Подробнее</div>
-					</a>
-				</div> 
-				<div class="pagin">
-					<a href="#" class="is-active">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
+			</div>
+			<div class="main__in">
+				<div class="search search_width">
+					<div class="search__main">
+						<input class="search__input" type="text" class="input" value="Синтез">
+					</div>
+					<button class="btn" type="submit">найти</button>
+					<div class="search__text">
+						<p>По запросу “<strong>Синтез</strong>” найдено 15 совпадений</p>
+						<a href="#" class="link-back"><i>←</i>  Вернуться назад</a>
+					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>

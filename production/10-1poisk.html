@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>7-1 services</title>
+	<title>10-1poisk</title>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=1024">
 <link rel="stylesheet" media="screen" href="css/screen.css" >
@@ -17,10 +17,10 @@
 			<div class="header__about">
 				Оборудование для синтеза премиум-класса 
 			</div>
-			<div class="header__search">
+			<div class="search">
 				<form class="js-form">
-					<input type="text" placeholder="Поиск по сайту">
-					<button type="submint"></button>
+					<input class="search__input" type="text" placeholder="Поиск по сайту">
+					<button class="search__btn" type="submit"></button>
 				</form>
 			</div> 
 			<div class="header__contact">
@@ -49,33 +49,112 @@
 	</div>
 	<!-- end header -->
 	<div class="l-center">
-		<nav class="breadcrumbs">
-			<a href="#"><span>Главная</span></a>
-		</nav>		
+		<ul class="breadcrumbs">
+			<li><a href="#"><span>Главная</span></a></li>
+		</ul>		
 		<div class="main">
-			<div class="main__container main__container_mod">
-				<div class="services">
-					<h1>Сертификаты</h1>
-					<ul class="main__sidebar">
-						<li><a href="#">Сервис</a></li>
-						<li>Сертификаты</li>
-						<li><a href="#" class="is-bold">Форма заявки</a></li>
-						<li><a href="#">Сервисный контракт</a></li>
-					</ul>
-					<div class="services__text">
-						<h6>Компания МИЛЛАБ Синтез является дочерним подразделением компании МИЛЛАБ, специализирующемся на оборудовании для химического синтеза, фильтрации, дистилляции, а также циркуляционных термостатирующих системах.</h6>
-						<div class="certificates">
-							<a href="#" class="certificate"><img src="img/wtsn/certificate(1).png" alt=""><div></div></a>
-							<a href="#" class="certificate"><img src="img/wtsn/certificate(2).png" alt=""><div></div></a>
-							<a href="#" class="certificate"><img src="img/wtsn/certificate(3).png" alt=""><div></div></a>
-							<a href="#" class="certificate"><img src="img/wtsn/certificate(4).png" alt=""><div></div></a>
-							<a href="#" class="certificate"><img src="img/wtsn/certificate(5).png" alt=""><div></div></a>
-							<a href="#" class="certificate"><img src="img/wtsn/certificate(4).png" alt=""><div></div></a>
-							<a href="#" class="certificate"><img src="img/wtsn/certificate(2).png" alt=""><div></div></a>
+			<div class="main__head no-border">
+				<div class="main__title">
+					<h1>Поиск</h1>
+				</div>
+				<div class="main__opt"> 
+					<div class="sort sort_right">
+						<span class="sort__title">Показывать по:</span>
+						<div class="select js-select">
+							<span class="select__text js-select-text">10
+							</span>
+							<ul class="select__list js-select-list">
+								<li><a href="0">10</a></li>
+								<li><a href="1" class="is-active">20</a></li>
+								<li><a href="2">30</a></li>
+								<li><a href="3">40</a></li>
+							</ul>
+							<select class="js-select-body">
+								<option value="0" selected>10</option>
+								<option value="1">20</option>
+								<option value="2">30</option>
+								<option value="3">40</option>
+							</select>
 						</div>
 					</div>
 				</div>
-			</div>		
+			</div>
+			<div class="main__in">
+				<div class="search search_width">
+					<div class="search__main">
+						<input class="search__input" type="text" class="input" value="Духи">
+					</div>
+					<button class="btn" type="submit">найти</button>
+					<div class="search__text">
+						<p>К сожалению, по вашему запросу “<strong>Духи</strong>” ничего не найдено. Проверьте правильность введенных данных.</p>
+					</div>
+				</div>
+				<div class="clause">
+					<span class="clause__counter">1</span>
+					<a href="#" class="clause__title">Спектрофотометр Agilent Cary 7000</a>
+					<p>Спектрофотометры Agilent Cary 7000 вошёл в топ 100 технологически значимых продуктов компании Миллаб среди лабораторного синтеза по версии журнала R&D за 2014 год...</p>
+					<div class="category">
+						<a href="#">Оборудование</a>
+						<a href="#">Системы параллельного синтеза</a>
+						<a href="#">Станции параллельного синтеза</a>
+					</div>
+				</div>
+				<div class="clause">
+					<span class="clause__counter">2</span>
+					<a href="#" class="clause__title">Спектрофотометр Agilent Cary 7000</a>
+					<p>Спектрофотометры Agilent Cary 7000 вошёл в топ 100 технологически значимых продуктов компании Миллаб среди лабораторного синтеза по версии журнала R&D за 2014 год...</p>
+					<div class="category">
+						<a href="#">Оборудование</a>
+						<a href="#">Системы параллельного синтеза</a>
+						<a href="#">Станции параллельного синтеза</a>
+					</div>
+				</div>
+				<div class="clause">
+					<span class="clause__counter">3</span>
+					<a href="#" class="clause__title">Спектрофотометр Agilent Cary 7000</a>
+					<p>Спектрофотометры Agilent Cary 7000 вошёл в топ 100 технологически значимых продуктов компании Миллаб среди лабораторного синтеза по версии журнала R&D за 2014 год...</p>
+					<div class="category">
+						<a href="#">Оборудование</a>
+						<a href="#">Системы параллельного синтеза</a>
+						<a href="#">Станции параллельного синтеза</a>
+					</div>
+				</div>
+				<div class="clause">
+					<span class="clause__counter">4</span>
+					<a href="#" class="clause__title">Спектрофотометр Agilent Cary 7000</a>
+					<p>Спектрофотометры Agilent Cary 7000 вошёл в топ 100 технологически значимых продуктов компании Миллаб среди лабораторного синтеза по версии журнала R&D за 2014 год...</p>
+					<div class="category">
+						<a href="#">Оборудование</a>
+						<a href="#">Системы параллельного синтеза</a>
+						<a href="#">Станции параллельного синтеза</a>
+					</div>
+				</div>
+				<div class="clause">
+					<span class="clause__counter">5</span>
+					<a href="#" class="clause__title">Спектрофотометр Agilent Cary 7000</a>
+					<p>Спектрофотометры Agilent Cary 7000 вошёл в топ 100 технологически значимых продуктов компании Миллаб среди лабораторного синтеза по версии журнала R&D за 2014 год...</p>
+					<div class="category">
+						<a href="#">Оборудование</a>
+						<a href="#">Системы параллельного синтеза</a>
+						<a href="#">Станции параллельного синтеза</a>
+					</div>
+				</div>
+				<div class="clause">
+					<span class="clause__counter">6</span>
+					<a href="#" class="clause__title">Спектрофотометр Agilent Cary 7000</a>
+					<p>Спектрофотометры Agilent Cary 7000 вошёл в топ 100 технологически значимых продуктов компании Миллаб среди лабораторного синтеза по версии журнала R&D за 2014 год...</p>
+					<div class="category">
+						<a href="#">Оборудование</a>
+						<a href="#">Системы параллельного синтеза</a>
+						<a href="#">Станции параллельного синтеза</a>
+					</div>
+				</div>
+				<div class="pagin">
+					<a href="#" class="is-active">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="push"></div>
@@ -180,6 +259,6 @@
 </div>
 <!-- end footer -->
 <!-- load scripts -->
-<script src="js/lib/head.js" data-headjs-load="js/init.js"></script> 
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>  
 </body>
 </html>
