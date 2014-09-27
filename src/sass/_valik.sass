@@ -3,13 +3,13 @@
 	border-bottom: 1px solid #d8e2ea
 .main
 	&__container
-		padding: 44px 0 80px 0
+		padding: 40px 0 80px 0
 		background: white
 		h1, h2, h3, h4, h5, h6
 			font-weight: normal
 		h1
 			+reg
-			line-height: 24px
+			line-height: 1.2
 			letter-spacing: 1px
 			color: $text
 			margin-bottom: 27px
@@ -97,13 +97,13 @@
 //CONTACTS
 .con
 	padding: 0px 37px 0px 62px
-	&__button
+	.btn_con
 		text-align: center
 		font-size: 0
 		line-height: 22px
 		height: 34px
 		width: 153px
-		padding: 4px 0 0 0
+		padding: 0
 		margin-top: 1px
 		float: right
 		+vertical
@@ -121,29 +121,31 @@
 	float: left
 	width: 550px
 	padding-top: 35px
-	table
-		width: 100%
-		td
-			padding: 2px 0 4px 0
-		p
-			font-size: 13px
-			line-height: 26px
-		a
-			color: #1dbed4
-			text-decoration: underline
-			+transition(color 0.4s ease)
-			&:hover
-				color: $azure_h
-				text-decoration: none
-		.con__i
-			+it
+	div
+		padding: 2px 0 4px 0
+		+clr
+	p
+		font-size: 13px
+		line-height: 26px
+	a
+		color: #1dbed4
+		text-decoration: underline
+		+transition(color 0.4s ease)
+		&:hover
+			color: $azure_h
+			text-decoration: none
+	.con__i
+		+it
 	&__left
 		width: 125px
-		span
-			font-size: 13px
-			+bold
-			color: $text
-			line-height: 24px
+		float: left
+		font-size: 13px
+		+bold
+		color: $text
+		line-height: 24px
+	p
+		width: 425px
+		float: left
 	&_mod
 		text-align: justify
 		font-size: 0.1px
@@ -158,7 +160,7 @@
 		width: 325px
 		vertical-align: top
 		display: inline-block
-		padding: 38px 0 12px 0
+		margin: 38px 0 12px 0
 		h4
 			font-size: 16px
 			line-height: 28px
@@ -166,6 +168,8 @@
 			letter-spacing: 0.3px
 			+sbold
 			margin-bottom: 17px
+		p
+			width: 100%
 	
 .con_mod
 	padding-bottom: 40px
@@ -206,6 +210,8 @@
 				right: -15px
 		.is-bold
 			+bold
+		.is-active
+			color: $text
 	ul
 		display: block
 		li
@@ -215,7 +221,7 @@
 			a
 				font-size: 12px
 //SERVICES
-.services
+.main__wrap
 	padding: 0px 81px 0px 62px
 	background: white
 	+clr 
@@ -226,9 +232,8 @@
 		margin-bottom: 22px
 	h6
 		letter-spacing: 0.2px 
-	&-i
-		width: 975px
-		margin: 0 auto 
+
+.services
 	&__text
 		width: 647px
 		padding-top: 5px
@@ -254,7 +259,7 @@
 //CERTIFICATES BLOCK
 .certificates
 	text-align: left
-	word-spacing: 18px 
+	word-spacing: 16px 
 	font-size: 0.1px
 	padding-top: 27px
 	border: none
@@ -273,7 +278,7 @@
 	+clr
 	margin-bottom: 19px
 	position: relative
-	+transition(color 0.4s ease)
+	+transition(border-color 0.4s ease)
 	img
 		float: left
 		position: relative
@@ -287,14 +292,17 @@
 		position: absolute
 		top: 0
 		left: 0
-		display: none
+		visibility: hidden
+		opacity: 0
+		+transition(all 0.4s ease)
 		z-index: 10 
 	&:hover
 		border: 3px solid $azure
 		border-radius: 3px
 		margin: -2px -2px 17px -2px
 		div
-			display: block
+			opacity: 1
+			visibility: visible
 			
 //NUMBERED LIST
 .numbered
@@ -371,8 +379,10 @@
 			background: #44cdde
 			border: 1px solid #44cdde
 			text-align: left
-			display: none
+			opacity: 0
+			visibility: hidden
 			overflow: hidden
+			+transition(all 0.4s ease)
 			span
 				+bold
 				font-size: 15px
@@ -389,7 +399,8 @@
 				letter-spacing: 0px 
 		&:hover
 			div
-				display: block
+				opacity: 1
+				visibility: visible
 //ERROR
 .error
 	width: 430px
