@@ -246,11 +246,23 @@
 				
 .pagin
 	text-align: center
+	margin-bottom: 60px
 	a
 		display: inline-block
-		border: 1px solid $azure
-		padding: 3px 4px 
+		margin-left: 10px
+		border: 1px solid transparent
+		padding: 3px 4px 2px
 		font-size: 13px
+		line-height: 1
+		color: $text
+		+tr(color .2s)
+		&.is-active
+			border-color: $azure
+			background: #f2fcfe 
+		&:first-child
+			margin-left: 0
+		&:hover
+			color: $azure 
 		
 .link-back
 	display: inline-block
@@ -264,3 +276,51 @@
 		display: inline-block
 		margin-right: 5px 
 		font: normal 18px Arial,sans-serif 
+		
+.sort
+	font-size: 12px
+	&__title
+		display: inline-block
+		vertical-align: middle
+		color: $text
+	&__body
+		display: inline-block
+		position: relative
+		vertical-align: middle
+	&__text
+		display: inline-block
+		vertical-align: middle
+		padding-right: 11px
+		height: 30px
+		line-height: 30px
+		position: relative
+		cursor: pointer
+		+unselectable
+		color: $azure
+		&:after
+			content: ""
+			position: absolute
+			right: 0
+			top: 13px
+			+arr(6,4,$azure,b) 
+	&__list
+		display: none
+		position: absolute
+		z-index: 2
+		top: 100%
+		left: -10px
+		padding: 5px 0 
+		width: auto
+		background: #fff 
+		border-radius: 3px 
+		box-shadow: 0 0 2px rgba(#000,.5) 
+		+tr(color .2s)
+		a
+			display: block
+			padding: 0 10px 
+			color: $azure
+			&:hover
+				color: $azure_h 
+	select
+		display: none
+	

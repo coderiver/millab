@@ -18,6 +18,10 @@
 		font-size: 14px
 		line-height: 1.7
 		+clr
+		&.no-border
+			border: 0
+			margin: 0
+			padding-bottom: 34px
 		.wrap
 			clear: both
 			padding-top: 21px
@@ -33,6 +37,30 @@
 			margin-top: 6px
 		.btn
 			float: right
+	&__opt
+		float: right
+		padding-top: 6px
+		width: 613px
+		+justify
+		.btn
+			display: inline-block
+			vertical-align: middle
+	&__nav
+		display: inline-block
+		vertical-align: middle
+		a
+			display: inline-block
+			margin-right: 20px
+			font-size: 13px
+			color: $text
+			+tr(color .2s)
+			&:hover,
+			&.is-active
+				color: $azure 
+	.sort
+		display: inline-block
+		vertical-align: middle
+		
 	&__body
 		+clr
 		.wrapper
@@ -62,6 +90,10 @@
 		border-top: 1px solid $border
 		padding: 52px 35px 57px 82px
 		line-height: 24px
+		&.no-border
+			border: 0
+			margin: 0
+			padding-bottom: 34px
 		p
 			margin-bottom: 11px
 			&:first-child
