@@ -703,6 +703,7 @@
 		margin: 26px 0 
 		border: 0
 		height: 1px
+		clear: both
 		background: $border  
 	ul
 		font-size: 0
@@ -801,4 +802,24 @@
 			margin-right: 7px
 	+ .link-back
 		margin-top: 52px
+
+.page-action
+	position: absolute
+	right: -38px
+	top: 47px
+	padding: 11px 0 2px 
+	width: 38px
+	background: #fff 
+	+gh(#eaeaec, #fff 20%)
+	text-align: center
+	&.is-fixed
+		position: fixed
+		top: 0
+		left: 50%
+		margin-left: 487px
+	&.has-top-margin
+		margin-top: 60px
 		
+	a
+		display: block
+		margin-bottom: 2px

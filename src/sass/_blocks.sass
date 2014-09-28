@@ -14,6 +14,52 @@
 	&-mol
 		display: inline-block
 		+s(mol)
+	&-print
+		display: inline-block
+		position: relative
+		width: 18px
+		height: 18px
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			will-change: opacity
+			+tr(opacity .4s)
+		&:before
+			+s(print-dark)
+		&:after
+			+s(print)
+			opacity: 0
+		&:hover
+			&:before
+				opacity: 0
+			&:after
+				opacity: 1
+	&-pdf
+		display: inline-block
+		position: relative
+		width: 18px
+		height: 18px
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			will-change: opacity
+			+tr(opacity .4s)
+		&:before
+			+s(pdf-dark)
+		&:after
+			+s(pdf)
+			opacity: 0
+		&:hover
+			&:before
+				opacity: 0
+			&:after
+				opacity: 1
 .h1, h1 
 	font-weight: normal
 	font-size: 30px
