@@ -76,6 +76,10 @@
 			position: absolute
 			top: 30px
 			left: 0
+		a
+			color: #1fbfd5
+			&:hover
+				color: $azure_h
 .blockquote
 	width: 650px
 	margin: 0 auto
@@ -344,11 +348,73 @@
 
 //PARTNERS
 .partners
-	padding: 0 70px 10px 82px
+	padding: 0 60px 10px 82px
 	&__title
-		width: 800px
+		width: 100%
 	h6
 		margin-bottom: 23px
+	h6, p
+		max-width: 800px
+	&__img
+		width: 340px
+		float: left
+		height: 180px
+		+vertical
+		text-align: left
+		padding-left: 10px
+		img
+			display: inline-block
+			vertical-align: middle
+	&__text
+		width: 480px
+		float: left
+	&__box
+		padding-top: 35px
+		clear: both
+		width: 810px
+		border-bottom: 1px solid $border
+		padding-bottom: 30px
+		p
+			margin-bottom: 15px
+		h5
+			+it
+			a
+				color: #1fbfd5
+				+transition(all 0.4s ease)
+				&:hover
+					color: $azure_h
+		h5, h6, p
+			max-width: 100%
+		h2
+			margin-bottom: 25px
+		.partners__list
+			padding-left: 40px
+			li
+				position: relative
+				padding-left: 40px
+				+transition(all 0.4s ease)
+				&:before
+					display: block
+					content: ""
+					height: 1px
+					width: 23px
+					background: #1dbed4
+					position: absolute
+					top: 12px
+					left: 0
+				&:hover
+					&:before
+						background: $azure_h
+				a
+					color: #1fbfd5
+					+transition(all 0.4s ease)
+					+sbold
+					font-size: 13px 
+					&:hover
+						color: $azure_h
+	&__box_mod
+		width: 100%
+		border: none
 .partners__logo
 	width: 760px
 	+clr
@@ -424,3 +490,95 @@
 			+transition(all 0.4s ease)
 			&:hover
 				color: $azure_h
+//CATALOG
+.catalog
+	padding: 0 81px 0 82px
+	+clr
+	&__right
+		float: right
+		+vertical
+		text-align: left
+		.select
+			width: 211px
+			display: inline-block
+			vertical-align: middle
+		.select_cat
+			width: 52px
+		.catalog__label
+			vertical-align: middle
+			display: inline-block
+			font-size: 12px
+			+reg
+			color: $text
+			margin: 0 10px 0 80px 
+	table
+		margin-top: 30px
+		margin-bottom: 55px
+		float: left
+		+clr
+		td
+			border: 1px solid $border
+			vertical-align: top
+		.catalog__logo
+			a
+				+vertical
+				width: 164px
+				height: 128px
+				display: block
+				img
+					vertical-align: middle
+					display: inline-block
+					margin: 0 auto
+		.catalog__text
+			width: 644px
+			img
+				margin: 16px 20px 20px 20px
+				border: 1px solid #edf3f8
+				background-color: #fff
+				box-shadow: 3px 4px 3px rgba(169, 185, 197, 0.67)
+				display: inline-block
+				vertical-align: top
+			div
+				display: inline-block
+				vertical-align: top
+				width: 400px
+				padding-top: 22px
+				a
+					color: $azure
+					font-size: 13px
+					+reg
+					line-height: 22px 
+					+transition(all 0.4s ease)
+					&:hover
+						color: $azure_h
+				p
+					color: $text
+					font-size: 12px
+					line-height: 22px
+					letter-spacing: 0.3px 
+			span
+				float: right
+				padding: 45px 20px 0 20px
+				display: block
+				+reg
+				font-size: 12px
+				color: #c0c0c0
+				letter-spacing: 0.3px  
+	.pagin
+		text-align: center
+		a
+			display: inline-block
+			margin-left: 10px
+			border: 1px solid transparent
+			padding: 3px 4px 2px
+			font-size: 13px
+			line-height: 1
+			color: $text
+			+tr(color .2s)
+			&.is-active
+				border-color: $azure
+				background: #f2fcfe 
+			&:first-child
+				margin-left: 0
+			&:hover
+				color: $azure 
