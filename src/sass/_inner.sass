@@ -433,3 +433,372 @@
 			color: $azure_h 
 	.category
 		margin-top: 8px
+// verstalo naverstalo
+.links
+	min-height: 60px
+	margin-bottom: 30px
+	border: 1px solid #d8e2ea
+	border-width: 1px 0 
+	&.is-fixed
+		.links__wrap
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+			z-index: 999
+			background: #FFF 
+			box-shadow: 0 2px 5px rgba(0,1,1,.2)
+		.links__list
+			li
+				&:first-child
+					padding-left: 20px
+			a
+				&.is-active
+					color: $text
+					&:before
+						opacity: 1 
+		.links__order
+			display: block
+	.links__wrap
+		+clr
+	.links__list
+		display: table
+		font-size: 0
+		li
+			display: table-cell
+			padding-left: 20px
+			font-size: 13px
+			&:first-child
+				padding-left: 5px
+		a
+			position: relative
+			display: block
+			padding: 17px 0
+			color: $azure 
+			+tr(color .2s)
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				height: 4px
+				background: $azure 
+				opacity: 0
+				+tr(opacity .2s) 
+	.links__order
+		float: right
+		margin: 13px 0 0 20px
+		display: none
+
+.prod
+	.prod__row
+		padding-bottom: 40px
+		margin-bottom: 35px
+		border-bottom: 1px solid #d8e2ea 
+		+clr
+	.prod__gallery
+		float: left
+	.prod__previews
+		float: left
+		width: 40px
+		margin-right: 10px
+		font-size: 0
+		li
+			position: relative
+			margin-bottom: 10px
+			+tr(opacity .2s)
+			opacity: .5
+			cursor: pointer
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				border: 2px solid $azure
+				+tr(opacity .2s)
+				opacity: 0
+			&.is-active
+				opacity: 1 
+				&:after
+					opacity: 1 
+	.prod__slider
+		float: left
+		font-size: 0
+		text-align: center
+	.prod__slider-item
+		img
+			max-width: 100%
+			max-height: 100%
+			vertical-align: top
+	.prod__in
+		float: right
+		width: 300px
+	.prod__head
+		margin-bottom: 35px
+		+clr
+	.prod__brand
+		float: left
+	.prod__types
+		float: right
+		font-size: 0
+		i
+			display: inline-block
+			margin-left: 15px 
+			opacity: .3 
+			vertical-align: middle
+			&.is-active
+				opacity: 1 
+	.prod__types-1
+		+s(prod-type1)
+	.prod__types-2
+		+s(prod-type2)
+	.prod__types-3
+		+s(prod-type3)
+
+.accord
+	.accord__item
+		margin-bottom: 5px 
+		border: 1px solid #e5f8fe
+		+tr(border-color .2s)
+		&.is-active
+			border-color: #2d3441
+			cursor: default
+			.accord__head
+				background: #2d3441 
+				color: #fff 
+				&:after
+					+rotate(180)
+	.accord__head
+		position: relative
+		padding: 10px 40px 10px 15px
+		background: #E5F8FE 
+		font-size: 14px
+		line-height: 1.7
+		cursor: pointer
+		+transition(background-color .2s, color .2s)
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			right: 20px 
+			margin-top: -3px
+			+arr(6,5,#89969f,b)
+			+tr(transform .2s)
+	.accord__in
+		display: none
+		padding: 20px
+
+.video
+	position: relative
+	.video__iframe
+		font-size: 0
+	.video__play
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -32px 0 0 -32px
+		+s(play)
+		&:hover
+			+sp(play-h)
+		
+
+.request
+	padding: 35px 25px 55px
+	margin-bottom: 45px
+	border: 1px solid $azure
+	border-width: 4px 0
+	background: url(../img/request-bg.png) no-repeat 0 100% #E5F8FE 
+	.request__fieldset
+		+clr
+		.field
+			float: left 
+			width: 200px 
+			margin: 0 0 20px 20px
+			&:first-child
+				margin-left: 0
+		.field_phone
+			.input
+				float: left
+				width: 140px
+				&:first-child
+					width: 50px
+					margin-right: 10px
+	.request__message
+		float: left
+		width: 400px
+		margin-left: 20px
+		.field
+			width: 400px
+
+.content
+	>*
+		margin-bottom: 20px 
+	ul
+		li
+			position: relative
+			padding-left: 40px
+			margin-bottom: 10px
+			&:before
+				content: ""
+				position: absolute
+				top: 11px
+				left: 0
+				width: 23px
+				height: 1px
+				background: $azure 
+	h1, h2, h3, h4, h5, h6
+		+sbold
+		font-weight: normal 
+	h2
+		margin-bottom: 25px
+	h5
+		font-size: 14px
+		font-weight: normal
+	tr
+		&:nth-child(2n)
+			td
+				background: #F3F8F9 
+	td
+		padding: 10px 20px 
+		border-bottom: 1px solid #e8eff5
+	img
+		&[align="left"]
+			float: left
+			margin: 0 20px 20px 0
+	b, strong
+		+sbold
+		font-size: 14px
+		font-weight: normal 
+
+.article
+	padding: 40px 82px 103px
+	.date
+		margin-bottom: 11px
+	h1,h2,h3,h4,h5,h6
+		font-weight: normal
+	h1
+		margin-bottom: 20px
+	h2
+		margin: 40px 0 30px
+	h6
+		margin-bottom: 10px
+		font-size: 14px
+	p
+		margin: 0 0 10px 
+	img
+		&[align="left"]
+			margin: 8px 34px 20px 0 
+		&[align="right"]
+			margin: 8px 0 20px 34px
+	blockquote
+		background: $blue 
+		padding: 35px 35px 30px 35px
+		text-align: center
+		margin: 44px 0 35px
+		text-transform: uppercase
+	hr
+		margin: 26px 0 
+		border: 0
+		height: 1px
+		background: $border  
+	ul
+		font-size: 0
+		li
+			position: relative
+			display: inline-block
+			vertical-align: top
+			margin: 0 0 6px 
+			padding: 0 20px 0 68px
+			width: 50%
+			font-size: 12px
+			+box
+			&:before
+				content: ""
+				position: absolute
+				top: 11px
+				left: 25px
+				height: 1px
+				width: 23px
+				background: #1dbed4
+	//NUMBERED LIST
+	ol
+		+column-count(2)
+		+column-width(340px)
+		counter-reset: list1
+		padding: 14px 16px 0 20px
+		li
+			position: relative
+			display: inline-block
+			vertical-align: top
+			margin: 0 0 17px 
+			padding: 5px 20px 0 68px
+			+box
+			&:before
+				counter-increment: list1 
+				content: counter(list1)
+				position: absolute
+				top: 0
+				left: 19px
+				height: 32px
+				width: 32px
+				text-align: center
+				line-height: 32px
+				+box
+				font-size: 14px
+				color: $text 
+				border-radius: 50% 
+				border: 1px solid $azure
+				
+	.video
+		margin-bottom: 42px
+.gallery
+	padding-top: 10px
+	font-size: 0
+	margin-right: -20px
+	a
+		display: inline-block
+		position: relative
+		margin: 0 15px 15px 0
+		vertical-align: middle
+		&:hover
+			&:after
+				opacity: 1
+				visibility: visible
+		&:after
+			content: "" 
+			opacity: 0
+			visibility: hidden 
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			border: 2px solid $azure
+			background: rgba($azure, .4)
+			+tr(opacity .4s)
+			will-change: opacity 
+		img
+			display: block
+
+.review
+	position: relative
+	margin: 0 0 30px 
+	padding-left: 68px
+	&:before
+		content: ""
+		position: absolute
+		left: 24px
+		top: 3px
+		+s(quote) 
+	&__meta
+		font-size: 12px
+		color: #b4b4b4
+		img
+			vertical-align: middle
+			margin-right: 7px
+	+ .link-back
+		margin-top: 52px
+		

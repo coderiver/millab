@@ -77,7 +77,15 @@ head.ready(function() {
         return false;
     });
 
-    // accordeon
+// fancy box
+        $(".js-fancybox a").fancybox({
+            padding: 1,
+            openEffect: 'elastic',
+            closeEffect: 'elastic',
+        });
+
+
+// accordeon
     function accord () {
         var el = $('.js-accord'),
             item = el.find('.accord__item'),
@@ -98,7 +106,7 @@ head.ready(function() {
     }
     accord();
 
-    // links
+// links
     function links () {
         var el = $('.links'),
             el_wrap = el.find('.links__wrap'),
