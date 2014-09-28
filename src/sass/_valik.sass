@@ -3,7 +3,6 @@
 	border-bottom: 1px solid #d8e2ea
 .main
 	&__container
-		padding: 40px 0 80px 0
 		background: white
 		h1, h2, h3, h4, h5, h6
 			font-weight: normal
@@ -13,8 +12,6 @@
 			letter-spacing: 1px
 			color: $text
 			margin-bottom: 27px
-		&_mod
-			padding-bottom: 60px
 		h6, h5, p
 			+reg
 			font-size: 14px
@@ -25,82 +22,44 @@
 			+sbold
 		p
 			font-size: 12px 
-.about
-	padding: 0px 0 29px 0
-	margin: 0 81px 0 82px
-	+clr
-	border-bottom: 1px solid $light
-	h2
-		margin-bottom: 3px
-		margin-top: 38px
-	&__img
-		width: 270px
-		padding: 18px 39px 0 41px
-		float: left
-	&__text
-		float: left
-		width: 462px
-		h6
-			margin-bottom: 14px
-	&_mod
+.article
+	ul
+		li
+			a
+				color: #1fbfd5
+				+sbold
+				font-size: 13px
+				line-height: 24px
+				letter-spacing: 0.3px 
+				&:hover
+					color: $azure_h 
+	i
+		+it
+		a
+			color: #1fbfd5
+			+transition(all 0.4s ease)
+			&:hover
+				color: $azure_h
+	div
 		text-align: justify
 		font-size: 0.1px
 		border: none
+		width: 100%
+		padding-top: 0px
 		&:after
 			content: ""
 			width: 100%
 			display: inline-block
-		h5
+		div
 			text-align: left
-		
-.list
-	+reg
-	font-size: 12px
-	line-height: 20px
-	letter-spacing: 0.3px
-	color: $text
-	width: 48%
-	float: left
-	li
-		width: 260px
-		padding-left: 43px
-		margin-left: 26px
-		padding-top: 20px
-		position: relative
-		&:before
-			display: block
-			content: ""
-			height: 1px
-			width: 23px
-			background: #1dbed4
-			position: absolute
-			top: 30px
-			left: 0
-		a
-			color: #1fbfd5
-			&:hover
-				color: $azure_h
-.blockquote
-	width: 650px
-	margin: 0 auto
-	background: $blue 
-	padding: 35px 80px 30px 80px
-	text-align: center
-	margin-top: 41px
-	margin-bottom: 3px
-	p
-		text-transform: uppercase
-		font-size: 12px 
-.col
-	text-align: left
-	width: 253px
-	display: inline-block
-	padding-top: 20px
-	h5
-		margin-bottom: 6px
+			max-width: 253px
+			display: inline-block
+			padding-top: 20px
+			h5
+				margin-bottom: 6px
 //CONTACTS
 .con
-	padding: 0px 37px 0px 62px
+	padding: 40px 37px 60px 62px
 	.btn_con
 		text-align: center
 		font-size: 0
@@ -185,6 +144,8 @@
 .main__sidebar
 	width: 185px
 	float: left
+	margin: 100px 0px 0px 62px
+	min-height: 210px
 	li
 		font-size: 13px
 		padding: 5px 0
@@ -226,7 +187,7 @@
 				font-size: 12px
 //SERVICES
 .main__wrap
-	padding: 0px 81px 0px 62px
+	padding: 40px 81px 60px 62px
 	background: white
 	+clr 
 	h1, h2, h3, h4, h5, h6
@@ -238,6 +199,8 @@
 		letter-spacing: 0.2px 
 
 .services
+	padding: 40px 81px 60px 62px
+	+clr
 	&__text
 		width: 647px
 		padding-top: 5px
@@ -299,6 +262,7 @@
 		visibility: hidden
 		opacity: 0
 		+transition(all 0.4s ease)
+		will-change: opacity
 		z-index: 10 
 	&:hover
 		border: 3px solid $azure
@@ -309,46 +273,12 @@
 			visibility: visible
 			
 //NUMBERED LIST
-.numbered
-	-moz-column-count: 2
-	-moz-column-width: 340px
-	-moz-column-gap: 0px
-	-webkit-column-count: 2
-	-webkit-column-width: 340px
-	-webkit-column-gap: 0px
-	column-count: 2
-	column-width: 340px
-	column-gap: 0px
-	+clr
-	padding: 10px 16px 0 20px
-	li
-		+clr
-		padding: 10px 0 
-		span
-			font-size: 14px
-			line-height: 24px
-			color: $text
-			letter-spacing: 0.3px
-			+reg
-			border: 1px solid #1fbfd5
-			border-radius: 50%
-			width: 30px
-			text-align: center
-			height: 27px
-			padding-top: 3px
-			display: block
-			float: left
-		p
-			width: 270px
-			float: left
-			display: block
-			padding-top: 5px
-			margin-left: 15px
-			text-align: left
+
 
 //PARTNERS
 .partners
-	padding: 0 60px 10px 82px
+	padding: 40px 60px 80px 82px
+	+clr
 	&__title
 		width: 100%
 	h6
@@ -449,6 +379,7 @@
 			visibility: hidden
 			overflow: hidden
 			+transition(all 0.4s ease)
+			will-change: opacity
 			span
 				+bold
 				font-size: 15px
@@ -492,7 +423,7 @@
 				color: $azure_h
 //CATALOG
 .catalog
-	padding: 0 81px 0 82px
+	padding: 40px 81px 40px 82px
 	+clr
 	&__right
 		float: right
@@ -564,21 +495,3 @@
 				font-size: 12px
 				color: #c0c0c0
 				letter-spacing: 0.3px  
-	.pagin
-		text-align: center
-		a
-			display: inline-block
-			margin-left: 10px
-			border: 1px solid transparent
-			padding: 3px 4px 2px
-			font-size: 13px
-			line-height: 1
-			color: $text
-			+tr(color .2s)
-			&.is-active
-				border-color: $azure
-				background: #f2fcfe 
-			&:first-child
-				margin-left: 0
-			&:hover
-				color: $azure 
