@@ -14,6 +14,8 @@
 	&-mol
 		display: inline-block
 		+s(mol)
+	&-done
+		+s(arr-done)
 	&-print
 		display: inline-block
 		position: relative
@@ -24,7 +26,7 @@
 			content: ""
 			position: absolute
 			left: 0
-			top: 0
+			top: 0 
 			will-change: opacity
 			+tr(opacity .4s)
 		&:before

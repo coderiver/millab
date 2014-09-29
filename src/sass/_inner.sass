@@ -342,8 +342,42 @@
 		+tr(opacity .4s)
 
 .form
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 4
+		visibility: hidden
+		background: #fff
+		background: rgba(#fff,.95)  
+		opacity: 0
+		will-change: opacity 
+	&.has-open-message	
+		.form__message
+			opacity: 1
+			visibility: visible
+		&:before
+			opacity: 1
+			visibility: visible
 	h2
 		margin: 46px 0 24px
+	&__message
+		position: absolute
+		z-index: 5
+		top: 0
+		left: 0
+		width: 390px
+		visibility: hidden
+		opacity: 0
+		will-change: opacity
+		.icon-done
+			display: block
+			margin: 7px auto 
+		
 .search
 	position: relative
 	margin: 44px 0 0
@@ -356,15 +390,17 @@
 		height: 36px
 		+box
 		border-radius: 4px 
-		background: #fcfdfd 
+		background: #fff 
+		background: rgba(#fff,.5)
 		+reg
-		+tr(border .4s)
+		+transition(border .4s, background .4s)
 		color: $text 
 		font-size: 12px
 		+placeholder
 			color: #cecece 
 		&:focus
 			border-color: $azure 
+			background: rgba(#fff,1)
 			+ button
 				&:before
 					opacity: 0
