@@ -1,53 +1,13 @@
 <!doctype html>
-<html>
+<html class="has-open-popup">
 <head>
 	<title>index</title>
-	<meta charset="utf-8">
-<meta name="viewport" content="width=1024">
-<link rel="stylesheet" media="screen,print" href="css/screen.css" >
-<!--[if IE]><script src="js/html5shiv.js"></script><![endif]--> 
+	@@include('_head.html')
 </head> 
 <body class="index-page">
-<!-- BEGIN  out-->
+<!-- BEGIN	out-->
 <div class="out">
-		<!-- begin header -->
-	<div class="header">
-		<div class="l-center">
-			<a href="#" class="header__logo"></a>
-			<div class="header__about">
-				Оборудование для синтеза премиум-класса 
-			</div>
-			<div class="search">
-				<form class="js-form">
-					<input class="search__input" type="text" placeholder="Поиск по сайту">
-					<button class="search__btn" type="submit"></button>
-				</form>
-			</div> 
-			<div class="header__contact">
-				<a href="js-popup-callback" class="header__callback js-popup-link">
-					<i class="icon-tel"></i>
-					Обратный звонок
-				</a>
-				<div class="tel">+7 495 933 71 47</div>
-			</div>
-		</div>
-		<div class="nav-wrap">
-			<div class="l-center">
-				<ul class="nav">
-					<li class="is-active"><a href="#">Оборудование</a></li>
-					<li><a href="#">Партнёры</a></li>           
-					<li><a href="#">Каталоги</a></li>           
-					<li><a href="#">Решения</a></li>           
-					<li><a href="#">Сервис</a></li> 
-					<li><a href="#">О проекте</a></li>           
-					<li><a href="#">Новости</a></li>           
-					<li><a href="#">Статьи</a></li>           
-					<li><a href="#">Контактная информация</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- end header -->
+	@@include('_header.html')
 	<div class="promo-wrap">
 		<div class="l-center">
 			<div class="promo promo_lab">
@@ -161,22 +121,7 @@
 		<a href="#">Оборудование Lauda</a>
 	</div>
 </div>
-<div class="brands-slider">
-	<div class="l-center js-slick">
-		<div><a href="brand1" class="js-window-toggle"><img src="img/logo1.png" alt="logo" height="132"></a></div>
-		<div><a href="brand2" class="js-window-toggle"><img src="img/logo2.png" alt="logo" height="132"></a></div>
-		<div><a href="brand3" class="js-window-toggle"><img src="img/logo3.png" alt="logo" height="132"></a></div>
-		<div><a href="brand4" class="js-window-toggle"><img src="img/logo4.png" alt="logo" height="132"></a></div>
-		<div><a href="brand5" class="js-window-toggle"><img src="img/logo5.png" alt="logo" height="132"></a></div>
-		<div><a href="brand6" class="js-window-toggle"><img src="img/logo6.png" alt="logo" height="132"></a></div>
-		<div><a href="brand1" class="js-window-toggle"><img src="img/logo1.png" alt="logo" height="132"></a></div>
-		<div><a href="brand2" class="js-window-toggle"><img src="img/logo2.png" alt="logo" height="132"></a></div>
-		<div><a href="brand3" class="js-window-toggle"><img src="img/logo3.png" alt="logo" height="132"></a></div>
-		<div><a href="brand4" class="js-window-toggle"><img src="img/logo4.png" alt="logo" height="132"></a></div>
-		<div><a href="brand5" class="js-window-toggle"><img src="img/logo5.png" alt="logo" height="132"></a></div>
-		<div><a href="brand6" class="js-window-toggle"><img src="img/logo6.png" alt="logo" height="132"></a></div>
-	</div>
-</div> 
+	@@include('_brands-slider.html')
 
 	<div class="l-center">
 		<div class="benefits-wrap">
@@ -253,34 +198,57 @@
 	<div class="push"></div>
 </div>
 <!-- END out--> 
-<!-- begin footer -->
-<div class="footer">
-	<div class="footer__main">
-		<div class="footer__left">
-			<p>© 1996 — 2014 МИЛЛАБ Синтез</p>
-			<a href="#"><i class="icon-sitemap"></i>Карта сайта</a>
-		</div>
-		<div class="footer__right">
-			<div class="footer__top">
-				<div class="tel">+7 495 933 71 47</div>
-				<div class="soc">
-					<a href="#" class="soc__fb">facebook</a>
-					<a href="#" class="soc__tw">twitter</a>
-					<a href="#" class="soc__ln">linkedin</a>
-				</div>
-				<a href="#" class="footer__logo">
-					<img src="img/flex.png" alt="flexmedia">
-				</a> 
+@@include('_footer.html')
+<div class="overlay js-overlay" style="display:block"></div>
+<div class="popup-wrap js-popup" data-popup="js-popup-callback">
+	<div class="popup">
+		<div class="popup__title">Обратный звонок</div>
+		<form class="js-validate">
+			<label class="field">
+				<span class="field__title">Имя*</span>
+				<span class="field__body"> 
+					<input class="input" type="text" required>
+				</span> 
+			</label>
+			<label class="field field_phone">
+				<span class="field__title">Телефон*</span>
+				<span class="field__body"> 
+					<input class="input" type="text">
+					<input class="input" type="text">
+				</span> 
+			</label>
+			<label class="field">
+				<span class="field__title">Удобное время для связи</span>
+				<span class="field__body"> 
+					<input class="input" type="text" required>
+				</span> 
+			</label>
+			<label class="field field_width">
+				<span class="field__title">Дополнительная информация</span>
+				<span class="field__body"> 
+					<textarea class="input input_textarea no-resize"></textarea>
+				</span> 
+			</label>
+			<div class="field">
+				<span class="field__body"> 
+					<button type="submit" class="btn">перезвоните мне</button>
+				</span> 
 			</div>
-			<div class="footer__contacts">
-				<p>127247 г. Москва, Дмитровское ш., д. 100, 
-				<p>стр. 2, Бизнес-центр North House</p>
-			</div>
-		</div>
+		</form>
+		<button type="button" class="popup__close js-popup-close"></button>
 	</div>
 </div>
-<!-- end footer -->
-<!-- load scripts -->
-<script src="js/lib/head.js" data-headjs-load="js/init.js"></script> 
+<div class="popup-wrap to-center js-popup is-visible" data-popup="js-popup-callback-done">
+	<div class="popup">
+		<div class="popup__title">Спасибо за проявленный интерес! </div>
+		<div class="popup__message">
+			<p>Запрос успешно отправлен, наш специалист свяжется с вами в течение 1 рабочего дня.</p>
+			<p><a href="#">Вернуться в раздел</a></p>
+		</div>
+		<button type="button" class="popup__close js-popup-close"></button>
+	</div>
+</div>
+
+
 </body>
 </html>

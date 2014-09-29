@@ -59,7 +59,7 @@
 							</td>
 							<td class="catalog__text">
 								<img src="img/wtsn/cat-item(1).png" alt="">
-								<div><a href="#">Каталог Gosselin “Пластиковая посуда”</a>
+								<div><a href="js-popup-download" class="js-popup-link">Каталог Gosselin “Пластиковая посуда”</a>
 								<p>В каталоге представлены все имеющиеся модели пластиковой посуды за 2014 год, в том числе и новая коллекция из пластика</p></div>
 								<span>PDF, 8,7 Мб</span>
 							</td>
@@ -67,7 +67,7 @@
 						<tr>
 							<td class="catalog__text">
 								<img src="img/wtsn/cat-item(2).png" alt="">
-								<div><a href="#">Каталог оборудования Gosselin</a>
+								<div><a href="js-popup-download" class="js-popup-link">Каталог оборудования Gosselin</a>
 								<p>В каталоге представлены все имеющиеся модели пластиковой посуды за 2014 год, в том числе и новая коллекция из пластика</p></div>
 								<span>PDF, 8,7 Мб</span>
 							</td>
@@ -78,7 +78,7 @@
 							</td>
 							<td class="catalog__text">
 								<img src="img/wtsn/cat-item(3).png" alt="">
-								<div><a href="#">Лабораторные и настольные автоклавы “Tuttnauer”</a>
+								<div><a href="js-popup-download" class="js-popup-link">Лабораторные и настольные автоклавы “Tuttnauer”</a>
 								<p>В каталоге представлены все имеющиеся модели пластиковой посуды за 2014 год, в том числе и новая коллекция из пластика</p></div>
 								<span>PDF, 8,7 Мб</span>
 							</td>
@@ -89,7 +89,7 @@
 							</td>
 							<td class="catalog__text">
 								<img src="img/wtsn/cat-item(1).png" alt="">
-								<div><a href="#">Каталог Gosselin “Пластиковая посуда”</a>
+								<div><a href="js-popup-download" class="js-popup-link">Каталог Gosselin “Пластиковая посуда”</a>
 								<p>В каталоге представлены все имеющиеся модели пластиковой посуды за 2014 год, в том числе и новая коллекция из пластика</p></div>
 								<span>PDF, 8,7 Мб</span>
 							</td>
@@ -97,7 +97,7 @@
 						<tr>
 							<td class="catalog__text">
 								<img src="img/wtsn/cat-item(2).png" alt="">
-								<div><a href="#">Каталог оборудования Gosselin</a>
+								<div><a href="js-popup-download" class="js-popup-link">Каталог оборудования Gosselin</a>
 								<p>В каталоге представлены все имеющиеся модели пластиковой посуды за 2014 год, в том числе и новая коллекция из пластика</p></div>
 								<span>PDF, 8,7 Мб</span>
 							</td>
@@ -105,7 +105,7 @@
 						<tr>
 							<td class="catalog__text">
 								<img src="img/wtsn/cat-item(1).png" alt="">
-								<div><a href="#">Каталог Gosselin “Пластиковая посуда”</a>
+								<div><a href="js-popup-download" class="js-popup-link">Каталог Gosselin “Пластиковая посуда”</a>
 								<p>В каталоге представлены все имеющиеся модели пластиковой посуды за 2014 год, в том числе и новая коллекция из пластика</p></div>
 								<span>PDF, 8,7 Мб</span>
 							</td>
@@ -116,7 +116,7 @@
 							</td>
 							<td class="catalog__text">
 								<img src="img/wtsn/cat-item(3).png" alt="">
-								<div><a href="#">Лабораторные и настольные автоклавы “Tuttnauer”</a>
+								<div><a href="js-popup-download" class="js-popup-link">Лабораторные и настольные автоклавы “Tuttnauer”</a>
 								<p>В каталоге представлены все имеющиеся модели пластиковой посуды за 2014 год, в том числе и новая коллекция из пластика</p></div>
 								<span>PDF, 8,7 Мб</span>
 							</td>
@@ -136,5 +136,93 @@
 <!-- END out--> 
 @@include('_brands-slider.html')
 @@include('_footer.html')
+<div class="overlay js-overlay"></div>
+<div class="popup-wrap js-popup" data-popup="js-popup-callback">
+	<div class="popup">
+		<div class="popup__title">Обратный звонок</div>
+		<form class="js-validate">
+			<label class="field">
+				<span class="field__title">Имя*</span>
+				<span class="field__body"> 
+					<input class="input" type="text" required>
+				</span> 
+			</label>
+			<label class="field field_phone">
+				<span class="field__title">Телефон*</span>
+				<span class="field__body"> 
+					<input class="input" type="text">
+					<input class="input" type="text">
+				</span> 
+			</label>
+			<label class="field">
+				<span class="field__title">Удобное время для связи</span>
+				<span class="field__body"> 
+					<input class="input" type="text" required>
+				</span> 
+			</label>
+			<label class="field field_width">
+				<span class="field__title">Дополнительная информация</span>
+				<span class="field__body"> 
+					<textarea class="input input_textarea no-resize"></textarea>
+				</span> 
+			</label>
+			<div class="field">
+				<span class="field__body"> 
+					<button type="submit" class="btn">перезвоните мне</button>
+				</span> 
+			</div>
+		</form>
+		<button type="button" class="popup__close js-popup-close"></button>
+	</div>
+</div>
+<div class="popup-wrap popup-wrap_padding js-popup" data-popup="js-popup-download">
+	<div class="popup">
+		<div class="popup__title">Скачать каталог</div>
+		<form class="js-validate">
+			<label class="field">
+				<span class="field__title">Имя*</span>
+				<span class="field__body"> 
+					<input class="input" type="text" required>
+				</span> 
+			</label>
+			<label class="field">
+				<span class="field__title">Фамилия*</span>
+				<span class="field__body"> 
+					<input class="input" type="text" required>
+				</span> 
+			</label>
+			<label class="field">
+				<span class="field__title">Отчество</span>
+				<span class="field__body"> 
+					<input class="input" type="text">
+				</span> 
+			</label>
+			<label class="field">
+				<span class="field__title">Организация</span>
+				<span class="field__body"> 
+					<input class="input" type="text">
+				</span> 
+			</label>
+			<label class="field">
+				<span class="field__title">E-mail*</span>
+				<span class="field__body"> 
+					<input class="input" type="email" required>
+				</span> 
+			</label>
+			<div class="field field_checkbox">
+				<label class="checkbox">
+					<input type="checkbox">
+					<span>Хочу получать обновления</span>
+				</label>
+			</div>
+			<div class="field">
+				<span class="field__body"> 
+					<button type="submit" class="btn">Подписаться</button>
+				</span> 
+			</div>
+		</form>
+		<button type="button" class="popup__close js-popup-close"></button>
+	</div>
+</div>
 </body>
 </html>

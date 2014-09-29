@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>5-0post</title>
+	<title>popup subscribe</title>
 	@@include('_head.html')
 </head> 
 <body>
@@ -144,7 +144,7 @@
 <!-- END out--> 
 @@include('_brands-slider.html')
 @@include('_footer.html')
-<div class="overlay js-overlay"></div>
+<div class="overlay js-overlay" style="display:block"></div>
 <div class="popup-wrap js-popup" data-popup="js-popup-callback">
 	<div class="popup">
 		<div class="popup__title">Обратный звонок</div>
@@ -183,7 +183,7 @@
 		<button type="button" class="popup__close js-popup-close"></button>
 	</div>
 </div>
-<div class="popup-wrap js-popup" data-popup="js-popup-subscribe">
+<div class="popup-wrap popup-wrap_padding js-popup is-visible" data-popup="js-popup-subscribe">
 	<div class="popup">
 		<div class="popup__title">Подписка на рассылку</div>
 		<form class="js-validate">

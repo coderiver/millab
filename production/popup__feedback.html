@@ -1,7 +1,7 @@
 <!doctype html>
-<html>
+<html class="has-open-popup">
 <head>
-	<title>7-1 services</title>
+	<title>6-2 contacts</title>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=1024">
 <link rel="stylesheet" media="screen,print" href="css/screen.css" >
@@ -51,41 +51,70 @@
 	<div class="l-center">
 		<ul class="breadcrumbs">
 			<li><a href="#"><span>Главная</span></a></li>
-		</ul>
+		</ul>	
 		<div class="main">
-			<div class="main__container main__container_mod">
+			<div class="main__container">
 				<ul class="main__sidebar">
-					<li><a href="#">Сервис</a></li>
-					<li><a href="#" class="is-active">Сертификаты</a></li>
-					<li><a href="#" class="is-bold">Форма заявки</a></li>
-					<li><a href="#">Сервисный контракт</a></li>
+					<li><a href="#">Центральный офис</a></li>
+					<li><a href="#">Санкт-Петербург</a></li>
+					<li><a href="#">Новосибирск</a></li>
+					<li><a href="#">Краснодар</a></li>
+					<li><a href="#">Владивосток</a></li>
+					<li>Представительства</li>
 				</ul>
-				<div class="main__content">
-					<h1>Сертификаты</h1>
-					<div class="services__text">
-						<h6>Компания МИЛЛАБ Синтез является дочерним подразделением компании МИЛЛАБ, специализирующемся на оборудовании для химического синтеза, фильтрации, дистилляции, а также циркуляционных термостатирующих системах.</h6>
-						<div class="certificates js-fancybox">
-							<a href="img/wtsn/certificate-big.jpg" rel="group" class="certificate">
-								<img src="img/wtsn/certificate(1).png" alt="">
-							</a>
-							<a href="img/wtsn/certificate-big.jpg" rel="group" class="certificate">
-								<img src="img/wtsn/certificate(2).png" alt="">
-							</a>
-							<a href="img/wtsn/certificate-big.jpg" rel="group" class="certificate">
-								<img src="img/wtsn/certificate(3).png" alt="">
-							</a>
-							<a href="img/wtsn/certificate-big.jpg" rel="group" class="certificate">
-								<img src="img/wtsn/certificate(4).png" alt="">
-							</a>
-							<a href="img/wtsn/certificate-big.jpg" rel="group" class="certificate">
-								<img src="img/wtsn/certificate(5).png" alt="">
-							</a>
-							<a href="img/wtsn/certificate-big.jpg" rel="group" class="certificate">
-								<img src="img/wtsn/certificate(4).png" alt="">
-							</a>
-							<a href="img/wtsn/certificate-big.jpg" rel="group" class="certificate">
-								<img src="img/wtsn/certificate(2).png" alt="">
-							</a>
+				<div class="con">
+					<a href="js-popup-feedback" class="btn btn_con js-popup-link"><span>контактная форма</span></a>
+					<h1>Контактная информация</h1>
+					<div class="con__row">
+						<div class="address address_mod">
+							<div class="address__rep">
+								<h4>Представительство в Беларуси</h4>
+								<div>
+									<span class="address__left">Телефон:</span>
+									<p>(383) 363-09-00</p>
+									<p>(383) 363-09-00</p>
+								</div>
+								<div>
+									<span class="address__left">E-mail:</span></td>
+									<p><a href="#">sibir@millab.ru</a></p>
+								</div>
+								<div>
+									<span class="address__left">Время работы:</span>
+									<p>пн–пт 09.00 – 18.00</p>
+								</div>
+							</div>
+							<div class="address__rep">
+								<h4>Представительство в Германии</h4>
+								<div>
+									<span class="address__left">Телефон:</span>
+									<p>(383) 363-09-00</p>
+									<p>(383) 363-09-00</p>
+								</div>
+								<div>
+									<span class="address__left">E-mail:</span></td>
+									<p><a href="#">sibir@millab.ru</a></p>
+								</div>
+								<div>
+									<span class="address__left">Время работы:</span>
+									<p>пн–пт 09.00 – 18.00</p>
+								</div>
+							</div>
+							<div class="address__rep">
+								<h4>Представительство в Китае</h4>
+								<div>
+									<span class="address__left">Телефон:</span>
+									<p>(383) 363-09-00</p>
+									<p>(383) 363-09-00</p>
+								</div>
+								<div>
+									<span class="address__left">E-mail:</span></td>
+									<p><a href="#">sibir@millab.ru</a></p>
+								</div>
+								<div>
+									<span class="address__left">Время работы:</span>
+									<p>пн–пт 09.00 – 18.00</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -195,5 +224,75 @@
 <!-- end footer -->
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script> 
+<div class="overlay js-overlay" style="display: block;"></div>
+<div class="popup-wrap js-popup" data-popup="js-popup-callback">
+	<div class="popup">
+		<div class="popup__title">Обратный звонок</div>
+		<form class="js-validate">
+			<label class="field">
+				<span class="field__title">Имя*</span>
+				<span class="field__body"> 
+					<input class="input" type="text" required>
+				</span> 
+			</label>
+			<label class="field field_phone">
+				<span class="field__title">Телефон*</span>
+				<span class="field__body"> 
+					<input class="input" type="text">
+					<input class="input" type="text">
+				</span> 
+			</label>
+			<label class="field">
+				<span class="field__title">Удобное время для связи</span>
+				<span class="field__body"> 
+					<input class="input" type="text" required>
+				</span> 
+			</label>
+			<label class="field field_width">
+				<span class="field__title">Дополнительная информация</span>
+				<span class="field__body"> 
+					<textarea class="input input_textarea no-resize"></textarea>
+				</span> 
+			</label>
+			<div class="field">
+				<span class="field__body"> 
+					<button type="submit" class="btn">перезвоните мне</button>
+				</span> 
+			</div>
+		</form>
+		<button type="button" class="popup__close js-popup-close"></button>
+	</div>
+</div>
+<div class="popup-wrap js-popup is-visible" data-popup="js-popup-feedback">
+	<div class="popup">
+		<div class="popup__title">Контактная информация</div>
+		<form class="js-validate">
+			<label class="field">
+				<span class="field__title">Имя*</span>
+				<span class="field__body"> 
+					<input class="input" type="text" required>
+				</span> 
+			</label>
+			<label class="field">
+				<span class="field__title">E-mail*</span>
+				<span class="field__body"> 
+					<input class="input" type="email" required>
+				</span> 
+			</label>
+			<label class="field field_width">
+				<span class="field__title">Сообщение</span>
+				<span class="field__body"> 
+					<textarea class="input input_textarea no-resize"></textarea>
+				</span> 
+			</label>
+			<div class="field">
+				<span class="field__body"> 
+					<button type="submit" class="btn">связаться с нами</button>
+				</span> 
+			</div>
+		</form>
+		<button type="button" class="popup__close js-popup-close"></button>
+	</div>
+</div>
 </body>
 </html>
