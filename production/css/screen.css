@@ -576,6 +576,8 @@ a { text-decoration: none; }
 .article ol { -moz-column-count: 2; -webkit-column-count: 2; column-count: 2; -moz-column-width: 340px; -webkit-column-width: 340px; column-width: 340px; counter-reset: list1; padding: 14px 16px 0 20px; }
 .article ol li { position: relative; display: inline-block; vertical-align: top; margin: 0 0 17px; padding: 5px 20px 0 68px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .article ol li:before { counter-increment: list1; content: counter(list1); position: absolute; top: 0; left: 19px; height: 32px; width: 32px; text-align: center; line-height: 32px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 14px; color: #2d3441; border-radius: 50%; border: 1px solid #1fbfd5; }
+.article table th { padding-bottom: 6px; font-weight: normal; font-family: "opensans-semibold", Arial, sans-serif; font-size: 14px; text-align: left; }
+.article table td { text-align: left; padding: 0 30px 0 0; }
 .article .video { margin-bottom: 42px; }
 
 .gallery { padding-top: 10px; font-size: 0; margin-right: -20px; }
@@ -739,16 +741,6 @@ a { text-decoration: none; }
 .main__container h6, .main__container h5, .main__container p { font-family: "opensans-regular", Arial, sans-serif; font-size: 14px; line-height: 24px; letter-spacing: 0.3px; color: #2d3441; }
 .main__container h5 { font-family: "opensans-semibold", Arial, sans-serif; }
 .main__container p { font-size: 12px; }
-
-.article ul li a { color: #1fbfd5; font-family: "opensans-semibold", Arial, sans-serif; font-size: 13px; line-height: 24px; letter-spacing: 0.3px; }
-.article ul li a:hover { color: #62deef; }
-.article i { font-family: "opensans-italic", Arial, sans-serif; }
-.article i a { color: #1fbfd5; -moz-transition: all 0.4s ease; -o-transition: all 0.4s ease; -webkit-transition: all 0.4s ease; transition: all 0.4s ease; }
-.article i a:hover { color: #62deef; }
-.article div { text-align: justify; font-size: 0.1px; border: none; width: 100%; padding-top: 0px; }
-.article div:after { content: ""; width: 100%; display: inline-block; }
-.article div div { text-align: left; max-width: 253px; display: inline-block; padding-top: 20px; }
-.article div div h5 { margin-bottom: 6px; }
 
 .con { padding: 40px 37px 60px 62px; }
 .con .btn_con { text-align: center; font-size: 0; line-height: 22px; height: 34px; width: 153px; padding: 0; margin-top: 1px; float: right; text-align: center; font-size: 0; }
