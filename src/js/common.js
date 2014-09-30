@@ -8,6 +8,7 @@ head.ready(function() {
         $("html").removeClass("has-open-popup");
 	});
  
+
 // slick slider init
 	$('.js-slick').slick({
 		infinite: true,
