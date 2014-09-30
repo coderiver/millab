@@ -223,4 +223,101 @@ head.ready(function() {
         }
     });
 
+    // validation form
+    function validate() {
+        $('.js-validate').each(function(){
+            if ($(this).length > 0) {
+                $(this).validate({
+                    errorClass: 'has-error',
+                    rules: {
+                        username: {
+                            minlength: 2
+                        },
+                        any: {
+                            minlength: 2
+                        },
+                        password: {
+                            minlength: 5
+                        },
+                        confirm_password: {
+                            minlength: 5,
+                            equalTo: '#password'
+                        },
+                        email: {
+                            email: true
+                        },
+                        tel: {
+                            minlength: 2,
+                        },
+                        address: {
+                            minlength: 2
+                        },
+                        message: {
+                            minlength: 4
+                        }
+                    },
+                    messages: {
+                        firstname: 'Вас так зовут?',
+                        lastname: 'У вас такая фамилия?',
+                        fathername: 'У вас такое отчество?',
+                        password: {
+                            required: 'Введите пароль',
+                            minlength: 'Минимум 5 символов'
+                        },
+                        confirm_password: {
+                             required: 'Пароли не совпадают',
+                             minlength: 'Минимум 5 символов',
+                             equalTo: 'Пароли не совпадают'
+                        },
+                        email: 'Неверный формат',
+                        address: 'Это Ваш адрес?',
+                        any: 'Заполните поле',
+                        company: 'Заполните поле',
+                        tel: {
+                            required: 'Заполните поле',
+                        },
+                        message: {
+                            required: 'Заполните поле',
+                            minlength: 'Заполните поле'
+                        }
+                    }
+                    // messages: {
+                    //     firstname: '',
+                    //     lastname: '',
+                    //     fathername: '',
+                    //     alias: '',
+                    //     any: '',
+                    //     password: {
+                    //         required: '',
+                    //         minlength: ''
+                    //     },
+                    //     confirm_password: {
+                    //         required: '',
+                    //         minlength: '',
+                    //         equalTo: ''
+                    //     },
+                    //     email: '',
+                    //     address: '',
+                    //     workplace: '',
+                    //     edu: '',
+                    //     status: '',
+                    //     exp: '',
+                    //     tel: {
+                    //         required: '',
+                    //         phoneUS: ''
+                    //     },
+                    //     message: {
+                    //         required: '',
+                    //         minlength: ''
+                    //     }
+                    // }
+                });
+            }
+        });
+    }
+        
+    validate();
+    if ($(".js-input-tel").length) {
+        $(".js-input-tel").mask("+799 (99) 999-99-99");
+    }
 });

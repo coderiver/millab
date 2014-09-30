@@ -678,65 +678,66 @@
 							</div>
 							<!-- request -->
 							<div class="request">
-								<div class="request__fieldset">
-									<!-- field -->
-									<label class="field">
-										<span class="field__title">Название прибора</span>
-										<span class="field__body"> 
-											<input class="input" type="text">
-										</span> 
-									</label>
-									<!-- field -->
-									<label class="field">
-										<span class="field__title">Имя*</span>
-										<span class="field__body"> 
-											<input class="input" type="text">
-										</span> 
-									</label>
-									<!-- field -->
-									<label class="field">
-										<span class="field__title">Отчество</span>
-										<span class="field__body"> 
-											<input class="input" type="text">
-										</span> 
-									</label>
-								</div>
-								<div class="request__fieldset">
-									<!-- field -->
-									<label class="field">
-										<span class="field__title">E-mail*</span>
-										<span class="field__body"> 
-											<input class="input" type="text">
-										</span> 
-									</label>
-									<!-- field -->
-									<div class="field field_phone">
-										<span class="field__title">Телефон*</span>
-										<span class="field__body"> 
-											<input class="input" type="text">
-											<input class="input" type="text">
-										</span> 
-									</div>
-								</div>
-								<div class="request__fieldset">
-									<!-- field -->
-									<label class="field">
-										<span class="field__title">Организация*</span>
-										<span class="field__body"> 
-											<input class="input" type="text">
-										</span> 
-									</label>
-									<div class="request__message">
+								<form class="js-validate">	
+									<div class="request__fieldset">
 										<!-- field -->
 										<label class="field">
-											<span class="field__title">Сообщение</span>
+											<span class="field__title">Название прибора*</span>
 											<span class="field__body"> 
-												<textarea class="input input_textarea"></textarea>
+												<input class="input" type="text" name="any" required>
 											</span> 
 										</label>
-										<button class="btn">Отправить запрос</button>
+										<!-- field -->
+										<label class="field">
+											<span class="field__title">Имя*</span>
+											<span class="field__body"> 
+												<input class="input" type="text" name="firstname" required>
+											</span> 
+										</label>
+										<!-- field -->
+										<label class="field">
+											<span class="field__title">Отчество</span>
+											<span class="field__body"> 
+												<input class="input" type="text">
+											</span> 
+										</label>
 									</div>
-								</div>
+									<div class="request__fieldset">
+										<!-- field -->
+										<label class="field">
+											<span class="field__title">E-mail*</span>
+											<span class="field__body"> 
+												<input class="input" type="email" name="email" required>
+											</span> 
+										</label>
+										<!-- field -->
+										<div class="field">
+											<span class="field__title">Телефон*</span>
+											<span class="field__body"> 
+												<input class="input input_tel js-input-tel" type="tel" placeholder="+7__ (__) ___-__-__" name="tel" required>
+											</span> 
+										</div>
+									</div>
+									<div class="request__fieldset">
+										<!-- field -->
+										<label class="field">
+											<span class="field__title">Организация</span>
+											<span class="field__body"> 
+												<input class="input" type="text" name="company" required>
+											</span> 
+										</label>
+										<div class="request__message">
+											<!-- field -->
+											<label class="field">
+												<span class="field__title">Сообщение*</span>
+												<span class="field__body"> 
+													<textarea class="input input_textarea" name="message" required></textarea>
+												</span> 
+											</label>
+											<button class="btn" type="submit">Отправить запрос</button>
+										</div>
+									</div>
+								</form>
 							</div>
 							<!-- back -->
 							<a href="#" class="link-back"><i>←</i> Назад в раздел</a>

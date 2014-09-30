@@ -81,8 +81,17 @@
 		color: $text 
 		+box
 	&__body
+		position: relative
 		display: block
 		+clr
+		label
+			&.has-error
+				position: absolute
+				left: 0
+				top: 100%
+				margin-top: -4px
+				color: #f00
+				font-size: 10px
 	&__half
 		float: left
 		width: 50%
@@ -121,7 +130,14 @@
 		color: $gray
 		+it
 	&:focus
-		border-color: #2d3341 
+		border-color: #2d3341
+	&.has-error
+		border-color: #f00 
+		color: #f00
+	&_tel
+		+placeholder
+			+reg
+	 
 .input_textarea
 	padding: 10px 13px
 	min-height: 130px
