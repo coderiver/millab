@@ -243,30 +243,40 @@
 	position: absolute
 	width: 333px
 	z-index: 10
-	background: #fff
-	line-height: 1.7
-	color: $gray
-	font-size: 12px 
-	box-shadow: 0 0 29px rgba(9,85,95,.3)
-	&:after
-		content: ""
-		position: absolute
-		left: 50%
-		margin-left: -13px
-		bottom: -13px
-		+arr(26,13,#fff,b) 
+	&:hover
+		.window__title
+			color: $azure_h
+	&.is-visible
+		display: block
+		.window__wrap
+			+transform(translateY(0))
+	&__wrap	
+		position: relative
+		+transform(translateY(-100px))
+		background: #fff
+		line-height: 1.7
+		color: $gray
+		font-size: 12px 
+		box-shadow: 0 0 29px rgba(9,85,95,.3)
+		+tr(transform .4s)
+		&:after
+			content: ""
+			position: absolute
+			left: 50%
+			margin-left: -13px
+			bottom: -13px
+			+arr(26,13,#fff,b)
 	&__in
 		padding: 25px 
 		p
 			margin-bottom: 10px
-		a
-			font-size: 10px
-			color: $azure
-			+tr(color .2s)
-			text-transform: uppercase
-			+bold
-			&:hover
-				color: $azure_h 
+	&__title
+		font-size: 10px
+		color: $azure
+		+tr(color .2s)
+		text-transform: uppercase
+		+bold
+		
 	&__img
 		overflow: hidden
 		img

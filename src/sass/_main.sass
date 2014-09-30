@@ -29,14 +29,16 @@
 	&:hover
 		.promo__main
 			top: 0
+			background: rgba(#020711, .9)
 	&__main
 		position: absolute
 		top: 300px
 		left: 0
 		right: 0
 		height: 380px
-		background: rgba(#020711, .9)
-		+tr(top .4s)
+		background: rgba(#020711, 0)
+		+transition(top .6s ceaser($easeOutExpo), background .6s)
+		will-change: position
 	&__title
 		display: block
 		padding: 0 30px
