@@ -492,7 +492,7 @@
 				&.is-active
 					color: $text
 					&:before
-						opacity: 1 
+						display: block
 		.links__order
 			display: block
 	.links__wrap
@@ -511,7 +511,6 @@
 			display: block
 			padding: 17px 0
 			color: $azure 
-			+tr(color .2s)
 			&:before
 				content: ""
 				position: absolute
@@ -520,8 +519,7 @@
 				right: 0
 				height: 4px
 				background: $azure 
-				opacity: 0
-				+tr(opacity .2s) 
+				display: none
 	.links__order
 		float: right
 		margin: 13px 0 0 20px
@@ -712,6 +710,8 @@
 	padding: 40px 82px 103px
 	.date
 		margin-bottom: 11px
+	a
+		color: $azure 
 	h1,h2,h3,h4,h5,h6
 		font-weight: normal
 	h1
