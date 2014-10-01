@@ -395,22 +395,20 @@
 				visibility: visible
 //ERROR
 .error
-	width: 430px
+	padding: 42px 0 0
 	margin: 0 auto
-	padding-top: 87px
-	min-height: 445px
-	padding-left: 64px
+	+box 
+	width: 430px
+	height: 655px
 	span
+		display: block
 		font-size: 200px
 		color: $text
-		letter-spacing: 6px
-		line-height: 24px
+		line-height: 1
 		+sbold
-	p
+	div
 		font-size: 13px
-		display: block
 		padding-top: 27px
-		letter-spacing: 0.6px 
 		a
 			color: #1dbed4
 			+transition(all 0.4s ease)
