@@ -20,6 +20,8 @@ $(document).ready(function() {
 
 // window popup
 	var win = $(".js-window");
+    var timer;
+    var delay = 500;
     if ($(".js-window-toggle").length > 0) {
         $(".js-window-toggle").hover(
           function() {
@@ -27,13 +29,18 @@ $(document).ready(function() {
             var el = $('[data-window="'+href+'"]');
             var el_left = $(this).offset().left;
             var el_top = $(this).offset().top;
-            win.hide().removeClass("is-visible");
             el.css({
                 left: el_left - $(this).outerWidth()/2,
                 top: el_top - el.outerHeight()
             });
-            el.fadeIn(400).addClass("is-visible");
+            timer = setTimeout(function() {
+                win.hide().removeClass("is-visible");
+                
+                el.fadeIn(400).addClass("is-visible");
+            }, delay);
+                
           }, function() {
+            clearTimeout(timer);
             win.hide().removeClass("is-visible");
           }
         );
