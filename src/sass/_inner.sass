@@ -80,27 +80,61 @@
 				color: $azure_h
 			&:after
 				display: none
-		 
-.item
-	display: inline-block
-	vertical-align: top
-	position: relative
-	margin: 0 0 -1px -1px
-	border: 1px solid $border
-	padding: 30px 35px 
-	width: 326px
+
+.item-row
+	float: left
 	overflow: hidden
+	margin-bottom: -1px
+	vertical-align: top
+	+clr
+	border-top: 1px solid $border
+	border-bottom: 1px solid $border
+	// &:first-child
+	// 	.item
+	// 		border-top: 1px solid $border
+.item-row_small,
+.item-row_smaller,
+	margin-bottom: 9px
+.item
+	float: left
+	position: relative
+	//margin: 0 0 0 -1px 
+	//border-left: 1px solid $border
+	border-right: 1px solid $border
+	padding: 30px 35px 
+	width: 325px
 	min-height: 280px
 	+box
 	font-size: 12px
 	background: #fff 
 	text-align: center
 	+tr(background .4s)
+	&:before
+		content: ""
+		position: absolute
+		top: 100%
+		right: 0
+		left: 0
+		z-index: 1
+		height: 1000px
+		background: #fff
+		+tr(background .4s)
+	&:after
+		content: "" 
+		position: absolute
+		top: 100%
+		right: -1px
+		height: 1000px
+		width: 1px
+		background: $border 
 	&:hover
-		background: #f3fdff 
+		background: #f3fdff
+		&:before
+			background: #f3fdff 
 		.item__main
 			opacity: 1
-			visibility: visible
+	&:first-child
+		border-left: 0
 	&__img
 		display: block
 		margin: 0 0 22px 
@@ -118,6 +152,14 @@
 		color: $azure
 		font-size: 14px 
 		line-height: 1.7
+		&:after
+			content: "" 
+			position: absolute
+			top: 100%
+			left: -1px
+			height: 1000px
+			width: 1px
+			background: $border 
 	&__main
 		position: absolute
 		top: 30px 
@@ -126,7 +168,6 @@
 		right: 35px
 		opacity: 0
 		+tr(opacity .4s)
-		visibility: hidden
 		will-change: opacity
 	&__in
 		position: absolute
@@ -145,7 +186,7 @@
 		li
 			padding: 5px 17px
 			text-align: left 
-			border-top: 1px solid #d8e2ea 
+			border-top: 1px solid $border 
 			color: $text 
 	&__descr
 		padding: 14px 17px
@@ -156,10 +197,11 @@
 		p
 			margin-bottom: 11px
 .item_small
-	margin: 0 -1px 9px 0
 	padding: 18px 20px 
-	width: 231px	
-	min-height: 250px	
+	width: 230px	
+	min-height: 250px
+	&:first-child
+		border-left: 1px solid $border	
 	.item__img
 		margin: 0 0 20px
 		height: 143px
@@ -181,10 +223,11 @@
 		.btn-detail
 			opacity: 1
 .item_smaller
-	margin: 0 -1px 9px 0
 	padding: 10px 12px 
-	width: 173px
+	width: 171px
 	min-height: 205px
+	&:first-child
+		border-left: 1px solid $border	
 	&:hover
 		.btn-detail
 			opacity: 1

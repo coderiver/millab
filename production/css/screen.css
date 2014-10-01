@@ -403,26 +403,38 @@ a { text-decoration: none; }
 .breadcrumbs ul a:hover { text-decoration: none; color: #62deef; }
 .breadcrumbs ul a:after { display: none; }
 
-.item { display: inline-block; vertical-align: top; position: relative; margin: 0 0 -1px -1px; border: 1px solid #e9edf0; padding: 30px 35px; width: 326px; overflow: hidden; min-height: 280px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 12px; background: white; text-align: center; -moz-transition: background 0.4s; -o-transition: background 0.4s; -webkit-transition: background 0.4s; transition: background 0.4s; }
+.item-row { float: left; overflow: hidden; margin-bottom: -1px; vertical-align: top; *zoom: 1; border-top: 1px solid #e9edf0; border-bottom: 1px solid #e9edf0; }
+.item-row:after { content: " "; display: table; clear: both; }
+
+.item-row_small, .item-row_smaller { margin-bottom: 9px; }
+
+.item { float: left; position: relative; border-right: 1px solid #e9edf0; padding: 30px 35px; width: 325px; min-height: 280px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 12px; background: white; text-align: center; -moz-transition: background 0.4s; -o-transition: background 0.4s; -webkit-transition: background 0.4s; transition: background 0.4s; }
+.item:before { content: ""; position: absolute; top: 100%; right: 0; left: 0; z-index: 1; height: 1000px; background: white; -moz-transition: background 0.4s; -o-transition: background 0.4s; -webkit-transition: background 0.4s; transition: background 0.4s; }
+.item:after { content: ""; position: absolute; top: 100%; right: -1px; height: 1000px; width: 1px; background: #e9edf0; }
 .item:hover { background: #f3fdff; }
-.item:hover .item__main { opacity: 1; visibility: visible; }
+.item:hover:before { background: #f3fdff; }
+.item:hover .item__main { opacity: 1; }
+.item:first-child { border-left: 0; }
 .item__img { display: block; margin: 0 0 22px; height: 152px; overflow: hidden; text-align: center; }
 .item__img img { display: block; margin: 0 auto; height: auto; max-height: 100%; max-width: 100%; }
 .item__title { color: #1fbfd5; font-size: 14px; line-height: 1.7; }
-.item__main { position: absolute; top: 30px; bottom: 0; left: 35px; right: 35px; opacity: 0; -moz-transition: opacity 0.4s; -o-transition: opacity 0.4s; -webkit-transition: opacity 0.4s; transition: opacity 0.4s; visibility: hidden; will-change: opacity; }
+.item__title:after { content: ""; position: absolute; top: 100%; left: -1px; height: 1000px; width: 1px; background: #e9edf0; }
+.item__main { position: absolute; top: 30px; bottom: 0; left: 35px; right: 35px; opacity: 0; -moz-transition: opacity 0.4s; -o-transition: opacity 0.4s; -webkit-transition: opacity 0.4s; transition: opacity 0.4s; will-change: opacity; }
 .item__in { position: absolute; top: 41px; left: 0; right: 0; bottom: 0; padding-top: 20px; background: #f3fdff; color: #adb2bb; font-size: 12px; text-align: center; }
 .item__in .item__title { margin-bottom: 13px; }
-.item__list li { padding: 5px 17px; text-align: left; border-top: 1px solid #d8e2ea; color: #2d3441; }
+.item__list li { padding: 5px 17px; text-align: left; border-top: 1px solid #e9edf0; color: #2d3441; }
 .item__descr { padding: 14px 17px; text-align: left; line-height: 1.7; border-top: 1px solid #d8e2ea; color: #2d3441; }
 .item__descr p { margin-bottom: 11px; }
 
-.item_small { margin: 0 -1px 9px 0; padding: 18px 20px; width: 231px; min-height: 250px; }
+.item_small { padding: 18px 20px; width: 230px; min-height: 250px; }
+.item_small:first-child { border-left: 1px solid #e9edf0; }
 .item_small .item__img { margin: 0 0 20px; height: 143px; }
 .item_small .item__title { font-size: 12px; line-height: 1.3; }
 .item_small .btn-detail { position: absolute; top: 18px; right: 23px; left: 23px; width: auto; height: 144px; line-height: 144px; opacity: 0; will-change: opacity; -moz-transition: opacity 0.4s; -o-transition: opacity 0.4s; -webkit-transition: opacity 0.4s; transition: opacity 0.4s; }
 .item_small:hover .btn-detail { opacity: 1; }
 
-.item_smaller { margin: 0 -1px 9px 0; padding: 10px 12px; width: 173px; min-height: 205px; }
+.item_smaller { padding: 10px 12px; width: 171px; min-height: 205px; }
+.item_smaller:first-child { border-left: 1px solid #e9edf0; }
 .item_smaller:hover .btn-detail { opacity: 1; }
 .item_smaller .item__title { font-size: 12px; line-height: 1.3; }
 .item_smaller .item__img { margin-bottom: 5px; height: 130px; line-height: 130px; }
@@ -822,10 +834,11 @@ a { text-decoration: none; }
 
 .certificate { border: 1px solid #d8e2ea; border-radius: 1px; overflow: hidden; width: 146px; height: 217px; display: inline-block; *zoom: 1; margin-bottom: 19px; position: relative; -moz-transition: border-color 0.4s ease; -o-transition: border-color 0.4s ease; -webkit-transition: border-color 0.4s ease; transition: border-color 0.4s ease; }
 .certificate:after { content: " "; display: table; clear: both; }
-.certificate img { float: left; position: relative; z-index: 5; }
-.certificate div { background: url(../img/wtsn/filter.png); width: 100%; height: 220px; float: left; clear: both; position: absolute; top: 0; left: 0; visibility: hidden; opacity: 0; -moz-transition: all 0.4s ease; -o-transition: all 0.4s ease; -webkit-transition: all 0.4s ease; transition: all 0.4s ease; will-change: opacity; z-index: 10; }
-.certificate:hover { border: 3px solid #1fbfd5; border-radius: 3px; margin: -2px -2px 17px -2px; }
-.certificate:hover div { opacity: 1; visibility: visible; }
+.certificate img { display: block; }
+.certificate:after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; left: 0; visibility: hidden; opacity: 0; background: rgba(31, 191, 213, 0.4); width: 100%; height: 220px; -moz-transition: all 0.4s ease; -o-transition: all 0.4s ease; -webkit-transition: all 0.4s ease; transition: all 0.4s ease; will-change: opacity; }
+.certificate:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0; z-index: 2; border: 3px solid #1fbfd5; border-radius: 3px; -moz-transition: all 0.4s ease; -o-transition: all 0.4s ease; -webkit-transition: all 0.4s ease; transition: all 0.4s ease; will-change: opacity; }
+.certificate:hover { border-radius: 3px; }
+.certificate:hover:after, .certificate:hover:before { opacity: 1; visibility: visible; }
 
 .partners { padding: 40px 60px 80px 82px; *zoom: 1; }
 .partners:after { content: " "; display: table; clear: both; }

@@ -231,30 +231,41 @@
 	position: relative
 	+transition(border-color 0.4s ease)
 	img
-		float: left
-		position: relative
-		z-index: 5 
-	div
-		background: url(../img/wtsn/filter.png)
-		width: 100%
-		height: 220px
-		float: left
-		clear: both
+		display: block
+	&:after
+		content: "" 
 		position: absolute
 		top: 0
+		bottom: 0
+		right: 0
 		left: 0
 		visibility: hidden
 		opacity: 0
+		background: rgba($azure,.4)
+		width: 100%
+		height: 220px
 		+transition(all 0.4s ease)
 		will-change: opacity
-		z-index: 10 
-	&:hover
+	&:before
+		content: "" 
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		opacity: 0
+		z-index: 2
 		border: 3px solid $azure
 		border-radius: 3px
-		margin: -2px -2px 17px -2px
-		div
+		+transition(all 0.4s ease)
+		will-change: opacity
+	&:hover
+		border-radius: 3px
+		&:after,
+		&:before
 			opacity: 1
 			visibility: visible
+
 			
 //NUMBERED LIST
 

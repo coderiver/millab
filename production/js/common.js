@@ -1,4 +1,4 @@
-head.ready(function() {
+$(document).ready(function() {
 
 	$(document).on("click", function(){
         $(".js-select").removeClass("is-active");
