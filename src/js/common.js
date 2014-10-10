@@ -118,7 +118,7 @@ $(document).ready(function() {
         $(".js-fancybox a").fancybox({
             padding: 1,
             openEffect: 'elastic',
-            closeEffect: 'elastic',
+            closeEffect: 'elastic'
         });
 
 
@@ -328,4 +328,26 @@ $(document).ready(function() {
     if ($(".js-input-tel").length) {
         $(".js-input-tel").mask("+799 (99) 999-99-99");
     }
+    $("body").on("change",".js-check input",function(){
+        var checkGroup = $(this).closest(".js-check-group");
+        var checkHidden = checkGroup.children(".js-check-hidden");
+        if ($(this).is(":checked")) {
+            checkHidden.addClass("is-visible");
+            $(this).parent().addClass("is-checked");
+        }
+        else {
+            checkHidden.removeClass("is-visible").addClass("is-hidden");
+            $(this).parent().removeClass("is-checked");
+        }
+    }); 
+
+    $('body').on("change",'[data-state="1"]',function(){
+        var el = $(this).parent().attr("data-toggle");
+        $("."+el).addClass("is-visible").removeClass("is-hidden");
+    });
+
+    $('body').on("change",'[data-state="0"]',function(){
+        var el = $(this).parent().attr("data-toggle");
+        $("."+el).addClass("is-hidden").removeClass("is-visible");
+    });
 });

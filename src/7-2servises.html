@@ -24,7 +24,7 @@
 				<div class="main__content">
 					<h1>Форма заявки на сервисное обслуживание</h1>
 					<p>Компания МИЛЛАБ Синтез является дочерним подразделением компании МИЛЛАБ, специализирующемся на оборудовании для химического синтеза, фильтрации, дистилляции, а также циркуляционных термостатирующих системах. </p>
-					<div class="form">
+					<div class="form js-check-group">
 						<form class="js-validate">
 							<h2>Информация о товаре</h2>
 							<label class="field field_hor">
@@ -68,28 +68,28 @@
 							</label>
 							<div class="field field_hor">
 								<span class="field__title">Гарантия</span>
-								<div class="field__body">
+								<div class="field__body js-radio-group">
 									<div class="field__half">
-										<label class="radio">
-											<input type="radio" name="garanty" checked>
-											<span>Да</span>
+										<label class="radio js-radio" data-toggle="js-radio1">
+											<input type="radio" name="garanty"  data-state="0" checked>
+											<span>Нет</span>
 										</label>
 									</div>
 									<div class="field__half">
-										<label class="radio">
-											<input type="radio" name="garanty">
-											<span>Нет</span>
+										<label class="radio js-radio" data-toggle="js-radio1">
+											<input type="radio" name="garanty" data-state="1">
+											<span>Да</span>
 										</label>
 									</div>
 								</div>
 							</div>
-							<label class="field field_hor">
+							<label class="field field_hor js-radio1 is-hidden">
 								<span class="field__title"></span>
 								<span class="field__body">
 									<input type="text" class="input" placeholder="Тип документа">
-								</span>
-							</label>
-							<label class="field field_hor">
+								</span> 
+							</label> 
+							<label class="field field_hor js-radio1 is-hidden">
 								<span class="field__title"></span>
 								<span class="field__body">
 									<input type="text" class="input"placeholder="Номер документа">

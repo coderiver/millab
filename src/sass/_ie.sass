@@ -1,0 +1,46 @@
+.ie8
+	.nav
+		li
+			&.is-marked
+				position: relative
+				z-index: 2
+				background: #fff
+				&.is-active
+					a
+						background: #d3f2f7 
+						color: $azure 
+				a
+					color: $azure 
+					&:hover
+						color: $azure_h 
+	.pace-activity
+		display: none
+	.benefit
+		&:hover
+			.benefit__main
+				display: block
+		&__main
+			display: none
+			background: $azure 
+	.footer 
+		&__top
+			overflow: hidden
+		.tel, 
+		.soc
+			float: left
+		.soc
+			margin-left: 50px
+		&__logo
+			float: right
+	.prod
+		.prod__previews
+			li
+				&:after
+					display: none
+				&.is-active
+					&:after
+						display: block
+	.search__input
+		line-height: 36px
+	.input
+		line-height: 39px
