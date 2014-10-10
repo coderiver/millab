@@ -587,6 +587,7 @@
 			+tr(opacity .2s)
 			opacity: .5
 			cursor: pointer
+			will-change: opacity
 			&:after
 				content: ""
 				position: absolute
@@ -596,6 +597,7 @@
 				bottom: 0
 				border: 2px solid $azure
 				+tr(opacity .2s)
+				will-change: opacity
 				opacity: 0
 			&.is-active
 				opacity: 1 
@@ -664,6 +666,7 @@
 			margin-top: -3px
 			+arr(6,5,#89969f,b)
 			+tr(transform .2s)
+			will-change: transform
 	.accord__in
 		display: none
 		padding: 20px

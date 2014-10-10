@@ -81,7 +81,7 @@ $gray: #adb2bb
 
 html
 	+selection
-		background: rgba($azure,.3) 
+		background: rgba($azure,.3)  
 	&.has-open-popup
 		overflow: hidden
 		body
@@ -173,6 +173,7 @@ a
 		i
 			margin-right: 3px
 			+tr(opacity .4s)
+			will-change: opacity
 	.tel
 		margin-top: 8px
 .tel
@@ -272,6 +273,7 @@ a
 			i
 				margin-right: 12px
 				+tr(opacity .4s)
+				will-change: opacity
 
 	&__right
 		overflow: hidden
@@ -290,6 +292,7 @@ a
 		img
 			display: block
 			+tr(opacity .4s)
+			will-change: opacity
 			&:hover
 				opacity: .7
 	&__contacts
