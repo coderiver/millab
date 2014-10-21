@@ -25,7 +25,7 @@ $(document).ready(function() {
     if ($(".js-window-toggle").length > 0) {
         $(".js-window-toggle").hover(
           function() {
-            var href = $(this).attr("href");
+            var href = $(this).attr("data-toggle");
             var el = $('[data-window="'+href+'"]');
             var el_left = $(this).offset().left;
             var el_top = $(this).offset().top;
