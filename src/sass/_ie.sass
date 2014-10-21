@@ -33,7 +33,7 @@
 		&__logo
 			float: right
 	.prod
-		.prod__previews
+		.prod__previews 
 			li
 				&:after
 					display: none
@@ -44,4 +44,44 @@
 		line-height: 36px
 	.input
 		line-height: 39px
-
+	.window
+		border: 1px solid $border
+		&__wrap	
+			&:before
+				content: ""
+				position: absolute
+				left: 50%
+				margin-left: -13px
+				bottom: -14px
+				+arr(26,13,$border,b)
+	.certificate
+		&:before,
+		&:after
+			visibility: hidden
+	.item_small 
+		.btn-detail
+			visibility: hidden
+		&:hover
+			.btn-detail
+				visibility: visible
+				+opacity(.9)
+	.btn-detail
+		background: rgb(59,196,216)
+	.promo
+		&__main
+			+opacity(.8)
+	.overlay
+		+opacity(.9)
+	.popup__close
+		&:hover
+			+opacity(.7)
+	.checkbox,
+	.radio
+		span
+			padding-left: 5px
+			&:before,
+			&:after
+				display: none
+		span, input
+			position: static
+			vertical-align: middle

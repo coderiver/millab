@@ -350,4 +350,5 @@ $(document).ready(function() {
         var el = $(this).parent().attr("data-toggle");
         $("."+el).addClass("is-hidden").removeClass("is-visible");
     });
+
 });
