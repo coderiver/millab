@@ -351,4 +351,19 @@ $(document).ready(function() {
         $("."+el).addClass("is-hidden").removeClass("is-visible");
     });
 
+    $(".js-scroll-to").on("click", function(){
+        var el = $(this).attr("data-scroll-to");
+        
+        if ($(this).attr("data-margin").length) {
+            var margin = $(this).attr("data-margin");
+        }
+        else {
+            var margin = 0
+        }
+        $('html, body').animate({
+            scrollTop: $("."+el).offset().top - margin
+        }, 500);
+        return false;
+    }); 
+
 });

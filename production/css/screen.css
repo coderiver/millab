@@ -518,6 +518,7 @@ a { text-decoration: none; }
 .clause__title { font-size: 13px; font-family: "opensans-semibold", Arial, sans-serif; color: #1fbfd5; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
 .clause__title:hover { color: #62deef; }
 .clause .category { margin-top: 8px; }
+.clause strong { font-weight: normal; font-family: "opensans-bold", Arial, sans-serif; }
 
 .links { min-height: 60px; margin-bottom: 30px; border: 1px solid #d8e2ea; border-width: 1px 0; }
 .links.is-fixed .links__wrap { position: fixed; top: 0; left: 0; right: 0; z-index: 999; background: white; box-shadow: 0 2px 5px rgba(0, 1, 1, 0.2); }
@@ -833,13 +834,12 @@ a { text-decoration: none; }
 .certificates { text-align: left; word-spacing: 16px; font-size: 0.1px; padding-top: 27px; border: none; }
 .certificates:after { content: ""; width: 100%; display: inline-block; }
 
-.certificate { border: 1px solid #d8e2ea; border-radius: 1px; overflow: hidden; width: 146px; height: 217px; display: inline-block; *zoom: 1; margin-bottom: 19px; position: relative; -moz-transition: border-color 0.4s ease; -o-transition: border-color 0.4s ease; -webkit-transition: border-color 0.4s ease; transition: border-color 0.4s ease; }
-.certificate:after { content: " "; display: table; clear: both; }
+.certificate { border: 1px solid #d8e2ea; border-radius: 1px; overflow: hidden; width: 146px; height: 217px; display: inline-block; margin-bottom: 19px; position: relative; -moz-transition: border-color 0.4s ease; -o-transition: border-color 0.4s ease; -webkit-transition: border-color 0.4s ease; transition: border-color 0.4s ease; }
 .certificate img { display: block; }
-.certificate:after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; left: 0; visibility: hidden; opacity: 0; background: rgba(31, 191, 213, 0.4); width: 100%; height: 220px; -moz-transition: all 0.4s ease; -o-transition: all 0.4s ease; -webkit-transition: all 0.4s ease; transition: all 0.4s ease; will-change: opacity; }
-.certificate:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0; z-index: 2; border: 3px solid #1fbfd5; border-radius: 3px; -moz-transition: all 0.4s ease; -o-transition: all 0.4s ease; -webkit-transition: all 0.4s ease; transition: all 0.4s ease; will-change: opacity; }
+.certificate i { content: ""; position: absolute; top: 0; bottom: 0; right: 0; left: 0; z-index: 2; visibility: hidden; opacity: 0; -moz-transition: all 0.4s ease; -o-transition: all 0.4s ease; -webkit-transition: all 0.4s ease; transition: all 0.4s ease; will-change: opacity; border: 3px solid #1fbfd5; border-radius: 3px; }
+.certificate i:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 2; background: #1fbfd5; background: rgba(31, 191, 213, 0.4); }
 .certificate:hover { border-radius: 3px; }
-.certificate:hover:after, .certificate:hover:before { opacity: 1; visibility: visible; }
+.certificate:hover i { opacity: 1; visibility: visible; }
 
 .partners { padding: 40px 60px 80px 82px; *zoom: 1; }
 .partners:after { content: " "; display: table; clear: both; }
@@ -939,9 +939,9 @@ a { text-decoration: none; }
 .ie8 .input { line-height: 39px; }
 .ie8 .window { border: 1px solid #e9edf0; }
 .ie8 .window__wrap:before { content: ""; position: absolute; left: 50%; margin-left: -13px; bottom: -14px; width: 0px; height: 0px; border-style: solid; border-width: 13px 13px 0 13px; border-color: #e9edf0 transparent transparent transparent; }
-.ie8 .certificate:before, .ie8 .certificate:after { visibility: hidden; }
-.ie8 .item_small .btn-detail { visibility: hidden; }
-.ie8 .item_small:hover .btn-detail { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); opacity: 0.9; }
+.ie8 .certificate i { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; }
+.ie8 .item .btn-detail { visibility: hidden; }
+.ie8 .item:hover .btn-detail { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); opacity: 0.9; }
 .ie8 .btn-detail { background: #3bc4d8; }
 .ie8 .promo__main { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 .ie8 .overlay { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); opacity: 0.9; }
