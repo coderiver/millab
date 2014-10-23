@@ -229,6 +229,7 @@ a { text-decoration: none; }
 .sort__title { display: inline-block; vertical-align: middle; color: #2d3441; }
 .sort__body { display: inline-block; position: relative; vertical-align: middle; }
 .sort__text { display: inline-block; vertical-align: middle; padding-right: 11px; height: 30px; line-height: 30px; position: relative; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; color: #1fbfd5; }
+.sort__text.is-active:after { width: 0px; height: 0px; border-style: solid; border-width: 0 3px 4px 3px; border-color: transparent transparent #1fbfd5 transparent; }
 .sort__text:after { content: ""; position: absolute; right: 0; top: 13px; width: 0px; height: 0px; border-style: solid; border-width: 4px 3px 0 3px; border-color: #1fbfd5 transparent transparent transparent; }
 .sort__list { display: none; position: absolute; z-index: 2; top: 100%; left: -10px; padding: 5px 0; width: auto; background: white; border-radius: 3px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
 .sort__list a { display: block; padding: 0 10px; color: #1fbfd5; }
@@ -604,7 +605,7 @@ a { text-decoration: none; }
 .article blockquote { background: #cef3fd; padding: 35px 35px 30px 35px; text-align: center; margin: 44px 0 35px; text-transform: uppercase; }
 .article hr { margin: 26px 0; border: 0; height: 1px; clear: both; background: #e9edf0; }
 .article ul { font-size: 0; }
-.article ul li { position: relative; display: inline-block; vertical-align: top; margin: 0 0 6px; padding: 0 20px 0 68px; width: 50%; font-size: 12px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.article ul li { position: relative; display: inline-block; vertical-align: top; margin: 0 0 6px; padding: 0 20px 0 68px; width: 49.9%; font-size: 12px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .article ul li:before { content: ""; position: absolute; top: 11px; left: 25px; height: 1px; width: 23px; background: #1dbed4; }
 .article ol { -moz-column-count: 2; -webkit-column-count: 2; column-count: 2; -moz-column-width: 340px; -webkit-column-width: 340px; column-width: 340px; counter-reset: list1; padding: 14px 16px 0 20px; }
 .article ol li { position: relative; display: inline-block; vertical-align: top; margin: 0 0 17px; padding: 5px 20px 0 68px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }

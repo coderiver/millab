@@ -390,6 +390,9 @@
 		cursor: pointer
 		+unselectable
 		color: $azure
+		&.is-active
+			&:after
+				+arr(6,4,$azure,t) 
 		&:after
 			content: ""
 			position: absolute

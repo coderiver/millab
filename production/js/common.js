@@ -366,4 +366,16 @@ $(document).ready(function() {
         return false;
     }); 
 
+    $(".js-sort").on("click", function(){
+        if ($(this).hasClass("is-active")) {
+            $(this).removeClass("is-active");
+            $(this).parent().find("input").removeAttr("checked");
+        }
+        else {
+            $(this).addClass("is-active");
+            $(this).parent().find("input").attr("checked", "checked");
+        }
+        return false;
+    }); 
+
 });
