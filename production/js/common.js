@@ -326,7 +326,7 @@ $(document).ready(function() {
         
     validate();
     if ($(".js-input-tel").length) {
-        $(".js-input-tel").mask("+799 (99) 999-99-99");
+        $(".js-input-tel").mask("+7(999) 999-99-99");
     }
     $("body").on("change",".js-check input",function(){
         var checkGroup = $(this).closest(".js-check-group");
