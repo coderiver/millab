@@ -356,7 +356,7 @@
 	&:hover
 		background: $blue 
 		.btn-detail
-			+opacity(1)
+			+opacity(.9)
 	&__img
 		margin-bottom: 17px
 		height: 145px
@@ -386,8 +386,7 @@
 
 .form
 	position: relative
-	&:before
-		content: ""
+	&__overlay
 		position: absolute
 		top: 0
 		left: 0
@@ -397,13 +396,13 @@
 		visibility: hidden
 		background: #fff
 		background: rgba(#fff,.95)  
-		opacity: 0
+		+opacity(0)
 		will-change: opacity 
 	&.has-open-message	
 		.form__message
-			opacity: 1
+			+opacity(1)
 			visibility: visible
-		&:before
+		.form__overlay
 			opacity: 1
 			visibility: visible
 	h2
@@ -415,7 +414,7 @@
 		left: 0
 		width: 390px
 		visibility: hidden
-		opacity: 0
+		+opacity(0)
 		will-change: opacity
 		.icon-done
 			display: block
@@ -590,24 +589,24 @@
 			position: relative
 			margin-bottom: 10px
 			+tr(opacity .2s)
-			opacity: .5
+			+opacity(.5)
 			cursor: pointer
 			will-change: opacity
-			&:after
-				content: ""
+			i
 				position: absolute
 				top: 0
 				left: 0
 				right: 0
 				bottom: 0
+				z-index: 10
 				border: 2px solid $azure
 				+tr(opacity .2s)
 				will-change: opacity
-				opacity: 0
+				+opacity(0)
 			&.is-active
-				opacity: 1 
-				&:after
-					opacity: 1 
+				+opacity(1) 
+				i
+					+opacity(1)
 	.prod__slider
 		float: left
 		font-size: 0
@@ -763,6 +762,9 @@
 		margin-bottom: 11px
 	a
 		color: $azure 
+		+tr(color .4s)
+		&:hover
+			color: $azure_h 
 	h1,h2,h3,h4,h5,h6
 		font-weight: normal
 	h1

@@ -195,6 +195,7 @@
 .select
 	position: relative
 	font-size: 11px
+	text-align: left
 	&.is-active
 		.select__text
 			border-radius: 6px 6px 0 0 
@@ -380,6 +381,8 @@
 		display: inline-block
 		position: relative
 		vertical-align: middle
+		input
+			+opacity(0)
 	&__text
 		display: inline-block
 		vertical-align: middle

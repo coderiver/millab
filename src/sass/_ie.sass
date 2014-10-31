@@ -60,10 +60,14 @@
 	.item
 		.btn-detail
 			visibility: hidden
+		&__main
+			display: none
 		&:hover
 			.btn-detail
 				visibility: visible
 				+opacity(.9)
+			.item__main
+				display: block
 	.btn-detail
 		background: rgb(59,196,216)
 	.promo
@@ -84,3 +88,5 @@
 		span, input
 			position: static
 			vertical-align: middle
+	.form__overlay
+		+opacity(.95)
