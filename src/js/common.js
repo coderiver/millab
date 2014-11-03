@@ -53,7 +53,7 @@ $(document).ready(function() {
         );
     }
     	
-// popups 
+// popups
     $(".js-popup-link").on("click", function(event){
         $(".js-overlay").fadeIn(300);
         var popup = $(this).attr("href");
@@ -67,6 +67,7 @@ $(document).ready(function() {
     $(".js-popup-close").on("click", function(){
         $(".js-overlay").fadeOut(300); 
         $(this).parents(".js-popup").removeClass("is-visible");
+        $("html").removeClass("has-open-popup");
         return false;
     });
     $(".js-popup").children().on("click", function(event){

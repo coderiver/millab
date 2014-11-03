@@ -27,8 +27,6 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: seguisb; src: url("../fonts/seguisb.eot"); src: url("../fonts/seguisb.eot?#iefix") format("embedded-opentype"), url("../fonts/seguisb.woff") format("woff"), url("../fonts/seguisb.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 html ::selection { background: rgba(31, 191, 213, 0.3); }
 html ::-moz-selection { background: rgba(31, 191, 213, 0.3); }
-html.has-open-popup { overflow: hidden; }
-html.has-open-popup body { overflow: hidden; }
 
 body { min-width: 1024px; font-size: 12px; line-height: 2; letter-spacing: 0.3px; font-family: "opensans-regular", Arial, sans-serif; background: #e8eff5; }
 body.index-page .header { overflow: visible; }
@@ -744,7 +742,7 @@ a { text-decoration: none; }
 .slick-dots button { display: block; width: 6px; height: 6px; background: white; -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); cursor: pointer; font: 0/0 a; text-shadow: none; color: transparent; border-radius: 50%; }
 .slick-dots button:hover { box-shadow: none; }
 
-.has-open-popup { overflow: hidden; padding-right: 17px; }
+.has-open-popup body { overflow: hidden; padding-right: 17px; }
 
 .overlay { display: none; position: fixed; top: 0; right: 0; left: 0; bottom: 0; z-index: 100; background: white; background: rgba(255, 255, 255, 0.99); }
 
