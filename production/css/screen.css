@@ -746,9 +746,9 @@ a { text-decoration: none; }
 
 .overlay { display: none; position: fixed; top: 0; right: 0; left: 0; bottom: 0; z-index: 100; background: white; background: rgba(255, 255, 255, 0.99); }
 
-.popup-wrap { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 200; padding: 30px 0; overflow: auto; -webkit-perspective: 1300px; -moz-perspective: 1300px; perspective: 1300px; visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; backface-visibility: hidden; text-align: center; font-size: 0; }
+.popup-wrap { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 200; padding: 30px 0; overflow: hidden; -webkit-perspective: 1300px; -moz-perspective: 1300px; perspective: 1300px; visibility: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; backface-visibility: hidden; text-align: center; font-size: 0; }
 .popup-wrap:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.popup-wrap.is-visible { visibility: visible; }
+.popup-wrap.is-visible { visibility: visible; overflow: auto; }
 .popup-wrap.is-visible .popup { -webkit-transform: rotateX(0deg); -moz-transform: rotateX(0deg); -ms-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
 .popup-wrap.to-center .popup { text-align: center; }
 .popup-wrap_padding .popup { padding: 40px 40px 65px 145px; }

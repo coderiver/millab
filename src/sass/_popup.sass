@@ -32,7 +32,7 @@
 	bottom: 0	
 	z-index: 200	
 	padding: 30px 0 
-	overflow: auto
+	overflow: hidden
 	-webkit-perspective: 1300px
 	-moz-perspective: 1300px
 	perspective: 1300px
@@ -43,6 +43,7 @@
 	+vertical
 	&.is-visible
 		visibility: visible
+		overflow: auto
 		.popup
 			-webkit-transform: rotateX(0deg)
 			-moz-transform: rotateX(0deg)
