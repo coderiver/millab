@@ -300,8 +300,7 @@
 	&__text
 		margin-bottom: 13px
 		line-height: 1.8
-.site-map,
-.sitemap
+.site-map
 	padding: 36px 83px 80px
 	line-height: 2.3
 	font-size: 13px
@@ -338,19 +337,50 @@
 		&:hover
 			color: $azure_h 
 			text-decoration: none
+
 .sitemap
-	+column-count(2)
-	.level-1 > li > a
-		margin: 43px 0 22px
-		a 
-			color: $text
-			&:hover
-				color: $azure_h
-		
-	.sitemap .level-2 > li > a
-		margin: 22px 0 12px
-		font-size: 16px
-		font-weight: normal
+	float: left
+	width: 50%
+	+box
+	margin: 0 
+	padding: 0 40px 40px 80px 
+	a
+		color: $azure
+		text-decoration: underline
+		+transition(color .2s)
+		&:hover
+			color: $azure_h 
+			text-decoration: none
+	ul
+		padding-left: 0
+	.level-1
+		margin-top: 10px
+		> li 
+			> a
+				display: inline-block
+				margin: 43px 0 22px
+				color: $text
+				+sbold
+				font-size: 20px
+				&:hover
+					color: $azure_h
+	.level-2
+		margin-bottom: 10px
+		> li 
+			> a
+				margin: 22px 0 12px
+				font-size: 16px
+				display: inline-block
+				color: $text
+				font-size: 16px
+				&:hover
+					color: $azure_h
+	.level-4
+		margin-bottom: 13px
+		padding-left: 20px
+		font-size: 12px
+		line-height: 2.2
+
 .post-wrap
 	padding: 0 67px 
 	font-size: 0		
