@@ -482,11 +482,11 @@ a { text-decoration: none; }
 .post .btn-detail { position: absolute; top: 15px; right: 15px; left: 15px; width: auto; height: 145px; line-height: 145px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; will-change: opacity; -moz-transition: opacity 0.4s; -o-transition: opacity 0.4s; -webkit-transition: opacity 0.4s; transition: opacity 0.4s; }
 
 .form { position: relative; }
-.form__overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 4; visibility: hidden; background: white; background: rgba(255, 255, 255, 0.95); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; will-change: opacity; }
-.form.has-open-message .form__message { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; visibility: visible; }
+.form__overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 4; visibility: hidden; opacity: 0; background: rgba(255, 255, 255, 0.95); }
+.form.has-open-message .form__message { visibility: visible; opacity: 1; }
 .form.has-open-message .form__overlay { opacity: 1; visibility: visible; }
 .form h2 { margin: 46px 0 24px; }
-.form__message { position: absolute; z-index: 5; top: 0; left: 0; width: 390px; visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; will-change: opacity; }
+.form__message { position: absolute; z-index: 5; top: 0; left: 0; width: 390px; visibility: hidden; opacity: 0; will-change: opacity; }
 .form__message .icon-done { display: block; margin: 7px auto; }
 
 .search { position: relative; margin: 44px 0 0; width: 234px; }

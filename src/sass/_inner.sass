@@ -318,7 +318,7 @@
 		font-size: 16px
 		font-weight: normal
 	h1,h2,h3,h4,h5,h6
-		a
+		a 
 			color: $text
 			&:hover
 				color: $azure_h
@@ -394,16 +394,14 @@
 		bottom: 0
 		z-index: 4
 		visibility: hidden
-		background: #fff
+		opacity: 0
 		background: rgba(#fff,.95)  
-		+opacity(0)
-		will-change: opacity 
 	&.has-open-message	
 		.form__message
-			+opacity(1)
 			visibility: visible
-		.form__overlay
 			opacity: 1
+		.form__overlay
+			opacity: 1 
 			visibility: visible
 	h2
 		margin: 46px 0 24px
@@ -414,7 +412,7 @@
 		left: 0
 		width: 390px
 		visibility: hidden
-		+opacity(0)
+		opacity: 0
 		will-change: opacity
 		.icon-done
 			display: block
