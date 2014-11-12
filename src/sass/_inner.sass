@@ -618,74 +618,75 @@
 		margin: 13px 0 0 20px
 		display: none
 
-.prod
-	.prod__row
-		padding-bottom: 40px
-		margin-bottom: 35px
-		border-bottom: 1px solid #d8e2ea 
-		+clr
-	.prod__gallery
-		float: left
-	.prod__previews
-		float: left
-		width: 40px
-		margin-right: 10px
-		font-size: 0
-		li
-			position: relative
-			margin-bottom: 10px
-			+tr(opacity .2s)
-			+opacity(.5)
-			cursor: pointer
-			will-change: opacity
-			i
-				position: absolute
-				top: 0
-				left: 0
-				right: 0
-				bottom: 0
-				z-index: 10
-				border: 2px solid $azure
-				+tr(opacity .2s)
-				will-change: opacity
-				+opacity(0)
-			&.is-active
-				+opacity(1) 
-				i
-					+opacity(1)
-	.prod__slider
-		float: left
-		font-size: 0
-		text-align: center
-	.prod__slider-item
-		img
-			max-width: 100%
-			max-height: 100%
-			vertical-align: top
-	.prod__in
-		float: right
-		width: 300px
-	.prod__head
-		margin-bottom: 35px
-		+clr
-	.prod__brand
-		float: left
-	.prod__types
-		float: right
-		font-size: 0
+.prod__row
+	padding-bottom: 40px
+	margin-bottom: 35px
+	border-bottom: 1px solid #d8e2ea 
+	+clr
+.prod__gallery
+	float: left
+	position: relative
+	z-index: 1
+.prod__previews
+	float: left
+	width: 40px
+	margin-right: 10px
+	font-size: 0
+	li
+		position: relative
+		margin-bottom: 10px
+		+tr(opacity .2s)
+		+opacity(.5)
+		cursor: pointer
+		will-change: opacity
 		i
-			display: inline-block
-			margin-left: 15px 
-			opacity: .3 
-			vertical-align: middle
-			&.is-active
-				opacity: 1 
-	.prod__types-1
-		+s(prod-type1)
-	.prod__types-2
-		+s(prod-type2)
-	.prod__types-3
-		+s(prod-type3)
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 10
+			border: 2px solid $azure
+			+tr(opacity .2s)
+			will-change: opacity
+			+opacity(0)
+		&.is-active
+			+opacity(1) 
+			i
+				+opacity(1)
+.prod__slider
+	float: left
+	font-size: 0
+	text-align: center
+.prod__slider-item
+	img
+		max-width: 100%
+		max-height: 100%
+		vertical-align: top
+.prod__in
+	float: right
+	width: 300px
+.prod__head
+	margin-bottom: 35px
+	+clr
+.prod__brand
+	float: left
+.prod__types
+	float: right
+	font-size: 0
+	i
+		display: inline-block
+		margin-left: 15px 
+		opacity: .3 
+		vertical-align: middle
+		&.is-active
+			opacity: 1 
+.prod__types-1
+	+s(prod-type1)
+.prod__types-2
+	+s(prod-type2)
+.prod__types-3
+	+s(prod-type3)
 
 .accord
 	.accord__item
