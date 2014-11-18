@@ -41,6 +41,7 @@
 					Обратный звонок
 				</a>
 				<div class="tel">+7 495 933 71 47</div>
+				<div class="header__address">127247 г. Москва, Дмитровское ш., д. 100, <br>стр. 2, Бизнес-центр North House</div>
 			</div>
 		</div>
 		<div class="nav-wrap">
@@ -637,7 +638,7 @@
 							</div>
 						</div>
 						<!-- 6 -->
-						<div id="video" class="prod__row js-links-block">
+						<div id="video" class="prod__row js-links-block is-hidden-for-print">
 							<!-- content -->
 							<div class="content">
 								<h2>Видео</h2>
@@ -651,7 +652,7 @@
 							</div>
 						</div>
 						<!-- 7 -->
-						<div class="prod__row">
+						<div class="prod__row is-hidden-for-print">
 							<!-- content -->
 							<div class="content">
 								<h2>Совместимые продукты</h2>
@@ -682,7 +683,7 @@
 							</div>
 						</div>
 						<!-- 8 -->
-						<div class="prod__row js-price-form">
+						<div class="prod__row js-price-form is-hidden-for-print">
 							<!-- content -->
 							<div class="content">
 								<h2>Запрос стоимости</h2>
@@ -877,5 +878,48 @@
 <!-- end footer -->
 <!-- load head.js -->
 <script src="js/lib/head.js"></script> 
+<div class="is-visible-for-print">
+		<!-- begin header -->
+	<div class="header">
+		<div class="l-center">
+			<a href="#" class="header__logo">
+				<img src="img/logo.png" alt="logo" height="97">
+			</a>
+			<div class="header__about">
+				Оборудование для синтеза премиум-класса 
+			</div> 
+			<div class="search">
+				<form class="js-form">
+					<input class="search__input" type="text" placeholder="Поиск по сайту">
+					<button class="search__btn" type="submit"></button>
+				</form>
+			</div> 
+			<div class="header__contact">
+				<a href="js-popup-callback" class="header__callback js-popup-link">
+					<i class="icon-tel"></i>
+					Обратный звонок
+				</a>
+				<div class="tel">+7 495 933 71 47</div>
+				<div class="header__address">127247 г. Москва, Дмитровское ш., д. 100, <br>стр. 2, Бизнес-центр North House</div>
+			</div>
+		</div>
+		<div class="nav-wrap">
+			<div class="l-center"> 
+				<ul class="nav">
+					<li class="is-active"><a href="#">Оборудование</a></li>
+					<li><a href="#">Партнёры</a></li>           
+					<li><a href="#">Каталоги</a></li>           
+					<li><a href="#">Решения</a></li>           
+					<li><a href="#">Сервис</a></li> 
+					<li class="is-marked"><a href="#">О проекте</a></li>           
+					<li class="is-marked"><a href="#">Новости</a></li>           
+					<li class="is-marked"><a href="#">Статьи</a></li>           
+					<li class="is-marked"><a href="#">Контактная информация</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+</div>
 </body>
 </html>

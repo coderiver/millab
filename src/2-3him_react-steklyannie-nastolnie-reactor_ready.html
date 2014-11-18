@@ -586,7 +586,7 @@
 							</div>
 						</div>
 						<!-- 6 -->
-						<div id="video" class="prod__row js-links-block">
+						<div id="video" class="prod__row js-links-block is-hidden-for-print">
 							<!-- content -->
 							<div class="content">
 								<h2>Видео</h2>
@@ -600,7 +600,7 @@
 							</div>
 						</div>
 						<!-- 7 -->
-						<div class="prod__row">
+						<div class="prod__row is-hidden-for-print">
 							<!-- content -->
 							<div class="content">
 								<h2>Совместимые продукты</h2>
@@ -631,7 +631,7 @@
 							</div>
 						</div>
 						<!-- 8 -->
-						<div class="prod__row js-price-form">
+						<div class="prod__row js-price-form is-hidden-for-print">
 							<!-- content -->
 							<div class="content">
 								<h2>Запрос стоимости</h2>
@@ -716,5 +716,8 @@
 <!-- END out-->  
 @@include('_brands-slider.html')
 @@include('_footer.html')
+<div class="is-visible-for-print">
+	@@include('_header.html')
+</div>
 </body>
 </html>

@@ -1,0 +1,22 @@
+body { background: white; }
+
+.header__about { display: none; }
+.header .search { display: none; }
+.header__contact a { display: none; }
+.header__address { display: block; width: 260px; overflow: visible; }
+.header .l-center { max-width: 691px; }
+.header .l-center:before { display: none; }
+
+.nav-wrap, .breadcrumbs, .sidebar, .links, .prod__previews, .prod__slider-item, .main__set, .page-action, .is-hidden-for-print, .brands-slider, .footer { display: none; }
+
+.prod__slider-item:first-child { display: block; }
+
+.l-center { max-width: 691px; margin: 0 auto; }
+
+.main { border-top: 1px solid #d8e2ea; margin-bottom: 0; }
+.main__right-col { float: none; padding: 0; margin: 0 auto; }
+.main .content ul { margin-bottom: 0; }
+
+.is-visible-for-print { display: block; }
+
+.accord__head:after { display: none; }

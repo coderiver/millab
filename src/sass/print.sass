@@ -1,2 +1,45 @@
 // done by Coderiver.com.ua
 @import lib/base
+
+body
+	background: #fff 
+.header
+	&__about
+		display: none
+	.search
+		display: none
+	&__contact
+		a
+			display: none
+	&__address
+		display: block
+		width: 260px 
+		overflow: visible
+	.l-center
+		max-width: 691px
+		&:before
+			display: none
+.nav-wrap, .breadcrumbs, .sidebar, .links, .prod__previews, .prod__slider-item, .main__set, .page-action, .is-hidden-for-print, .brands-slider, .footer
+	display: none
+.prod__slider-item
+	&:first-child
+		display: block
+.l-center
+	max-width: 691px
+	margin: 0 auto
+.main
+	border-top: 1px solid #d8e2ea
+	margin-bottom: 0
+	&__right-col
+		float: none
+		padding: 0
+		margin: 0 auto
+	.content
+		ul
+			margin-bottom: 0
+.is-visible-for-print
+	display: block
+.accord
+	&__head
+		&:after
+			display: none
