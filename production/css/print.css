@@ -9,8 +9,6 @@ body { background: white; }
 
 .nav-wrap, .breadcrumbs, .sidebar, .links, .prod__previews, .prod__slider-item, .main__set, .page-action, .is-hidden-for-print, .brands-slider, .footer { display: none; }
 
-.prod__slider-item:first-child { display: block; }
-
 .l-center { max-width: 691px; margin: 0 auto; }
 
 .main { border-top: 1px solid #d8e2ea; margin-bottom: 0; }
