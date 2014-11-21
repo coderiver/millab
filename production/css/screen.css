@@ -551,8 +551,7 @@ a { text-decoration: none; }
 .links .links__list li:first-child { padding-left: 5px; }
 .links .links__list a { position: relative; display: block; padding: 17px 0; color: #1fbfd5; }
 .links .links__list a:before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #1fbfd5; display: none; }
-.links .links__order { float: right; margin: 13px 0 0 20px; display: none; }
-.links .links__order:last-child { margin-bottom: 13px; }
+.links .links__order { float: right; margin: 13px 0 13px 20px; display: none; }
 
 .prod__row { padding-bottom: 40px; margin-bottom: 35px; border-bottom: 1px solid #d8e2ea; *zoom: 1; }
 .prod__row:after { content: " "; display: table; clear: both; }
