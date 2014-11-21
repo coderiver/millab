@@ -19,7 +19,7 @@ body
 		max-width: 691px
 		&:before
 			display: none
-.nav-wrap, .breadcrumbs, .sidebar, .links, .prod__previews, .prod__slider-item, .main__set, .page-action, .is-hidden-for-print, .brands-slider, .footer
+.nav-wrap, .breadcrumbs, .sidebar, .links, .prod__previews, .prod__slider, .main__set .btn, .page-action, .is-hidden-for-print, .brands-slider, .footer
 	display: none
 .l-center
 	max-width: 691px
@@ -37,6 +37,15 @@ body
 .is-visible-for-print
 	display: block
 .accord
-	&__head
+	&__item
+		border-color: #2d3441 !important
+	&__in
+		display: block !important
+	.accord__head
+		color: #fff !important
+		background: #2d3441 !important 
 		&:after
 			display: none
+.btn-print
+	display: block
+	float: right
