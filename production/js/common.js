@@ -153,11 +153,15 @@ $(document).ready(function() {
             scroll_top = $(window).scrollTop();
         if (scroll_top > (el_top + el_height)) {
             el.addClass('is-fixed');
-            $(".js-page-action").addClass("has-top-margin");
+            $(".js-page-action").css({ 
+                marginTop: el_wrap.outerHeight()
+            });
         }
         else {
             el.removeClass('is-fixed');
-            $(".js-page-action").removeClass("has-top-margin");
+            $(".js-page-action").css({
+                marginTop: 0
+            });
         }
     }
      if ($('.links').length > 0) {
@@ -378,5 +382,6 @@ $(document).ready(function() {
         }
         return false;
     }); 
+
 
 });
