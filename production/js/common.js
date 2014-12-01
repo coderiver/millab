@@ -130,16 +130,22 @@ $(document).ready(function() {
             head = el.find('.accord__head'),
             content = el.find('.accord__in');
         head.on('click', function () {
+            
             if (!$(this).parent().hasClass('is-active')) {
                 item.removeClass('is-active');
                 $(this).parent().addClass('is-active');
-                content.slideUp();
+                content.hide();
                 $(this).next().slideDown();
             }
             else {
                 item.removeClass('is-active');
                 $(this).next().slideUp();
             }
+            var top = $(this).offset().top - $(".links__wrap").outerHeight();
+            console.log(top);
+            $('html, body').animate({
+                scrollTop: top
+            }, 100);
         }); 
     }
     accord();
