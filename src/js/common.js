@@ -102,11 +102,10 @@ $(document).ready(function() {
                 $(this).next().slideDown();
             }
             else {
-                item.removeClass('is-active');
+                $(this).parent().removeClass('is-active');
                 $(this).next().slideUp();
             }
             var top = $(this).offset().top - $(".links__wrap").outerHeight();
-            console.log(top);
             $('html, body').animate({
                 scrollTop: top
             }, 100);
@@ -165,7 +164,7 @@ $(document).ready(function() {
         var item_scroll = $('.js-nav-item');
         block.each(function(){        
             var block_top = $(this).offset().top,
-                block_top = block_top - links_height;
+                block_top = block_top - links_height - 40;
             if (offset_top >= block_top) {
                 var item_el = $(this).attr('id'),
                     item_el = '#' + item_el;
