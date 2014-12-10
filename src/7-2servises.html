@@ -28,36 +28,36 @@
 						<form class="js-validate">
 							<h2>Информация о товаре</h2>
 							<label class="field field_hor">
-								<span class="field__title">Название прибора</span>
+								<span class="field__title">Название прибора <sup>*</sup></span>
 								<span class="field__body">
-									<input type="text" class="input">
+									<input type="text" class="input" name="name11" required>
 								</span>
-							</label>
+							</label> 
 							<div class="field field_hor">
-								<span class="field__title">Производитель</span>
+								<span class="field__title">Производитель<sup>*</sup></span>
 								<div class="field__body">
 									<div class="drop js-select is-empty">
-										<span class="drop__text js-select-text">Выберите из списка
-										</span>
-										<ul class="drop__list js-select-list">
-											<li><a href="0" class="is-active">Прозиводитель0</a></li>
-											<li><a href="1">Прозиводитель1</a></li>
-											<li><a href="2">Прозиводитель2</a></li>
-											<li><a href="3">Прозиводитель3</a></li>
-										</ul>
-										<select class="js-select-body">
-											<option value="0">Прозиводитель0</option>
+										<select class="js-select-body" name="name13" required title="Please select something!">
+											<option value=""></option>
 											<option value="1">Прозиводитель1</option>
 											<option value="2">Прозиводитель2</option>
 											<option value="3">Прозиводитель3</option>
 										</select>
+										<span class="drop__text js-select-text">Выберите из списка
+										</span>
+										<ul class="drop__list js-select-list">
+											<li><a href=""></a></li>
+											<li><a href="1">Прозиводитель1</a></li>
+											<li><a href="2">Прозиводитель2</a></li>
+											<li><a href="3">Прозиводитель3</a></li>
+										</ul>
 									</div>
 								</div>
 							</div>
 							<label class="field field_hor">
-								<span class="field__title">Серийный номер</span>
+								<span class="field__title">Серийный номер <sup>*</sup></span>
 								<span class="field__body">
-									<input type="text" class="input">
+									<input type="text" class="input" name="name12" required>
 								</span>
 							</label>
 							<label class="field field_hor">
@@ -71,13 +71,13 @@
 								<div class="field__body js-radio-group">
 									<div class="field__half">
 										<label class="radio js-radio" data-toggle="js-radio1">
-											<input type="radio" name="garanty"  data-state="0" checked>
+											<input type="radio" name="garanty"  data-state="0" required>
 											<span>Нет</span>
 										</label>
 									</div>
 									<div class="field__half">
 										<label class="radio js-radio" data-toggle="js-radio1">
-											<input type="radio" name="garanty" data-state="1">
+											<input type="radio" name="garanty" data-state="1" required>
 											<span>Да</span>
 										</label>
 									</div>
@@ -148,7 +148,7 @@
 								<span class="field__title"></span>
 								<div class="field__body">
 									<div class="btn-wrap">
-										<button class="btn js-scroll-top">Отправить запрос</button>
+										<button class="btn js-scroll-top" type="submit">Отправить запрос</button>
 									</div>
 								</div>
 							</div>

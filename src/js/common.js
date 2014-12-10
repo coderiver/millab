@@ -77,43 +77,7 @@ $(document).ready(function() {
         $(".js-popup").removeClass("is-visible");
     });
 
-// select list
-    $(".js-select").on("click",function(event) {
-        event.stopPropagation();
-    });
-    $(".js-select-text").on("click",function(event) {
-        if ($(this).parents(".js-select").hasClass("is-active")) {
-            $(".js-select").removeClass("is-active");
-            $(".js-select-list").slideUp(100);
-        }
-        else {
-            $(".js-select").removeClass("is-active");
-            $(".js-select-list").slideUp(100);
-            $(this).parents(".js-select").toggleClass("is-active");
-            $(this).parents(".js-select").find(".js-select-list").slideToggle(100);
-        }
-       
-    });
-    $(".js-select-list a").on("click",function() {
-        var val = $(this).attr("href");
-        var text = $(this).text();
-        $(this).parents(".js-select").find(".js-select-text").text(text);
-        $(this).parents(".js-select").find("option").removeAttr("selected");
-        $(this).parents(".js-select").find('option[value="'+val+'"]').attr("selected", "selected");
-        $(this).parents(".js-select-list").find("a").removeClass("is-active");
-        $(this).addClass("is-active");
-        $(this).parents(".js-select").removeClass("is-active").removeClass("is-empty");
-        $(this).parents(".js-select-list").slideUp(100);
-        return false;
-        
-    });
 
-    $(".js-more").on("click",function() {
-        var el = $(this).parent().find(".js-box-more");
-        $(this).toggleClass("is-active");
-        el.toggleClass("is-active");
-        return false;
-    });
 
 // fancy box
         $(".js-fancybox a").fancybox({
@@ -274,7 +238,13 @@ $(document).ready(function() {
                         },
                         message: {
                             minlength: 4
-                        }
+                        },
+                        field: {
+                            required: true
+                        },
+                        // fruit: {
+                        //   required: true
+                        // }
                     },
                     messages: {
                         firstname: 'Вас так зовут?',
@@ -301,42 +271,50 @@ $(document).ready(function() {
                             minlength: 'Заполните поле'
                         }
                     }
-                    // messages: {
-                    //     firstname: '',
-                    //     lastname: '',
-                    //     fathername: '',
-                    //     alias: '',
-                    //     any: '',
-                    //     password: {
-                    //         required: '',
-                    //         minlength: ''
-                    //     },
-                    //     confirm_password: {
-                    //         required: '',
-                    //         minlength: '',
-                    //         equalTo: ''
-                    //     },
-                    //     email: '',
-                    //     address: '',
-                    //     workplace: '',
-                    //     edu: '',
-                    //     status: '',
-                    //     exp: '',
-                    //     tel: {
-                    //         required: '',
-                    //         phoneUS: ''
-                    //     },
-                    //     message: {
-                    //         required: '',
-                    //         minlength: ''
-                    //     }
-                    // }
                 });
             }
         });
     }
         
     validate();
+
+    // select list
+    $(".js-select").on("click",function(event) {
+        event.stopPropagation();
+    });
+    $(".js-select-text").on("click",function(event) {
+        if ($(this).parents(".js-select").hasClass("is-active")) {
+            $(".js-select").removeClass("is-active");
+            $(".js-select-list").slideUp(100);
+        }
+        else {
+            $(".js-select").removeClass("is-active");
+            $(".js-select-list").slideUp(100);
+            $(this).parents(".js-select").toggleClass("is-active");
+            $(this).parents(".js-select").find(".js-select-list").slideToggle(100);
+        }
+       
+    });
+    $(".js-select-list a").on("click",function() {
+        var val = $(this).attr("href");
+        var text = $(this).text();
+        $(this).parents(".js-select").find(".js-select-text").text(text);
+        //$(this).parents(".js-select").find("option").removeAttr("selected");
+        $(this).parents(".js-select").find("select").val(val).change();
+        $(this).parents(".js-select-list").find("a").removeClass("is-active");
+        $(this).addClass("is-active"); 
+        $(this).parents(".js-select").removeClass("is-active").removeClass("is-empty");
+        $(this).parents(".js-select-list").slideUp(100);
+        return false;
+        
+    });
+
+    $(".js-more").on("click",function() {
+        var el = $(this).parent().find(".js-box-more");
+        $(this).toggleClass("is-active");
+        el.toggleClass("is-active");
+        return false;
+    });
     if ($(".js-input-tel").length) {
         $(".js-input-tel").mask("+7 (999) 999-99-99");
     }
@@ -394,10 +372,18 @@ $(document).ready(function() {
         $("body, html").animate({
             scrollTop: 0
         }, 300);
-        return false;
+        //return false;
     }); 
 
-
+    // $(".radio input").on("change", function(){
+    //     if ($(this).is(":checked")) {
+    //         $(this).parents(".js-radio-group").find(".radio").removeClass("is-checked");
+    //         $(this).parent().addClass("is-checked");
+    //     }
+    //     else {
+    //         $(this).parent().removeClass("is-checked");
+    //     }
+    // })
 
 
 });

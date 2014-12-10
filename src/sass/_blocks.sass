@@ -92,6 +92,7 @@
 				margin-top: -4px
 				color: #f00
 				font-size: 10px
+				white-space: nowrap
 	&__half
 		float: left
 		width: 50%
@@ -492,11 +493,19 @@
 				color: $azure
 	select
 		position: absolute
-		display: none
-		top: 0
+		//display: none
+		top: 100%
 		left: 0
 		width: 100%
 		height: 100%
+		visibility: hidden
+		z-index: 2
+	.has-error
+		+ .drop__text
+			border-color: #f00
+	.has-error[style]
+		+ .drop__text
+			border-color: #8ebdcd
 .radio
 	display: inline-block
 	position: relative
@@ -513,6 +522,10 @@
 			+ span
 				&:after
 					display: block
+			+ label
+				+ span
+					&:after
+						display: block
 	span  
 		display: inline-block
 		vertical-align: middle
@@ -539,6 +552,15 @@
 			height: 8px
 			border-radius: 50%
 			background: $text
+	.has-error
+		+ span
+			&:before
+				border-color: #f00
+	.has-error[style]
+		+ span
+			&:before
+				border-color: #8ebecd
+			
 .checkbox
 	display: inline-block
 	position: relative
@@ -556,6 +578,10 @@
 			+ span
 				&:after
 					display: block
+			+ label
+				+ span
+					&:after
+						display: block
 	span  
 		display: inline-block
 		vertical-align: middle
@@ -584,6 +610,14 @@
 			height: 8px
 			border-radius: 3px
 			background: $text	
+	.has-error
+		+ span
+			&:before
+				border-color: #f00
+	.has-error[style]
+		+ span
+			&:before
+				border-color: #8ebecd
 .category 
 	a
 		display: inline-block
