@@ -1,6 +1,9 @@
 .breadcrumbs
 	padding: 15px 0 8px 7px
 	font-size: 0
+	> li
+		&:hover
+			z-index: 5
 	li
 		display: inline-block
 		position: relative
@@ -20,12 +23,11 @@
 							color: $azure_h
 			
 		&:hover
-			z-index: 5
 			a
 				color: $azure 
 			span 
 				border-bottom-color: transparent 
-			ul
+			ul, div
 				opacity: 1
 				visibility: visible
 	a
@@ -50,7 +52,21 @@
 			z-index: 4
 			border-bottom: 1px solid 
 			+tr(all .2s)
-	ul
+		+ ul
+			position: absolute
+			opacity: 0
+			visibility: hidden
+			top: -9px
+			left: -5px
+			z-index: 3
+			padding: 45px 20px 30px 20px
+			width: 500px
+			+box
+			background: #fff
+			+tr(opacity .4s)
+			will-change: opacity
+			box-shadow: 0 1px 5px rgba(40,66,83,.24)
+	div
 		position: absolute
 		opacity: 0
 		visibility: hidden
@@ -64,16 +80,17 @@
 		+tr(opacity .4s)
 		will-change: opacity
 		box-shadow: 0 1px 5px rgba(40,66,83,.24)
+		ul
+			+column-count(2)
+	ul
 		li
-			float: left
-			margin: 0 0 14px 10px
-			width: 220px
+			margin: 0 0 14px 0
 			+box
 			line-height: 2.2
 		a
 			color: $azure
-			padding: 0
-			+tr(color .2s)
+			padding: 0 0 0 10px
+			+tr(color .2s) 
 			text-decoration: none
 			&:hover
 				text-decoration: none
