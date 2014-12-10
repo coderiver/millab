@@ -29,10 +29,20 @@ $(document).ready(function() {
             var el = $('[data-window="'+href+'"]');
             var el_left = $(this).offset().left;
             var el_top = $(this).offset().top;
-            el.css({
-                left: el_left - $(this).outerWidth()/2,
-                top: el_top - el.outerHeight()
-            });
+            var el_height = el.outerHeight();
+            
+            if ($(window).height() - (el_top - $(document).scrollTop()+$(this).outerHeight()) >= el_height) {
+                el.addClass("is-bottom-position").css({
+                    left: el_left - $(this).outerWidth()/2,
+                    top: el_top + $(this).outerHeight()
+                });
+            }
+            else {
+                el.removeClass("is-bottom-position").css({
+                    left: el_left - $(this).outerWidth()/2,
+                    top: el_top - el_height
+                });
+            }
             timer = setTimeout(function() {
                 win.hide().removeClass("is-visible");
                 

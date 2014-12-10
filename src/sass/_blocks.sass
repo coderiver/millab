@@ -272,6 +272,20 @@
 		display: block
 		.window__wrap
 			+transform(translateY(0))
+		&.is-bottom-position
+			.window__wrap
+				+transform(translateY(0))
+	&.is-bottom-position
+		.window__wrap
+			+transform(translateY(100px))
+			&:after
+				content: ""
+				position: absolute
+				left: 50%
+				margin-left: -13px
+				top: -13px
+				bottom: auto
+				+arr(26,13,#fff,t)
 	&__wrap	
 		position: relative
 		+transform(translateY(-100px))
