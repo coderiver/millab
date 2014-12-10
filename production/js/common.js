@@ -185,6 +185,7 @@ $(document).ready(function() {
             $('html, body').animate({
                 scrollTop: top
             }, 400);
+            item.find(".accord__item").first().addClass("is-active").find(".accord__in").slideDown(200);
             return false;
         });
     }
@@ -387,7 +388,16 @@ $(document).ready(function() {
             $(this).parent().find("input").attr("checked", "checked");
         }
         return false;
+    });  
+
+    $(".js-scroll-top").on("click", function(){
+        $("body, html").animate({
+            scrollTop: 0
+        }, 300);
+        return false;
     }); 
+
+
 
 
 });
