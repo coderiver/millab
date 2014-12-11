@@ -100,25 +100,25 @@ $(document).ready(function() {
 // accordeon
     function accord () {
         var el = $('.js-accord'),
-            item = el.find('.accord__item'),
-            head = el.find('.accord__head'),
-            content = el.find('.accord__in');
+            //item = el.find('.accord__item'),
+            head = el.find('.accord__head');
+            //content = el.find('.accord__in');
         head.on('click', function () {
             
             if (!$(this).parent().hasClass('is-active')) {
-                item.removeClass('is-active');
+                //item.removeClass('is-active');
                 $(this).parent().addClass('is-active');
-                content.hide();
+                //content.hide();
                 $(this).next().slideDown();
             }
             else {
                 $(this).parent().removeClass('is-active');
                 $(this).next().slideUp();
             }
-            var top = $(this).offset().top - $(".links__wrap").outerHeight();
-            $('html, body').animate({
-                scrollTop: top
-            }, 100);
+            // var top = $(this).offset().top - $(".links__wrap").outerHeight();
+            // $('html, body').animate({
+            //     scrollTop: top
+            // }, 100);
         }); 
     }
     accord();
@@ -148,13 +148,12 @@ $(document).ready(function() {
     }
     function links_nav () {
         var el = $('.links'),
-            link = el.find('.links__list a'),
-            links_height = 80;
+            link = el.find('.links__list a');
         link.on('click', function () {
             var id = $(this).attr('href'),
                 item = $(id),
-                top = item.offset().top,
-                top = top - links_height;
+                link_height = $(this).parents(".links__list").outerHeight(),
+                top = item.offset().top - link_height;
             $('html, body').animate({
                 scrollTop: top
             }, 400);
