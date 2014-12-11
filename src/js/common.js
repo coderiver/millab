@@ -157,7 +157,7 @@ $(document).ready(function() {
                 link_height = $(this).parents(".links__list").outerHeight(),
                 top = item.offset().top - link_height;
             $('html, body').animate({
-                scrollTop: top
+                scrollTop: top - 20
             }, 400);
             item.find(".accord__item").first().addClass("is-active").find(".accord__in").slideDown(200);
             return false;
