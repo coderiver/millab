@@ -25,13 +25,15 @@ $(document).ready(function() {
     if ($(".js-window-toggle").length > 0) {
         $(".js-window-toggle").hover(
           function() {
-            var href = $(this).attr("data-toggle");
-            var el = $('[data-window="'+href+'"]');
-            var el_left = $(this).offset().left;
-            var el_top = $(this).offset().top;
-            var el_height = el.outerHeight();
-            
-            if ($(window).height() - (el_top - $(document).scrollTop()+$(this).outerHeight()) >= el_height) {
+            var href = $(this).attr("data-toggle"),
+                el = $('[data-window="'+href+'"]'),
+                el_left = $(this).offset().left,
+                el_top = $(this).offset().top,
+                el_height = el.outerHeight(),
+                scroll = $(document).scrollTop(),
+                position_bottom = $(window).height() - (el_top - scroll + $(this).outerHeight()),
+                position_top = el_top - scroll - el_height;
+            if ( position_bottom >= el_height && position_top < el_height) {
                 el.addClass("is-bottom-position").css({
                     left: el_left - $(this).outerWidth()/2,
                     top: el_top + $(this).outerHeight()
