@@ -310,7 +310,7 @@ $(document).ready(function() {
         var text = $(this).text();
         $(this).parents(".js-select").find(".js-select-text").text(text);
         //$(this).parents(".js-select").find("option").removeAttr("selected");
-        $(this).parents(".js-select").find("select").val(val).change();
+        $(this).parents(".js-select").find("select").change().val(val);
         $(this).parents(".js-select-list").find("a").removeClass("is-active");
         $(this).addClass("is-active"); 
         $(this).parents(".js-select").removeClass("is-active").removeClass("is-empty");
