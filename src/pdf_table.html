@@ -4,8 +4,8 @@
 	<title>2-3him_react-steklyannie-nastolnie-reactor_ready</title>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=1024">
-<link rel="stylesheet" media="screen,print" href="css/screen.css" >
-<link rel="stylesheet" media="screen" href="css/print.css" >
+<!-- <link rel="stylesheet" media="screen,print" href="css/screen.css" >
+<link rel="stylesheet" media="screen" href="css/print.css" > -->
 <script src="js/lib/jquery.js"></script> 
 <script src="js/lib/slick.min.js"></script>
 <script src="js/lib/cycle.min.js"></script>
@@ -16,6 +16,38 @@
 <script src="js/common.js"></script>
 <!--[if IE]><script src="js/html5shiv.js"></script><![endif]--> 
 <style>
+	.l-center {
+		max-width: 691px;
+		margin: 0 auto;
+	}
+	.main {
+		border-top: 1px solid #d8e2ea;
+		margin-bottom: 0;
+	}
+	.header table {
+		width: 100%;
+	}
+	.header__contact {
+		margin-top: 20px;
+		float: right;
+		text-align: right;
+	}
+	.header .tel {
+		margin-top: 8px;
+	}
+	.header__address {
+		display: block;
+		width: 260px;
+		overflow: visible;
+		color: silver;
+		font-size: 12px;
+		line-height: 1.9;
+	}
+	.prod__row {
+		padding-bottom: 40px;
+		margin-bottom: 35px;
+		border-bottom: 1px solid #d8e2ea;
+	}
 	.content > * { margin-bottom: 20px; }
 	.content ul li { position: relative; padding-left: 40px; margin-bottom: 10px; }
 	.content ul li:before { content: ""; position: absolute; top: 11px; left: 0; width: 23px; height: 1px; background: #1fbfd5; }
@@ -74,10 +106,6 @@
 					</td>
 					<td>
 						<div class="header__contact">
-							<a href="js-popup-callback" class="header__callback js-popup-link">
-								<i class="icon-tel"></i>
-								Обратный звонок
-							</a>
 							<div class="tel">+7 495 933 71 47</div>
 							<div class="header__address">127247 г. Москва, Дмитровское ш., д. 100, <br>стр. 2, Бизнес-центр North House</div>
 						</div>
