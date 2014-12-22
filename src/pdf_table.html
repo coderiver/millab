@@ -54,7 +54,8 @@
 	.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 { font-family: "opensans-semibold", Arial, sans-serif; font-weight: normal; }
 	.content h2 { margin-bottom: 25px; }
 	.content h5 { font-size: 14px; font-weight: normal; }
-	.content tr:nth-child(2n) td { background: #f3f8f9; }
+	.content tr:nth-child(2n),
+	.content tr.is-marked td { background: #f3f8f9; }
 	.content td { padding: 10px 20px; border-bottom: 1px solid #e8eff5; }
 	.content img[align="left"] { float: left; margin: 0 20px 20px 0; }
 	.content b, .content strong { font-family: "opensans-semibold", Arial, sans-serif; font-size: 14px; font-weight: normal; }
@@ -69,9 +70,12 @@
 		padding: 40px 0;
 		text-align: left;
 	}
-	.pdf-table_accord {
+	.pdf-table-wrap {
 		margin-bottom: 5px;
-		border: 1px solid #2d3441 !important
+		border: 1px solid #2d3441;
+	}
+	.pdf-table_accord {
+		border: 0 !important
 	}
 	.pdf-table_accord th {
 		font-weight: normal;
@@ -82,12 +86,12 @@
 		font-size: 14px;
 		line-height: 1.7;
 	}
-	.pdf-table_accord td {
+	/*.pdf-table_accord td {
 		padding: 20px;
-	}
-	.pdf-table_accord td .content td {
+	}*/
+	/*.pdf-table_accord td .content td {
 		padding: 10px 20px;
-	}
+	}*/
 </style>
 </head> 
 <body> 
@@ -173,246 +177,252 @@
 							</td>
 						</tr>
 					</table>
-					<table class="pdf-table pdf-table_accord">
-						<thead>
-							<tr>
-								<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<div class="content">
-										<h3>Описание</h3>
-									</div>
-									<table class="content">
-										<tr>
-											<td>
-												<img src="http://placehold.it/150x120" align="left" alt="">
-											</td>
-											<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="content">
-										<h5>Технические характеристики</h5>
-										<table>
-											<tbody>
-												<tr>
-													<td>Материал ёмкости</td>
-													<td>Боросиликатное стекло</td>
-												</tr>
-												<tr>
-													<td>Фланец горла</td>
-													<td>DN100</td>
-												</tr>
-												<tr>
-													<td>Патрубки рубашки</td>
-													<td>DN15</td>
-												</tr>
-												<tr>
-													<td>Нулевой мертвый объем</td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Клапан нижнего слива </td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Материал клапана</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Сливное отверстие</td>
-													<td>15 мм*</td>
-												</tr>
-												<tr>
-													<td>Датчик температуры</td>
-													<td>Pt100</td>
-												</tr>
-												<tr>
-													<td>Материал датчика температуры</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Перемешивающий элемент</td>
-													<td>4-х лопастной, пропеллерный, якорный**</td>
-												</tr>
-												<tr>
-													<td>Материал перемешивающего элемента</td>
-													<td>PTFE</td>
-												</tr>
-											</tbody>
+					<div class="pdf-table-wrap">
+						<table class="pdf-table pdf-table_accord" cellpadding="20px" cellspacing="0">
+							<thead>
+								<tr>
+									<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="content">
+											<h3>Описание</h3>
+										</div>
+										<table class="content">
+											<tr>
+												<td>
+													<img src="http://placehold.it/150x120" align="left" alt="">
+												</td>
+												<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
+											</tr>
 										</table>
-										<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="pdf-table pdf-table_accord">
-						<thead>
-							<tr>
-								<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<div class="content">
-										<h3>Описание</h3>
-									</div>
-									<table class="content">
-										<tr>
-											<td>
-												<img src="http://placehold.it/150x120" align="left" alt="">
-											</td>
-											<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="content">
-										<h5>Технические характеристики</h5>
-										<table>
-											<tbody>
-												<tr>
-													<td>Материал ёмкости</td>
-													<td>Боросиликатное стекло</td>
-												</tr>
-												<tr>
-													<td>Фланец горла</td>
-													<td>DN100</td>
-												</tr>
-												<tr>
-													<td>Патрубки рубашки</td>
-													<td>DN15</td>
-												</tr>
-												<tr>
-													<td>Нулевой мертвый объем</td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Клапан нижнего слива </td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Материал клапана</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Сливное отверстие</td>
-													<td>15 мм*</td>
-												</tr>
-												<tr>
-													<td>Датчик температуры</td>
-													<td>Pt100</td>
-												</tr>
-												<tr>
-													<td>Материал датчика температуры</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Перемешивающий элемент</td>
-													<td>4-х лопастной, пропеллерный, якорный**</td>
-												</tr>
-												<tr>
-													<td>Материал перемешивающего элемента</td>
-													<td>PTFE</td>
-												</tr>
-											</tbody>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="content">
+											<h5>Технические характеристики</h5>
+											<table cellspacing="0" cellpadding="10">
+												<tbody>
+													<tr>
+														<td>Материал ёмкости</td>
+														<td>Боросиликатное стекло</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Фланец горла</td>
+														<td>DN100</td>
+													</tr>
+													<tr>
+														<td>Патрубки рубашки</td>
+														<td>DN15</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Нулевой мертвый объем</td>
+														<td>Да</td>
+													</tr>
+													<tr>
+														<td>Клапан нижнего слива </td>
+														<td>Да</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Материал клапана</td>
+														<td>PTFE</td>
+													</tr>
+													<tr>
+														<td>Сливное отверстие</td>
+														<td>15 мм*</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Датчик температуры</td>
+														<td>Pt100</td>
+													</tr>
+													<tr>
+														<td>Материал датчика температуры</td>
+														<td>PTFE</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Перемешивающий элемент</td>
+														<td>4-х лопастной, пропеллерный, якорный**</td>
+													</tr>
+													<tr>
+														<td>Материал перемешивающего элемента</td>
+														<td>PTFE</td>
+													</tr>
+												</tbody>
+											</table>
+											<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="pdf-table-wrap">
+						<table class="pdf-table pdf-table_accord" cellpadding="20px" cellspacing="0">
+							<thead>
+								<tr>
+									<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="content">
+											<h3>Описание</h3>
+										</div>
+										<table class="content">
+											<tr>
+												<td>
+													<img src="http://placehold.it/150x120" align="left" alt="">
+												</td>
+												<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
+											</tr>
 										</table>
-										<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="pdf-table pdf-table_accord">
-						<thead>
-							<tr>
-								<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<div class="content">
-										<h3>Описание</h3>
-									</div>
-									<table class="content">
-										<tr>
-											<td>
-												<img src="http://placehold.it/150x120" align="left" alt="">
-											</td>
-											<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="content">
-										<h5>Технические характеристики</h5>
-										<table>
-											<tbody>
-												<tr>
-													<td>Материал ёмкости</td>
-													<td>Боросиликатное стекло</td>
-												</tr>
-												<tr>
-													<td>Фланец горла</td>
-													<td>DN100</td>
-												</tr>
-												<tr>
-													<td>Патрубки рубашки</td>
-													<td>DN15</td>
-												</tr>
-												<tr>
-													<td>Нулевой мертвый объем</td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Клапан нижнего слива </td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Материал клапана</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Сливное отверстие</td>
-													<td>15 мм*</td>
-												</tr>
-												<tr>
-													<td>Датчик температуры</td>
-													<td>Pt100</td>
-												</tr>
-												<tr>
-													<td>Материал датчика температуры</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Перемешивающий элемент</td>
-													<td>4-х лопастной, пропеллерный, якорный**</td>
-												</tr>
-												<tr>
-													<td>Материал перемешивающего элемента</td>
-													<td>PTFE</td>
-												</tr>
-											</tbody>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="content">
+											<h5>Технические характеристики</h5>
+											<table cellspacing="0" cellpadding="10">
+												<tbody>
+													<tr>
+														<td>Материал ёмкости</td>
+														<td>Боросиликатное стекло</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Фланец горла</td>
+														<td>DN100</td>
+													</tr>
+													<tr>
+														<td>Патрубки рубашки</td>
+														<td>DN15</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Нулевой мертвый объем</td>
+														<td>Да</td>
+													</tr>
+													<tr>
+														<td>Клапан нижнего слива </td>
+														<td>Да</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Материал клапана</td>
+														<td>PTFE</td>
+													</tr>
+													<tr>
+														<td>Сливное отверстие</td>
+														<td>15 мм*</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Датчик температуры</td>
+														<td>Pt100</td>
+													</tr>
+													<tr>
+														<td>Материал датчика температуры</td>
+														<td>PTFE</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Перемешивающий элемент</td>
+														<td>4-х лопастной, пропеллерный, якорный**</td>
+													</tr>
+													<tr>
+														<td>Материал перемешивающего элемента</td>
+														<td>PTFE</td>
+													</tr>
+												</tbody>
+											</table>
+											<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="pdf-table-wrap">
+						<table class="pdf-table pdf-table_accord" cellpadding="20px" cellspacing="0">
+							<thead>
+								<tr>
+									<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="content">
+											<h3>Описание</h3>
+										</div>
+										<table class="content">
+											<tr>
+												<td>
+													<img src="http://placehold.it/150x120" align="left" alt="">
+												</td>
+												<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
+											</tr>
 										</table>
-										<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="content">
+											<h5>Технические характеристики</h5>
+											<table cellspacing="0" cellpadding="10">
+												<tbody>
+													<tr>
+														<td>Материал ёмкости</td>
+														<td>Боросиликатное стекло</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Фланец горла</td>
+														<td>DN100</td>
+													</tr>
+													<tr>
+														<td>Патрубки рубашки</td>
+														<td>DN15</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Нулевой мертвый объем</td>
+														<td>Да</td>
+													</tr>
+													<tr>
+														<td>Клапан нижнего слива </td>
+														<td>Да</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Материал клапана</td>
+														<td>PTFE</td>
+													</tr>
+													<tr>
+														<td>Сливное отверстие</td>
+														<td>15 мм*</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Датчик температуры</td>
+														<td>Pt100</td>
+													</tr>
+													<tr>
+														<td>Материал датчика температуры</td>
+														<td>PTFE</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Перемешивающий элемент</td>
+														<td>4-х лопастной, пропеллерный, якорный**</td>
+													</tr>
+													<tr>
+														<td>Материал перемешивающего элемента</td>
+														<td>PTFE</td>
+													</tr>
+												</tbody>
+											</table>
+											<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 				<div class="prod__row">
 					<table class="pdf-table">
@@ -424,246 +434,252 @@
 							</td>
 						</tr>
 					</table>
-					<table class="pdf-table pdf-table_accord">
-						<thead>
-							<tr>
-								<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<div class="content">
-										<h3>Описание</h3>
-									</div>
-									<table class="content">
-										<tr>
-											<td>
-												<img src="http://placehold.it/150x120" align="left" alt="">
-											</td>
-											<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="content">
-										<h5>Технические характеристики</h5>
-										<table>
-											<tbody>
-												<tr>
-													<td>Материал ёмкости</td>
-													<td>Боросиликатное стекло</td>
-												</tr>
-												<tr>
-													<td>Фланец горла</td>
-													<td>DN100</td>
-												</tr>
-												<tr>
-													<td>Патрубки рубашки</td>
-													<td>DN15</td>
-												</tr>
-												<tr>
-													<td>Нулевой мертвый объем</td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Клапан нижнего слива </td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Материал клапана</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Сливное отверстие</td>
-													<td>15 мм*</td>
-												</tr>
-												<tr>
-													<td>Датчик температуры</td>
-													<td>Pt100</td>
-												</tr>
-												<tr>
-													<td>Материал датчика температуры</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Перемешивающий элемент</td>
-													<td>4-х лопастной, пропеллерный, якорный**</td>
-												</tr>
-												<tr>
-													<td>Материал перемешивающего элемента</td>
-													<td>PTFE</td>
-												</tr>
-											</tbody>
+					<div class="pdf-table-wrap">
+						<table class="pdf-table pdf-table_accord" cellpadding="20px" cellspacing="0">
+							<thead>
+								<tr>
+									<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="content">
+											<h3>Описание</h3>
+										</div>
+										<table class="content">
+											<tr>
+												<td>
+													<img src="http://placehold.it/150x120" align="left" alt="">
+												</td>
+												<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
+											</tr>
 										</table>
-										<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="pdf-table pdf-table_accord">
-						<thead>
-							<tr>
-								<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<div class="content">
-										<h3>Описание</h3>
-									</div>
-									<table class="content">
-										<tr>
-											<td>
-												<img src="http://placehold.it/150x120" align="left" alt="">
-											</td>
-											<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="content">
-										<h5>Технические характеристики</h5>
-										<table>
-											<tbody>
-												<tr>
-													<td>Материал ёмкости</td>
-													<td>Боросиликатное стекло</td>
-												</tr>
-												<tr>
-													<td>Фланец горла</td>
-													<td>DN100</td>
-												</tr>
-												<tr>
-													<td>Патрубки рубашки</td>
-													<td>DN15</td>
-												</tr>
-												<tr>
-													<td>Нулевой мертвый объем</td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Клапан нижнего слива </td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Материал клапана</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Сливное отверстие</td>
-													<td>15 мм*</td>
-												</tr>
-												<tr>
-													<td>Датчик температуры</td>
-													<td>Pt100</td>
-												</tr>
-												<tr>
-													<td>Материал датчика температуры</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Перемешивающий элемент</td>
-													<td>4-х лопастной, пропеллерный, якорный**</td>
-												</tr>
-												<tr>
-													<td>Материал перемешивающего элемента</td>
-													<td>PTFE</td>
-												</tr>
-											</tbody>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="content">
+											<h5>Технические характеристики</h5>
+											<table cellspacing="0" cellpadding="10">
+												<tbody>
+													<tr>
+														<td>Материал ёмкости</td>
+														<td>Боросиликатное стекло</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Фланец горла</td>
+														<td>DN100</td>
+													</tr>
+													<tr>
+														<td>Патрубки рубашки</td>
+														<td>DN15</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Нулевой мертвый объем</td>
+														<td>Да</td>
+													</tr>
+													<tr>
+														<td>Клапан нижнего слива </td>
+														<td>Да</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Материал клапана</td>
+														<td>PTFE</td>
+													</tr>
+													<tr>
+														<td>Сливное отверстие</td>
+														<td>15 мм*</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Датчик температуры</td>
+														<td>Pt100</td>
+													</tr>
+													<tr>
+														<td>Материал датчика температуры</td>
+														<td>PTFE</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Перемешивающий элемент</td>
+														<td>4-х лопастной, пропеллерный, якорный**</td>
+													</tr>
+													<tr>
+														<td>Материал перемешивающего элемента</td>
+														<td>PTFE</td>
+													</tr>
+												</tbody>
+											</table>
+											<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="pdf-table-wrap">
+						<table class="pdf-table pdf-table_accord" cellpadding="20px" cellspacing="0">
+							<thead>
+								<tr>
+									<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="content">
+											<h3>Описание</h3>
+										</div>
+										<table class="content">
+											<tr>
+												<td>
+													<img src="http://placehold.it/150x120" align="left" alt="">
+												</td>
+												<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
+											</tr>
 										</table>
-										<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="pdf-table pdf-table_accord">
-						<thead>
-							<tr>
-								<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<div class="content">
-										<h3>Описание</h3>
-									</div>
-									<table class="content">
-										<tr>
-											<td>
-												<img src="http://placehold.it/150x120" align="left" alt="">
-											</td>
-											<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="content">
-										<h5>Технические характеристики</h5>
-										<table>
-											<tbody>
-												<tr>
-													<td>Материал ёмкости</td>
-													<td>Боросиликатное стекло</td>
-												</tr>
-												<tr>
-													<td>Фланец горла</td>
-													<td>DN100</td>
-												</tr>
-												<tr>
-													<td>Патрубки рубашки</td>
-													<td>DN15</td>
-												</tr>
-												<tr>
-													<td>Нулевой мертвый объем</td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Клапан нижнего слива </td>
-													<td>Да</td>
-												</tr>
-												<tr>
-													<td>Материал клапана</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Сливное отверстие</td>
-													<td>15 мм*</td>
-												</tr>
-												<tr>
-													<td>Датчик температуры</td>
-													<td>Pt100</td>
-												</tr>
-												<tr>
-													<td>Материал датчика температуры</td>
-													<td>PTFE</td>
-												</tr>
-												<tr>
-													<td>Перемешивающий элемент</td>
-													<td>4-х лопастной, пропеллерный, якорный**</td>
-												</tr>
-												<tr>
-													<td>Материал перемешивающего элемента</td>
-													<td>PTFE</td>
-												</tr>
-											</tbody>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="content">
+											<h5>Технические характеристики</h5>
+											<table cellspacing="0" cellpadding="10">
+												<tbody>
+													<tr>
+														<td>Материал ёмкости</td>
+														<td>Боросиликатное стекло</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Фланец горла</td>
+														<td>DN100</td>
+													</tr>
+													<tr>
+														<td>Патрубки рубашки</td>
+														<td>DN15</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Нулевой мертвый объем</td>
+														<td>Да</td>
+													</tr>
+													<tr>
+														<td>Клапан нижнего слива </td>
+														<td>Да</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Материал клапана</td>
+														<td>PTFE</td>
+													</tr>
+													<tr>
+														<td>Сливное отверстие</td>
+														<td>15 мм*</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Датчик температуры</td>
+														<td>Pt100</td>
+													</tr>
+													<tr>
+														<td>Материал датчика температуры</td>
+														<td>PTFE</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Перемешивающий элемент</td>
+														<td>4-х лопастной, пропеллерный, якорный**</td>
+													</tr>
+													<tr>
+														<td>Материал перемешивающего элемента</td>
+														<td>PTFE</td>
+													</tr>
+												</tbody>
+											</table>
+											<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="pdf-table-wrap">
+						<table class="pdf-table pdf-table_accord" cellpadding="20px" cellspacing="0">
+							<thead>
+								<tr>
+									<th>Универсальные штатив, крышка реактора и затвора вала мешалки</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="content">
+											<h3>Описание</h3>
+										</div>
+										<table class="content">
+											<tr>
+												<td>
+													<img src="http://placehold.it/150x120" align="left" alt="">
+												</td>
+												<td><p>Штатив реактора Ready позволяет работать с реакционными ёмкостями объёмами от 100 мл до 5 л.  Для заказа доступны емкости как лабораторной, так и промышленной геометрии (отношение диаметра горла к высоте ёмкости как 1:1,25); как двухстеночные, так и трехстеночные (с дополнительной вакуумной рубашкой).</p></td>
+											</tr>
 										</table>
-										<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="content">
+											<h5>Технические характеристики</h5>
+											<table cellspacing="0" cellpadding="10">
+												<tbody>
+													<tr>
+														<td>Материал ёмкости</td>
+														<td>Боросиликатное стекло</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Фланец горла</td>
+														<td>DN100</td>
+													</tr>
+													<tr>
+														<td>Патрубки рубашки</td>
+														<td>DN15</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Нулевой мертвый объем</td>
+														<td>Да</td>
+													</tr>
+													<tr>
+														<td>Клапан нижнего слива </td>
+														<td>Да</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Материал клапана</td>
+														<td>PTFE</td>
+													</tr>
+													<tr>
+														<td>Сливное отверстие</td>
+														<td>15 мм*</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Датчик температуры</td>
+														<td>Pt100</td>
+													</tr>
+													<tr>
+														<td>Материал датчика температуры</td>
+														<td>PTFE</td>
+													</tr>
+													<tr class="is-marked">
+														<td>Перемешивающий элемент</td>
+														<td>4-х лопастной, пропеллерный, якорный**</td>
+													</tr>
+													<tr>
+														<td>Материал перемешивающего элемента</td>
+														<td>PTFE</td>
+													</tr>
+												</tbody>
+											</table>
+											<p><em>* По запросу может быть изготовлена емкость с 25 мм сливным отверстием<br>**Также к заказу доступны перемешивающие элементы других конфигураций</em></p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 				<div class="prod__row">
 					<table class="pdf-table">
@@ -716,50 +732,6 @@
 	<div class="push"></div>
 </div>
 <!-- END out-->
-<div class="brands-slider">
-	<div class="l-center js-slick">
-		<div><a href="#" data-toggle="brand1" class="js-window-toggle"><img src="img/logo1.png" alt="logo" height="132"></a></div>
-		<div><a href="#" data-toggle="brand2" class="js-window-toggle"><img src="img/logo2.png" alt="logo" height="132"></a></div>
-		<div><a href="#" data-toggle="brand3" class="js-window-toggle"><img src="img/logo3.png" alt="logo" height="132"></a></div>
-		<div><a href="#" data-toggle="brand4" class="js-window-toggle"><img src="img/logo4.png" alt="logo" height="132"></a></div>
-		<div><a href="#" data-toggle="brand5" class="js-window-toggle"><img src="img/logo5.png" alt="logo" height="132"></a></div>
-		<div><a href="#" data-toggle="brand6" class="js-window-toggle"><img src="img/logo6.png" alt="logo" height="132"></a></div>
-		<div><a href="#" data-toggle="brand1" class="js-window-toggle"><img src="img/logo1.png" alt="logo" height="132"></a></div>
-		<div><a href="#" data-toggle="brand2" class="js-window-toggle"><img src="img/logo2.png" alt="logo" height="132"></a></div>
-		<div><a href="#" data-toggle="brand3" class="js-window-toggle"><img src="img/logo3.png" alt="logo" height="132"></a></div>
-		<div><a href="#" data-toggle="brand4" class="js-window-toggle"><img src="img/logo4.png" alt="logo" height="132"></a></div>
-		<div><a href="#" data-toggle="brand5" class="js-window-toggle"><img src="img/logo5.png" alt="logo" height="132"></a></div>
-		<div><a href="#" data-toggle="brand6" class="js-window-toggle"><img src="img/logo6.png" alt="logo" height="132"></a></div>
-	</div>
-</div> 
-
-<!-- begin footer -->
-<div class="footer">
-	<div class="footer__main">
-		<div class="footer__left">
-			<p>© 1996 — 2014 МИЛЛАБ Синтез</p>
-			<a href="#"><i class="icon-sitemap"></i>Карта сайта</a>
-		</div>
-		<div class="footer__right">
-			<div class="footer__top">
-				<div class="tel">+7 495 933 71 47</div>
-				<div class="soc">
-					<a href="#" class="soc__fb">facebook</a>
-					<a href="#" class="soc__tw">twitter</a>
-					<a href="#" class="soc__ln">linkedin</a>
-				</div>
-				<a href="#" class="footer__logo">
-					<img src="img/flex.png" alt="flexmedia">
-				</a> 
-			</div>
-			<div class="footer__contacts">
-				<p>127247 г. Москва, Дмитровское ш., д. 100, 
-				<p>стр. 2, Бизнес-центр North House</p>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- end footer -->
 <!-- load head.js -->
 <script src="js/lib/head.js"></script> 
 </body>
