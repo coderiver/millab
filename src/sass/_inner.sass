@@ -459,14 +459,14 @@
 		bottom: 0
 		z-index: 4
 		visibility: hidden
-		opacity: 0
-		background: rgba(#fff,.95)  
-	&.has-open-message	
+		+opacity(0)
+		background: #fff  
+	&.has-open-message
 		.form__message
 			visibility: visible
-			opacity: 1
+			+opacity(1)
 		.form__overlay
-			opacity: 1 
+			+opacity(.95)
 			visibility: visible
 	h2
 		margin: 46px 0 24px
@@ -477,7 +477,7 @@
 		left: 0
 		width: 390px
 		visibility: hidden
-		opacity: 0
+		+opacity(0)
 		will-change: opacity
 		.icon-done
 			display: block

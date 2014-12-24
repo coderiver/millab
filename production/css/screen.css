@@ -515,11 +515,11 @@ a { text-decoration: none; }
 .post .btn-detail { position: absolute; top: 15px; right: 15px; left: 15px; width: auto; height: 145px; line-height: 145px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; will-change: opacity; -moz-transition: opacity 0.4s; -o-transition: opacity 0.4s; -webkit-transition: opacity 0.4s; transition: opacity 0.4s; }
 
 .form { position: relative; }
-.form__overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 4; visibility: hidden; opacity: 0; background: rgba(255, 255, 255, 0.95); }
-.form.has-open-message .form__message { visibility: visible; opacity: 1; }
-.form.has-open-message .form__overlay { opacity: 1; visibility: visible; }
+.form__overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 4; visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; background: white; }
+.form.has-open-message .form__message { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.form.has-open-message .form__overlay { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95); opacity: 0.95; visibility: visible; }
 .form h2 { margin: 46px 0 24px; }
-.form__message { position: absolute; z-index: 5; top: 0; left: 0; width: 390px; visibility: hidden; opacity: 0; will-change: opacity; }
+.form__message { position: absolute; z-index: 5; top: 0; left: 0; width: 390px; visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; will-change: opacity; }
 .form__message .icon-done { display: block; margin: 7px auto; }
 
 .search { position: relative; margin: 44px 0 0; width: 234px; }
@@ -1001,3 +1001,4 @@ a { text-decoration: none; }
 .ie8 .checkbox span:before, .ie8 .checkbox span:after, .ie8 .radio span:before, .ie8 .radio span:after { display: none; }
 .ie8 .checkbox span, .ie8 .checkbox input, .ie8 .radio span, .ie8 .radio input { position: static; vertical-align: middle; }
 .ie8 .form__overlay { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95); opacity: 0.95; }
+.ie8 .breadcrumbs div ul li { float: left; width: 50%; padding-right: 10px; }
